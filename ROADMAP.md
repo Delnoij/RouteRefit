@@ -1,65 +1,54 @@
-# RouteRefit: stand van zaken bij 0.5.15 Bèta
+# RouteRefit roadmap
 
-Nieuw: Exporteer naar > Bestand… biedt GPX, TCX en KML. TCX is een koers
-met bestaande of zelf ingestelde routetijden. GPX/KML bevatten geen tijden.
-Export blijft lokaal; bestaande bestanden worden nooit overschreven.
+## Available in 0.5.15 Beta
 
-## Beschikbaar
+- Local Windows editor, six interface languages, OSM map, large-map view,
+  elevation/statistics and manual import/folder checks.
+- Automatic/manual alignment, anchors, local repairs, context-menu actions and undo.
+- Review before acceptance, then continue editing the accepted route manually.
+- Connect segments, move endpoints, adjust pauses/timing and add named waypoints
+  with descriptions/photos. Save GPX and a review report.
+- Walking, cycling, mountain biking, gravel cycling, driving and motorcycling.
+  Access, direction and supported OSM turn relations are checked separately.
+- Persistent local road index, downloads for missing areas, bounded waiting and
+  local proposals before separate background requests.
+- Multiple regions and custom drawn areas, compact preparation, regional updates
+  and background work after explicit Windows opt-in.
+- Processing adapts to competing Windows load; no fixed runtime or full use of
+  every processor core is promised.
+- GPX navigation exports for Komoot, Garmin, Strava and Wikiloc. Three compact logo
+  buttons open import pages; the user completes uploads. File export also supports
+  TCX courses and KML. Existing exports are not overwritten.
+- Activity export with calculated timestamps, a calendar and time picker.
+- Six portrait manuals, GPL-3.0-only licensing and OpenStreetMap attribution.
 
-- Lokale Windows-editor met zes talen, OSM-kaart, grote kaart,
-  hoogteprofiel/statistieken en handmatige import/mapcontrole.
-- Automatisch en handmatig uitlijnen, hoofdpunten verplaatsen/verwijderen,
-  plaatselijke herstelvoorstellen, rechtermuisknopbediening en ongedaan maken.
-- Voorstellen eerst beoordelen; na overnemen direct handmatig verderwerken.
-- Routedelen verbinden, start/eind verplaatsen, pauzes en tijdschema aanpassen,
-  waypoints met naam, omschrijving en foto; GPX met controlerapport bewaren.
-- Activiteiten: Lopen, Fiets, MTB, Gravelfiets, Auto en Motor. Toegang, richting
-  en ondersteunde OSM-afslagrelaties zijn afzonderlijke controles.
-- Lokale wegenindex, alleen ontbrekende gebieden ophalen, begrensde downloads,
-  lokaal voorstel vóór de afzonderlijke achtergrondaanvraag.
-- Meerdere optionele regio's en eigen getekende gebieden, compacte verwerking,
-  regionale wijzigingsupdates en achtergrondwerk na expliciete Windows-opt-in.
-- Verwerking houdt rekening met andere Windows-belasting. Geen beloofde
-  constante rekentijd of volledige benutting van alle processorkernen.
-- GPX-export voor Komoot, Garmin, Strava en Wikiloc; drie compacte logoknoppen
-  openen officiële importpagina's. Upload bevestigt de gebruiker bij de dienst.
-- Activiteitsexport met berekende tijden, datumkalender en tijdkiezer.
-- Zes uitgebreide handleidingen; GPL-3.0-only en OSM-vermelding in Over RouteRefit.
+## Planned or incomplete
 
-## Nog open of gedeeltelijk
+1. Shortest/fastest preferences alongside the current balanced road choice.
+2. Least-climbing, scenic and quiet-route alternatives.
+3. Research suitable, licensed heatmap data. No Garmin/Strava heatmap integration
+   or guarantee of access currently exists.
+4. Create a new route from an empty map with clicked points. A design exists;
+   there is no active empty-map route planner yet.
+5. Merge separate files and split them into separate files. Connecting segments
+   within an open route is already available.
+6. More complete national default rules and conditional access across Europe.
+7. Automatic incremental refresh for custom drawn areas. These currently need
+   manual full refresh; regional packages already support periodic differences.
+8. Direct account uploads, broader device compatibility and practical verification
+   of how receiving services handle calculated activity timestamps.
+9. Integrated website uploads with review date/statistics. Manual exchange exists.
+10. Further measurement of routing quality and speed. GraphHopper is a comparison
+    point, not a required paid service or an established quality claim.
 
-1. Routevoorkeuren **kortste** en **snelste**, naast het bestaande **meest logisch**.
-2. Alternatieven met **minste stijging**, **mooiste** en **rustigste** route.
-3. Geschikte en toegestane heatmapgegevens onderzoeken; geen gerealiseerde
-   Garmin- of Strava-heatmapkoppeling of toezegging over beschikbaarheid.
-4. **Nieuwe route** vanaf een lege kaart met klikpunten. Het ontwerp staat in
-   docs/ONTWERP-ROUTES-CREEREN.md; er is nog geen actieve routeplanner.
-5. Afzonderlijke bestanden **samenvoegen** en **splitsen** naar aparte bestanden.
-   Routedelen binnen de geopende route verbinden is al beschikbaar.
-6. Europese landelijke standaardregels en conditionele toegang vollediger
-   verwerken. De huidige generieke OSM-regels zijn geen volledige landenregelset.
-7. Eigen getekende gebieden automatisch en met kleine verschillen vernieuwen.
-   Deze gebruiken nu handmatige volledige vernieuwing; regiopakketten ondersteunen
-   al periodieke wijzigingsupdates.
-8. Rechtstreekse accountuploads zijn niet gerealiseerd. De bestaande knoppen
-   maken een GPX en openen de dienst; toestelcompatibiliteit en overname van
-   berekende tijden door diensten moeten verder in de praktijk worden getest.
-9. Websitekoppeling: handmatig exporteren/importeren bestaat; een geïntegreerde
-   automatische upload met controledatum en bijgewerkte statistieken ontbreekt.
-10. Verder meten en finetunen van routekwaliteit en snelheid. GraphHopper is een
-    vergelijkingspunt, geen verplichte betaalde dienst of bewezen kwaliteitsclaim.
+Automatic local recovery drafts and a dedicated MTB terrain-difficulty control
+were proposed but are not implemented. Manually saving/reopening edits is available.
+Speed-pedelec support has been dropped and is not a planned feature.
 
-Een automatisch lokaal herstelconcept is eerder voorgesteld, maar niet gebouwd.
-Handmatig een concept bewaren en bewerkingen heropenen zijn wel beschikbaar.
-Instelbare MTB-terreinmoeilijkheid was eveneens een voorstel; er is nog geen
-aparte bediening voor een terreinmoeilijkheidsniveau.
+## Publication
 
-## Gewijzigde of uitgestelde keuzes
-
-- **Speedpedelec vervalt** op uitdrukkelijk verzoek; niet meer als komende functie
-  presenteren. Het eerdere uitsluitend Nederlandse profiel is achterhaald.
-- Publicatie op GitHub en een SignPath-aanvraag blijven uitgesteld tot eigen
-  praktijktests en een afzonderlijk besluit van de eigenaar.
-- Publieke pakketten blijven vrij van persoonlijke routes, kaarten en instellingen.
-- Oudere installaties behouden tijdens praktijktests; opschonen is een aparte actie.
-- Versie 1.0 volgt pas na voldoende praktijktests.
+The public project is [Delnoij/RouteRefit](https://github.com/Delnoij/RouteRefit).
+The first release is an unsigned beta. A SignPath application is a later, separate
+step after reviewed builds, practical testing and genuine public history.
+Public packages must remain free of personal routes, maps and preferences.
+Version 1.0 will follow sufficient practical testing.

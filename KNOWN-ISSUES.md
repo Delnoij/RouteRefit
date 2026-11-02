@@ -1,88 +1,110 @@
-# Bekende beperkingen van 0.5.15 Bèta
+# Known limitations of 0.5.15 Beta
 
-- Het eerste voorstel kan gedeeltelijk zijn. Volledig uitlijnen vergt voldoende
-  lokale weggegevens. Nieuwe downloads veranderen een voorstel niet vanzelf.
-- De gemeten tijdwinst geldt voor het eerste gedeeltelijke voorstel bij een trage
-  dienst; dit is geen garantie voor iedere route of een volledige uitlijning.
-- De aparte achtergrondaanvraag na lokaal uitlijnen is begrensd op 60 seconden
-  totaal en 45 seconden per verzoek. Andere downloadpaden behouden 30 seconden
-  totaal en 20 seconden per verzoek. Lokale indexopbouw en
-  rekenen vallen buiten deze grens. Een uitzonderlijk vastgelopen systeemaanroep
-  kan intern nog afronden; maximaal één netwerkwerker blijft daarvoor bestaan.
-- Een mislukte aanvraag wordt niet automatisch herhaald of opgesplitst. Probeer
-  later zelf opnieuw om ontbrekende gebieden op te halen. Een verplichte pauze
-  van de wegendienst wordt binnen dezelfde programmasessie gerespecteerd.
-- Een gedeeltelijk voorstel betekent geen volledige uitlijning: ontbrekende
-  stukken blijven onopgelost. Zonder bruikbare kaartdekking wordt de route behouden.
-- De openbare wegendienst blijft extern en kan uitvallen. Volledige gratis online
-  beschikbaarheid en onmiddellijke voltooiing voor iedere route zijn niet gegarandeerd.
+## Alignment and road downloads
 
-- De Windows-build is niet ondertekend. SmartScreen of Smart App Control kan waarschuwen of uitvoering blokkeren. De uitgeversidentiteit is niet geverifieerd.
-- Niet ieder apparaatbestand is getest. De importtests gebruiken gecontroleerde testbestanden; fouten in uitzonderlijke varianten kunnen nog voorkomen.
-- Uitvoer is GPX, TCX-koers of KML; geen FIT-export. KML vereist minstens twee punten per routedeel. TCX vereist bruikbare routetijden of een berekening via datum/snelheid; lopen en fietsen vereist daarvoor volledige hoogtes. TCX/KML zijn nog niet op echte navigatietoestellen getest. Bij conversie worden sensorkanalen, kaartstijlen en apparaatspecifieke velden niet overgenomen. Bronbestand apart bewaard.
-- Een los meetpunt binnen een verder bruikbare route blijft behouden; een bestand met alleen losse punten is geen bewerkbare route. Waypoint-only-bestanden zijn niet als route te openen.
-- KMZ ondersteunt één KML. Externe links, afbeeldingen, overlays en Polygon-geometrie worden niet als route geïmporteerd. GeoJSON accepteert lijnen en punten, geen polygonen.
-- Hoogtemeters zijn ongefilterde GPX-hoogtes; ruis beïnvloedt stijging en daling. Ontbrekende hoogtes geven gedeeltelijke totalen. Gemiddelde snelheid bevat pauzes.
-- Het starttijdveld is UTC. Berekende tijden zijn schattingen. Bij ongelijke tijdzones normaliseert GPX tijdstempels naar UTC.
-- Uitlijnen controleert niet alle OSM-afslagrelaties en voorwaardelijke toegang. Een kaartcontrole is geen terreincontrole.
-- Achtergrondkaarten en het downloaden/vernieuwen van weggegevens vereisen netwerktoegang. Bij storingen is geen volledige offlinekaart beschikbaar tenzij die al is gecachet.
-- Technische foutdetails van Windows, XML- of FIT-bibliotheken kunnen in hun oorspronkelijke taal verschijnen. Gebruikersinhoud wordt niet vertaald.
-- De bestaande website-integratie verwijst naar marcodelnoij.nl. De publieke uitgave bevat een lege catalogus; importeer desgewenst een eigen catalogus.
-- Windows 11 is het geteste platform. Linux, macOS, grote letterinstellingen en alle schermschalen zijn nog niet volledig getest.
+- The first proposal may be partial. Complete alignment needs sufficient local road
+  data. Downloads never replace a proposal automatically; missing sections remain
+  unresolved. Without usable coverage, the existing route is retained.
+- Faster initial proposals do not guarantee a particular completion time or a fully
+  aligned route. Public road services can be slow or unavailable.
+- Background enrichment after a local proposal allows 45 seconds per request and
+  60 seconds in total. Other download paths allow 20/30 seconds. Local indexing and
+  calculation take additional time. An exceptionally stalled system call may still
+  finish internally; at most one network worker is retained for it.
+- Failed requests are not automatically retried or subdivided. Retry explicitly
+  later; server cooldowns are respected within the same application session.
+- Planning is limited to 200 base areas and 400 network requests. Route length alone
+  does not determine coverage or guarantee that a route fits these limits.
+- Visible map images are separate from road data. They require network access
+  unless already cached. Road packages do not bulk-download background map images.
 
-- De wegdownload is begrensd op 200 geplande basisvakken en maximaal 400 netwerkverzoeken bij onderverdeling. Niet elke route van 200 km is ruimtelijk gelijk; er is geen garantie dat elke lengte of regio binnen dat budget past. Het GPX-bestand blijft wel beschikbaar.
-- De SignPath-workflow is voorbereid maar nog niet verbonden of door GitHub uitgevoerd.
+## Route quality and access
 
-Automatic changed-road recovery: if obsolete intermediate anchors prevent a valid connection, the app tries a local window of at most 1,500 metres and relaxes interior anchors. Endpoints retain the configured search radius. Connections use current OSM access/direction/topology. Both directions of geometric deviation are checked (maximum 150 metres), and length must remain between 50% and 180% of the old section. Manual sections and segment boundaries are protected. The final combined result is checked again; rejected sections remain review issues. Accepted adaptations are listed in Checks and can be undone. These bounds can still reject major road changes, and a proposal requires visual review.
+Automatic changed-road recovery relaxes intermediate anchors within a local window
+of at most 1,500 metres. Endpoints retain the chosen search radius. Connections use
+OSM access, direction and topology. Geometric deviation in both directions is
+limited to 150 metres; section length must remain between 50% and 180% of the old
+section. Manual sections and segment boundaries are protected. Combined results
+are checked again; rejected sections remain review issues. Accepted adaptations
+are listed in the checks and can be undone. Major changes may still be rejected.
 
-Travel direction is a candidate preference, not lane-level navigation. OSM road centrelines do not establish the cyclist’s exact lateral position. Explicit direction restrictions and bicycle exceptions are retained. Loop recovery protects recorded circuits, but changed junctions still need review. Turn relations and conditional access are not fully implemented.
+Travel direction is a candidate preference, not lane-level navigation. OSM road
+centrelines do not establish a cyclist's lateral position. Cycling quality uses
+available surface, width, smoothness and tracktype tags; missing tags do not prove
+usability. Mountain biking has its own rough-surface preference. Driveways and
+parking aisles are discouraged, but remain available for genuine destinations.
 
-Cycling quality uses available OSM surface/width/smoothness/tracktype tags; missing tags cannot prove a path is usable. Mountainbike has a separate rough-surface preference. Driveways and parking aisles are discouraged, not generally forbidden, so a real destination remains reachable. User-reviewed local way choices belong to the particular route proposal and do not establish general routing correctness.
+Activities use generic explicit OSM access and direction rules across Europe.
+There is no complete database of implicit national rules, vehicle dimensions,
+environmental zones, live closures or speed limits. Standard no/only turn relations
+with a via node or sequence of via ways are supported; unusual or combined
+conditional relations are not fully supported. Recognised conditional prohibitions
+are applied without evaluating their time windows. Motor profiles conservatively
+avoid unclear motor access on tracks and footpaths and may reject a legal connection.
+There is no speed-pedelec profile. Motor time estimates do not model traffic or speed limits.
 
-Reconstructed gaps: the proposed roads may differ from the actual journey. Via points guide the proposal. Connection times include any unrecorded pause; active riding time cannot be recovered from missing GPS samples. A connection is bounded to 50 km through at most 50 via points; long detours may need additional via points and road data.
+Reconstructed gaps may differ from the actual journey. Via points guide the proposal;
+connection times include any unrecorded pause. Actual moving time cannot be recovered
+from missing samples. Connections are limited to 50 km and 50 via points. Review
+maps and real-world conditions; a successful calculation is not a terrain check.
 
-De lokale index bouwt eenmaal op uit bestaande OSM-bestanden. Zonder eerdere download of volledige begrensde regio-import blijven ontbrekende gebieden internet vragen. Grote regiobestanden kunnen een merkbare eerste indexopbouw vragen; de limiet is 128 MB per XML-bestand. Deze handmatige regio-import gebruikt OSM XML; het aparte scherm Gebiedspakketten ondersteunt ook PBF. De datum is de OSM-momentopname of anders de bestandsdatum. Cachegebruik garandeert geen actuele toegangsregels.
-# Gebiedspakketten (0.5.11)
+## Packages and offline use
 
-De eerste download en voorbereiding kunnen meerdere minuten duren en gebruiken
-extra schijfruimte. Kies kleine regio's; maximaal 500 MB download per pakket.
-Pakketten zijn optioneel. Zonder pakket blijven opgeslagen wegen bruikbaar;
-ontbrekende wegen ophalen kan veel langer duren. Grensroutes kunnen meerdere
-gebiedspakketten nodig hebben. Ontbrekende dekking blijft zichtbaar als een
-gedeeltelijk voorstel. De achtergrondkaart wordt apart opgehaald.
-Zonder expliciete achtergrondoptie werken wekelijkse updates alleen zolang het programma geopend is. Met die opt-in kan Windows het werk na sluiten voortzetten; zie de beperkingen hieronder. Bij gewijzigde
-grenzen, meer dan 90 dagelijkse updates achterstand of te grote wijzigingen is
-expliciet opnieuw downloaden nodig. Er is geen gegarandeerde externe beschikbaarheid.
+The local index is prepared once from saved OSM files. Manual XML region imports
+are limited to 128 MB per file; the separate package manager also supports PBF.
+The data date is the OSM snapshot date or, if unavailable, the file date. Cached
+data does not guarantee current access rules.
 
+Regional packages are optional. Without them, saved roads remain usable but
+retrieving missing roads may take much longer. Border routes may need several
+packages. Initial preparation can take minutes and needs extra disk space;
+downloads are limited to 500 MB per package. Weekly updates normally run while
+the app is open. Changed boundaries, more than 90 daily updates or excessive
+changes require an explicit full download.
 
+Compact storage is used for newly prepared packages. Existing packages remain
+usable and are not silently rebuilt. Custom drawn areas use small full extracts
+and manual refresh, not incremental regional feeds. SliceOSM is a volunteer
+service and may be unavailable. Leave a margin around routes when drawing an area.
 
-0.5.12 area packages: first preparation still depends on area size, disk and CPU
-load. Only newly prepared packages use compact storage; existing packages remain
-usable and are not silently rebuilt. Select Download again to rebuild explicitly.
-Custom areas use full small extracts and manual refresh; no compatible regional
-incremental feed is assumed. SliceOSM is a volunteer service and can be slow or
-unavailable. Data coverage is conservative near polygons; keep a margin around routes.
-Background opt-in needs Windows Task Scheduler; managed Windows policies may refuse
-registration. The app reports failure and keeps the option off. Sleep, sign-out,
-shutdown and unavailable connectivity prevent work; interrupted jobs need manual
-review. Standard OSM map images are not bulk-downloaded with road packages.
+Continuing work after closing requires explicit opt-in and Windows Task Scheduler.
+If Windows policy rejects registration, the option stays off and an error is shown.
+Sleep, sign-out, shutdown or missing connectivity prevent work; interrupted jobs
+need review. There is no global in-app switch for all network features.
 
-0.5.14: activiteiten gebruiken generieke expliciete OSM-toegang en rijrichting
-in heel Europa; geen complete database met impliciete nationale regels,
-voertuigafmetingen, milieuzones, actuele afsluitingen of maximumsnelheden.
-Standaard no/only-afslagrelaties met één via-knooppunt of een reeks via-wegen
-worden verwerkt. Niet alle exotische of gecombineerde conditionele relaties
-zijn ondersteund. Herkende voorwaardelijke afslagverboden gelden altijd,
-zonder tijdvenster te evalueren. Kaart- en terreincontrole blijven nodig.
-Motorprofielen vermijden onduidelijke motorische toegang op veld- en voetpaden;
-dat kan een legale verbinding afwijzen. Geen routeadvies voor speedpedelecs.
-Motorische tijdschattingen modelleren geen verkeer of snelheidslimieten.
+## Formats, exports and timing
 
-Navigatieknoppen uploaden niet via een API: zij slaan een GPX op en openen de
-officiële importpagina. Aanmelden, bestand kiezen en import bevestigen gebeuren
-bij de dienst. Externe diensten kunnen kosten, voorwaarden en limieten hanteren;
-Strava routeplanning kan een abonnement vereisen. Compatibiliteit met alle
-toestellen is niet getest. De ontvangende dienst kan opnieuw berekenen.
-Afslaginstructies en offline navigatie worden door de dienst/toestel verzorgd.
-Voor auto en motor zijn sportdiensten niet algemeen geschikt; gebruik een
-GPX-geschikte autonavigator. Er is geen echte accountupload uitgevoerd in tests.
+- Not every device format has been tested. Controlled fixtures cover known cases,
+  but unusual variants may fail. The original imported file is retained separately.
+- Export supports GPX, TCX courses and KML, but not FIT. KML needs at least two
+  points per segment. TCX needs usable timestamps or a date/speed calculation;
+  calculated walking/cycling times require complete elevations.
+- Sensor channels, map styling and device-specific fields are not preserved in
+  conversion. KMZ supports one KML; external resources, overlays and polygons are
+  not route inputs. GeoJSON supports lines and points, not polygons.
+- Isolated samples within an otherwise usable route are retained. A file containing
+  only isolated points or waypoints is not an editable route.
+- Elevation totals use unfiltered source elevations and are affected by noise.
+  Missing elevations yield partial totals. Average speed includes pauses.
+- The main start-time field uses UTC. The separate activity-export dialog uses
+  the selected local date/time. GPX timestamps are normalised to UTC. Calculated
+  timestamps remain estimates, not proof of a completed activity.
+- Navigation buttons save a GPX and open official import pages; they do not upload
+  through an API. You sign in, select the file and confirm with the service.
+  Services may apply fees, terms and limits; Strava route planning may require a
+  subscription. The recipient may recalculate the route. Turn instructions and
+  offline navigation are provided by that service or device.
+- Sports services are not generally suitable for car/motorcycle navigation; use
+  a compatible navigator. No real account uploads have been tested. TCX/KML and
+  compatibility with all navigation devices still need practical testing.
+
+## Platform and signing
+
+The Windows downloads are unsigned. SmartScreen or Smart App Control may warn
+or block execution; publisher identity is not verified. The GitHub workflow builds
+unsigned packages. SignPath acceptance and integration are not in place.
+
+Windows 11 is the target platform. Linux, macOS, every display scale and large-font
+configuration are not fully tested. Some Windows/XML/FIT errors may appear in the
+library's original language; user content is not translated. The optional website
+integration refers to marcodelnoij.nl; public downloads have an empty catalogue.

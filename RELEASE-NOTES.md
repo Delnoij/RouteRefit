@@ -1,52 +1,58 @@
-# RouteRefit 0.5.15 Bèta
+# RouteRefit 0.5.15 Beta
 
-RouteRefit is een gratis lokaal Windows-programma van Marco Delnoij (EOSfoto)
-voor het controleren, herstellen en bewerken van routes.
+RouteRefit is a free, local Windows application by **Marco Delnoij**
+([@Delnoij](https://github.com/Delnoij)) for reviewing, repairing and editing routes.
 
-## Download
+**Available in Dutch, English, German, French, Spanish and European Portuguese.**
+The interface and illustrated portrait manuals support all six languages.
 
-- **Setup.exe**: aanbevolen voor Windows 11 x64. Installeert voor de huidige
-  gebruiker en biedt een Startmenu-snelkoppeling. Python is niet nodig.
-- **Windows.zip**: draagbare versie; pak de volledige map uit.
-- **broncode.zip**: gecontroleerde broncode met bouwscripts en tests.
-- De Nederlandse handleiding is los beschikbaar. De programma-downloads bevatten
-  alle zes handleidingen in staand formaat.
+## Downloads
 
-## Wat zit erin?
+- **Setup.exe**: recommended for Windows 11 x64. Installs for the current user
+  with a Start-menu shortcut. Python is not required.
+- **Windows.zip**: portable version. Extract the entire folder before running it.
+- **broncode.zip**: reviewed source code, build scripts and tests.
+- **handleiding-EN.pdf / handleiding-NL.pdf**: English and Dutch manuals.
+  All six manuals are included in the application downloads.
+- **BUILD-INFO.json, INSTALLER-INFO.json and SHA256SUMS.txt**: build provenance
+  and checksums for verifying the downloads.
 
-- Eerst lokaal uitlijnen, ontbrekende wegen apart ophalen en voorstellen beoordelen.
-- Optionele gebiedspakketten, meerdere regio's en handmatig verder bewerken.
-- Lopen, fietsen, MTB, gravel, auto en motor.
-- GPX-, TCX- en KML-export; importhulp voor Komoot, Garmin en Strava.
-- Installeren, bijwerken en verwijderen met behoud van lokale gebruikersgegevens.
+## Features
 
-## Bestaande gebruikers
+- Align using local roads first; retrieve missing roads separately and review proposals.
+- Optional road packages, multiple regions and continued manual editing.
+- Walking, cycling, mountain biking, gravel cycling, driving and motorcycling.
+- GPX, TCX and KML export, with import helpers for Komoot, Garmin and Strava.
+- Installation, updates and uninstallation designed to retain local user data.
 
-Sla je werk op, sluit RouteRefit en stop lopende wegdownloads vóór een update.
-Bewaar een reservekopie van Mijn GPX, Kaarten en voorkeuren.json. De installer
-hergebruikt bij updates dezelfde map. Bij overstappen van een draagbare versie
-kun je de bestaande map kiezen; gegevens worden niet vanzelf naar een andere
-map verplaatst. Achtergrondwerk blijft een afzonderlijke opt-in.
+## Existing users
 
-## Privacy en beperkingen
+Save your work, close RouteRefit and stop road downloads before updating. Back up
+`Mijn GPX`, `Kaarten` and `voorkeuren.json`. Updates reuse the installation folder.
+When switching from a portable copy, you can select its existing folder; data is
+not moved automatically to a different folder. Background work remains a separate opt-in.
 
-Geen telemetrie, automatische route-upload of betaald routeringsabonnement.
-Kaartdiensten kunnen het gevraagde gebied en je IP-adres zien. Lees de
-[privacyuitleg](https://github.com/Delnoij/RouteRefit/blob/v0.5.15-beta/PRIVACY.md). Downloads bevatten geen persoonlijke routes of kaarten.
+## Privacy and limitations
 
-Dit is een bèta. Externe wegendiensten kunnen traag of onbereikbaar zijn.
-Controleer voorstellen en navigatiebestanden zelf. Berekende activiteitstijden
-blijven schattingen. Zie [bekende beperkingen](https://github.com/Delnoij/RouteRefit/blob/v0.5.15-beta/KNOWN-ISSUES.md) en de feitelijke
-[testinformatie](https://github.com/Delnoij/RouteRefit/blob/v0.5.15-beta/VALIDATIE.txt). Een test op een tweede pc en echte navigatie-
-toestellen staat nog open; er zijn geen echte accountuploads getest.
+No telemetry, automatic route upload or paid routing subscription. Map services
+can see requested areas and your IP address. See the
+[privacy policy](https://github.com/Delnoij/RouteRefit/blob/v0.5.15-beta/PRIVACY.md).
+Downloads contain no personal route library or downloaded maps.
+
+This is a beta. External road services may be slow or unavailable. Review proposals
+and navigation exports. Calculated activity times remain estimates. Read the
+[known limitations](https://github.com/Delnoij/RouteRefit/blob/v0.5.15-beta/KNOWN-ISSUES.md)
+and [validation report](https://github.com/Delnoij/RouteRefit/blob/v0.5.15-beta/VALIDATIE.txt).
+Testing on a separate Windows 11 PC and real navigation devices remains outstanding;
+no real account uploads have been tested.
 
 ## Code signing policy
 
-**Deze uitgave is nog niet digitaal ondertekend en heeft geen SignPath-toelating.**
-Windows kan daarom waarschuwen of uitvoering blokkeren. Schakel beveiliging
-niet uit. De [Code signing policy](https://github.com/Delnoij/RouteRefit/blob/v0.5.15-beta/CODE-SIGNING-POLICY.md) beschrijft rollen,
-review en handmatige goedkeuring. SHA256SUMS.txt controleert de bestandsinhoud,
-maar vervangt geen digitale handtekening of geverifieerde uitgever.
+**This release is not digitally signed and has no SignPath Foundation acceptance.**
+Windows may warn or block execution. Do not disable security protections.
+The [code signing policy](https://github.com/Delnoij/RouteRefit/blob/v0.5.15-beta/CODE-SIGNING-POLICY.md)
+describes review and deliberate approval. Checksums verify file contents; they
+do not replace a digital signature or verified publisher identity.
 
-Licentie: GPL-3.0-only, copyright 2026 EOSfoto. Kaartgegevens:
-© [OpenStreetMap-bijdragers](https://www.openstreetmap.org/copyright), ODbL.
+**Copyright © 2026 Marco Delnoij.** Licensed under GPL-3.0-only.
+Map data: © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), ODbL.

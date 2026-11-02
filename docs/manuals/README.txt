@@ -1,11 +1,10 @@
-Huidige handleidingen: guidebook.json (33 hoofdstukken per taal) en guide_meta.json.
-Echte, visueel gecontroleerde schermafdrukken: screens/0.5.5/{nl,en,de,fr,es,pt}/*.jpg.
-Alle beelden gebruiken uitsluitend de synthetische demonstratieroute uit examples/handleiding.
-De demonstratiekaart is zichtbaar; deze is geen meegeleverde bruikbare wegenindex.
+Current manuals: guidebook.json (33 chapters per language) and guide_meta.json.
+Real, visually reviewed screenshots: screens/0.5.5/{nl,en,de,fr,es,pt}/*.jpg.
+All screenshots use only the synthetic demonstration in examples/handleiding.
+The visible demonstration map is not a bundled usable road index.
 
-Opnieuw maken: python tools/build_manuals.py, met ReportLab, Pillow en Windows Segoe UI.
-Auteursgereedschappen zijn niet nodig voor het Windows-programma.
-De PDF's komen in Handleidingen. Render alle pagina's en controleer inhoud en beeld.
-Update daarna alleen de goedgekeurde documentchecksums in release-data-manifest.json.
-Nooit beelden uit een persoonlijke, gebruikte installatie goedkeuren zonder inhoudscontrole.
-
+Regenerate with python tools/build_manuals.py using ReportLab, Pillow and Windows
+Segoe UI. Authoring tools are not required to run the Windows application.
+PDFs are written to Handleidingen. Render every page and check content and layout.
+Then update only the reviewed document hashes in release-data-manifest.json.
+Never approve images from a used personal installation without content review.

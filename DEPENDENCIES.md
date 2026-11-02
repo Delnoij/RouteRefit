@@ -22,6 +22,6 @@ urllib3, certifi) are pinned for installation reproducibility; unused replicatio
 tools are excluded from the Windows executable. Upstream licences supplied with
 the packages and pyosmium source archive are included in THIRD-PARTY-NOTICES.
 
-Build-only packages such as setuptools, altgraph, packaging and the Windows build helpers are pinned in the lock file. Their source and package metadata are available from their named PyPI project releases. None is represented as code maintained by EOSfoto. The project should only request a signature for its own application EXE; third-party library signatures remain those of their respective publishers or are absent.
+Build-only packages such as setuptools, altgraph, packaging and the Windows build helpers are pinned in the lock file. Their source and package metadata are available from their named PyPI project releases. None is represented as code maintained by Marco Delnoij. The project should only request a signature for its own application EXE; third-party library signatures remain those of their respective publishers or are absent.
 
 The local build uses the same locked Windows dependencies as the prepared workflow. A local build is not thereby a GitHub trusted build. Actual GitHub-run provenance and SignPath configuration must be checked after the maintainer's test and publication approval.

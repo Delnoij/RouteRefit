@@ -1,55 +1,45 @@
-# Voorbereiding: zelf routes creëren
+# Design: creating new routes
 
-Status: ontwerp, nog geen aangeboden programmamogelijkheid. Eerst deze taal-,
-handleiding- en voortgangsversie praktisch testen. Daarna de vervoermiddelen
-uitbreiden en valideren. Routecreatie volgt als afzonderlijke volgende stap.
+Status: design only, not an available application feature. Empty-map route planning
+is a separate future step; the existing alignment workflow must remain stable.
 
-## Bediening
+## Interaction
 
-Een toekomstige knop **Nieuwe route** opent een leeg ontwerp. De gebruiker kiest
-vervoermiddel en routevoorkeur, klikt begin, tussenpunten en einde op de kaart en
-krijgt een berekend voorstel. Afstand, geschatte tijd en beschikbare stijging staan
-vóór **Voorstel overnemen** in beeld. Klikpunten blijven versleepbaar; verwijderen
-vervangt de hele verbinding tot de aangrenzende overblijvende klikpunten.
-Ongedaan maken, annuleren, waypoints, foto's en GPX-export worden hergebruikt.
+A future New route action would create an empty design. Users select an activity
+and route preference, then click a start, via points and an end. A proposal shows
+distance, estimated time and available ascent before acceptance. Control points
+remain draggable; removing one replaces the connection between its surviving
+neighbours. Reuse undo, cancellation, waypoints, photos and GPX export.
 
-## Onderdelen die we kunnen hergebruiken
+## Reusable components
 
-- De lokale wegenindex en ontbrekende gebiedsdekking uit `road_provider.py`.
-- De per-profiel voorbereide netwerken en toegang/richting uit `prepared_roads.py`.
-- Profielinstellingen los van het tijdschema; toekomstige voertuigen krijgen eigen
-  geteste regels vóór zij voor plannen beschikbaar komen.
-- Voorstelcontrole, afstands-/hoogtesamenvatting, kaart en bewerkingsgeschiedenis.
-- GPX/rapport-export en de bestaande controles op schattingen en fotobijlagen.
+- Local road indexing and missing coverage in road_provider.py.
+- Prepared activity networks and access/direction rules in prepared_roads.py.
+- Activity settings separate from timing; validate each supported activity.
+- Proposal review, distance/elevation summaries, map view and editing history.
+- GPX/review reports, estimated-time attribution and explicit photo selection.
 
-## Vereiste scheiding in het gegevensmodel
+## Data model
 
-Een opgenomen route behoudt een onveranderlijke bron. Een ontwerp krijgt de
-expliciete herkomst `planned`, een lijst besturingspunten en een afzonderlijk
-voorstel. Er wordt geen fictieve oorspronkelijke GPS-opname gemaakt. Gemeten
-tijden, werkelijk afgelegde afstand en opgenomen pauzes blijven onbekend.
-Een tijdschema is alleen een berekende schatting op basis van de gekozen snelheid
-en een eventueel gekozen starttijd. In GPX en rapport blijft die herkomst zichtbaar.
+A recorded route retains an immutable source. A design needs explicit planned
+provenance, control points and a separate proposal. Do not invent an original GPS
+recording. Measured times, actual distance travelled and recorded pauses remain
+unknown. Any schedule is an estimate based on speed and an optional start time;
+exports and reports must preserve that distinction.
 
-De huidige uitlijner volgt een bestaande routevorm en beperkt afwijking daarvan.
-Een planner moet verbindingen tussen nieuwe klikpunten zoeken. Die twee intenties
-krijgen afzonderlijke zoekopdrachten boven hetzelfde lokale wegennet, zodat
-nieuwe planning de huidige herstelkeuze niet ongemerkt wijzigt. De planner moet
-ook melden wanneer lokale gebiedsdekking ontbreekt en die gericht uitbreiden.
+Alignment follows an existing shape with bounded deviation. Planning searches
+between newly chosen points. Keep these separate operations above the same local
+road network so planning does not silently change repair behaviour. Report missing
+local coverage and expand it in a controlled way.
 
-## Vooraf te beslissen en te testen
+## Decisions and tests
 
-1. Begin/einde op bereikbare wegen projecteren, met een controleerbaar voorstel.
-2. Gebiedsdekking stapsgewijs vergroten bij een omweg buiten het eerste gebied;
-   grenzen aan rekentijd en downloaden behouden.
-3. Alle toegevoegde vervoermiddelen afzonderlijk testen op toegang, richting,
-   afslagbeperkingen en parallelle paden.
-4. Ontwerpen heropenen zonder ze als opgenomen activiteit aan te merken.
-5. Verwijderen/verplaatsen van een klikpunt, expliciete voorstelovername,
-   annuleren, ongedaan maken en geschatte tijden samen controleren.
-6. Hoogtebronnen later afzonderlijk aansluiten. Zonder hoogtegegevens blijft de
-   stijging onbekend; getallen worden niet verzonnen.
+1. Project endpoints onto reachable roads and show a reviewable proposal.
+2. Expand coverage for detours while retaining time/download limits.
+3. Check every activity's access, direction, turn restrictions and parallel paths.
+4. Reopen designs without presenting them as recorded activities.
+5. Test point movement/removal, explicit acceptance, cancellation, undo and estimated times.
+6. Connect elevation sources separately. Missing ascent remains unknown, not invented.
 
-Er komen in deze uitgave geen lege planningsknoppen. Samenvoegen en splitsen van
-afzonderlijke bestanden blijven aparte toekomstige uitbreidingen. Publicatie en
-SignPath-aanvraag blijven uitgesteld tot de eigenaar daarvoor kiest.
+Do not expose non-working planning buttons. Merging/splitting separate files are
+separate future features. SignPath application and signing are separate release decisions.

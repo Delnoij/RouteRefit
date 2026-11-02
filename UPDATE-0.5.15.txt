@@ -1,28 +1,27 @@
-RouteRefit 0.5.15 Bèta - 2 november 2026
+RouteRefit 0.5.15 Beta - 2 November 2026
 
-De zes handleidingen zijn nu staand A4 (47 pagina’s, 33 hoofdstukken).
-Hoofdstuk 33 beschrijft de lokale GPX-, TCX- en KML-export.
+Copyright © 2026 Marco Delnoij. GitHub maintainer: @Delnoij.
+Interface and manuals: Dutch, English, German, French, Spanish and European Portuguese.
 
-Nieuw: Exporteer naar > Bestand… biedt GPX, TCX en KML. TCX is een koers
-met bestaande of zelf ingestelde routetijden. GPX/KML bevatten geen tijden.
-Export blijft lokaal; bestaande bestanden worden nooit overschreven.
+The six manuals use portrait A4 (47 pages, 33 chapters). Chapter 33 explains local
+GPX, TCX and KML export. Export to > File offers these formats; TCX courses use
+existing or calculated route times, while GPX/KML navigation exports omit times.
+Exports remain local and existing files are not overwritten.
 
-Boven Komoot, Garmin en Strava staat nu Exporteer naar.
-De knoppen zijn compacter: kleinere logo's en minder ruimte rond de tekst.
-Zo blijft meer plaats over voor toekomstige exportmogelijkheden.
+The compact Komoot, Garmin and Strava buttons are grouped under Export to, with
+room for future services. They save a GPX and open an import page; you upload it.
 
-De privéwegenoptie was niet verwijderd. Ze is nu beter zichtbaar:
-Instellingen > Activiteit > Toegang en privéwegen opent Instellingen > Route.
-Bovenaan staan Sta privéwegen en -paden toe en Toegangsmeldingen.
-De laatste functie blijft ook beschikbaar via Meer > Toegangsmeldingen.
+The private-roads option remains available and is easier to find via activity
+settings. Route settings group private-road permission and access review together.
+Allowing private roads includes applicable private-tagged roads; it does not lift
+other explicit restrictions. Reviewing access issues can retain existing geometry,
+elevations and times. Undo and persistence remain available.
 
-Sta privéwegen en -paden toe neemt wegen met een toepasselijke private-tag mee
-bij uitlijnen. Andere expliciete toegangsbeperkingen worden niet opgeheven.
-Via Toegangsmeldingen kun je na de routecontrole toegangsmeldingen beoordelen
-en de bestaande lijn behouden; hoogtes en tijden blijven ook behouden.
-Ongedaan maken en het opslaan van de beoordeling blijven beschikbaar.
+Missing access tags do not automatically block walking/cycling. Motor profiles
+remain conservative on cycle paths and footpaths without explicit permission.
+Saved access choices, routes, edits and maps remain your local data.
 
-Ontbrekende toegangstags blokkeren lopen en fietsen niet automatisch. Auto en
-motor blijven gewone fiets- en voetpaden zonder expliciete toestemming vermijden.
-Je opgeslagen toegangskeuze, routes, bewerkingen en kaarten blijven behouden.
-Lees hoofdstuk 7 van de bijgewerkte handleiding.
+The per-user Setup.exe installer preserves user data when updating or uninstalling.
+Save and close the application and stop background work before updating. Back up
+Mijn GPX, Kaarten and voorkeuren.json. Data is not moved automatically between folders.
+This beta is unsigned; see README.md, PRIVACY.md and KNOWN-ISSUES.md.

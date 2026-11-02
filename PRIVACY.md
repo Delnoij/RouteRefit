@@ -80,14 +80,13 @@ Road downloads use one read-only Overpass endpoint, reuse completed local tiles 
 Foreground road requests declare a 15-second server execution timeout and a 64 MiB resource allowance. Earlier 0.5.5 resource-failure subdivision and retry countdowns were removed in 0.5.8. No alternate service hosts are used. The server timeout is a request setting; local preparation and calculation are additional to the bounded download wait.
 
 0.5.6: service export creates a local GPX plus an export report. Navigation export omits timestamps, waypoints, photographs and source metadata. Strava activity export includes newly modeled timestamps from the user-selected date, local start time, transport and average speed. The report records that these are estimates. No automatic upload, account login or token storage is implemented. Import-help buttons open the browser only when clicked. Icons are bundled locally. Geographic positions remain present in exports.
-# Aanvulling 0.5.7
+## 0.5.7: performance changes
 
-De snelheidsverbeteringen gebruiken lokale berekeningen en de bestaande openbare
-OSM-wegendienst. Er is geen nieuwe aanbieder, route-upload, reclame of telemetrie.
-Een kaartaanvraag deelt wel het gevraagde gebied en verbindingsgegevens zoals het
-IP-adres. Bestaande GPX-bestanden, tijden, namen en foto's worden niet meegestuurd.
-Een beperkt downloadbudget en hergebruik van complete gebieden verminderen aanvragen.
-
+Performance improvements use local calculations and the existing public road
+service. No new provider, route-upload service, advertising or telemetry is added.
+Map requests disclose the requested area and connection information such as the
+IP address, but do not send GPX files, timestamps, names or photographs. Bounded
+downloads and reuse of completed areas reduce requests.
 
 ## 0.5.9: local proposal before background road downloads
 

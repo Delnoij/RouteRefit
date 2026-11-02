@@ -50,8 +50,8 @@ across different Windows machines or timestamps.
 4. Test the installer on a separate Windows 11 computer without Python. Record
    actual results and remaining limitations. Do not invent adoption or testing.
 5. Create tag `v0.5.15-beta` at that exact revision. Draft a release, mark it
-   **pre-release**, and include the installer, portable ZIP, source ZIP, Dutch
-   manual, BUILD-INFO.json, INSTALLER-INFO.json and matching SHA256SUMS.txt from that build. All six
+   **pre-release**, and include the installer, portable ZIP, source ZIP, English and Dutch
+   manuals, BUILD-INFO.json, INSTALLER-INFO.json and matching SHA256SUMS.txt from that build. All six
    manuals are also inside the Windows packages. Use RELEASE-NOTES.md as the
    draft text. Convert its document links to the actual repository's tagged source
    URLs before pasting it into the release page. Review the exact files before publishing.

@@ -1,0 +1,57 @@
+{
+  "result_sha256": "c9cc1697031a3e70b33b104e082f77574720c5e27cd1ff573870ec0fc385d3d2",
+  "settings": {
+    "profile": "Fietsen · trekking",
+    "automatic_alignment": false,
+    "allow_private": false
+  },
+  "issues": [
+    {
+      "segment": 0,
+      "start": 89,
+      "end": 92,
+      "reason": "Demonstratie: controleer de aansluiting en kies of dit stuk opnieuw moet worden uitgelijnd."
+    }
+  ],
+  "notes": [
+    "Demo met synthetische tijden en hoogtes. Het aandachtspunt dient uitsluitend om de bediening te tonen."
+  ],
+  "review_sections": [
+    {
+      "title": "Demo",
+      "lat": 50.8646677,
+      "lon": 5.8244451
+    }
+  ],
+  "focus": [
+    50.8649671,
+    5.8208901
+  ],
+  "main_points": [
+    [
+      0,
+      5,
+      18,
+      25,
+      35,
+      40,
+      64,
+      99,
+      111,
+      125,
+      134,
+      148,
+      172,
+      190,
+      194,
+      201,
+      210,
+      213,
+      235,
+      241,
+      246,
+      255,
+      267
+    ]
+  ]
+}

@@ -1,19 +1,20 @@
 ---
-name: Bug report / foutmelding
-about: Reproduceerbaar probleem in de beta
+name: Bug report
+about: A reproducible problem in the beta
 title: ''
 labels: bug
 ---
 
-Versie / version:
-Windows:
-Taal / language:
-Bestandsformaat / input format:
+RouteRefit version:
+Windows version:
+Interface language:
+Input format:
 
-Stappen / steps:
+Steps to reproduce:
 1.
 
-Verwacht / expected:
-Werkelijk / actual:
+Expected result:
+Actual result:
 
-Bijlage: alleen een geanonimiseerd minimaal voorbeeld; geen persoonlijke routes of locaties.
+Attachments: only a minimal anonymised example. Do not publish personal routes,
+locations, photographs or account details.

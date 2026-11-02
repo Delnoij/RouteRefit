@@ -1,306 +1,44 @@
-Installer en publicatiedocumentatie - 2 november 2026
+RouteRefit 0.5.15 Beta - validation report, 2 November 2026
 
-Inno Setup 7.1.1, vastgelegde downloadhash en geldige Pyrsys B.V.-handtekening.
-Lokale installertest geslaagd: eerste installatie, weigeren bij een geopend
-programmabestand, opnieuw installeren, routes/bewerkingen/kaarten/instellingen
-byte voor byte behouden, verwijderen en isolatie van andere achtergrondtaken.
-Alleen synthetische testgegevens en tijdelijke taken gebruikt. De eigen
-installaties van de gebruiker zijn niet gewijzigd of verwijderd.
-De zes handleidingen blijven 47 pagina's staand A4; installatiehoofdstuk in
-zes talen aangepast en visueel gecontroleerd. Alle pagina's gerenderd en
-tekstgrenzen gecontroleerd. Dit betreft lokale voorbereiding; nog geen
-GitHub-bouwrun, SignPath-aanvraag of ondertekende uitgave.
-Publicatievoorbereiding 2 november 2026
+Scope
+The first public beta packages the existing route editor with a per-user Windows
+installer, English publication documents and six portrait manuals. Copyright is
+attributed to Marco Delnoij; the GitHub account is Delnoij. These publication changes
+do not replace the route-alignment algorithm.
 
-De programmabron onder src is ongewijzigd ten opzichte van 0.5.15 Bèta.
-De openbare bron bevat alleen de actuele handleidingen; oude losse update- en
-testnotities zijn vervangen door de bestaande CHANGELOG en actuele TESTEN.
-392 automatische tests opnieuw geslaagd vanuit de schone publicatiebron
-(17,142 seconden). Persoonlijke gegevens en kaarten horen niet in deze bron.
-Deze controle is lokaal uitgevoerd, niet op GitHub of op een tweede pc.
-RouteRefit 0.5.15 Bèta - validatie 2 november 2026
+Recorded baseline
+392 unit tests passed locally. GitHub run 41483317769 also passed all 392 tests
+(5.248 seconds), eight interface checks in six languages, the Windows build,
+packaging and installer tests at revision 626e208945e62729c92ae10fdd5c5212b417d40a.
+https://github.com/Delnoij/RouteRefit/actions/runs/41483317769
+Subsequent publication/copyright edits require a fresh hosted run. The exact
+revision and run for each downloadable build are in BUILD-INFO.json and
+INSTALLER-INFO.json; consult the release's linked successful run.
 
-392 automatische tests geslaagd. Bediening in zes talen gecontroleerd:
-Exporteer naar, snelkoppeling vanaf Activiteit, zichtbare privéwegenoptie,
-beoordelen via de nieuwe knop Toegangsmeldingen, annuleren, accepteren,
-ongedaan maken en bewaren/heropenen van beoordelingen en allow_private.
-Bestaande lijn, hoogtes en tijden blijven behouden. Geen wijziging van
-rekenbeleid of standaardtoestemming. Synthetische testbestanden gebruikt;
-persoonlijke routebestanden zijn niet in de tests gewijzigd.
-Zes handleidingen in staand A4, elk 47 pagina's en 33 hoofdstukken. Alle pagina's
-gerenderd; paginaformaat, tekstgrenzen en hoofdstukverwijzingen gecontroleerd.
-Nederlandse paginavellen en de uitvoerigste/nieuwe hoofdstukken van alle talen
-visueel beoordeeld. Nieuwe versiemetadata en vertalingen aanwezig.
-Aanvullende exportcontrole in zes talen: knoppen van 143 x 52 naar 102 x 28
-logische pixels in de testomgeving. Drie exportacties en annuleren werken;
-geometrie en instellingen blijven behouden.
+Interface checks cover import, statistics, segment connections, via points,
+access review, separate activity/timing settings, proposal cancellation and
+acceptance, undo, manual editing during stalled downloads, stale responses,
+offline road indexing, visible progress, stopping and retained original files.
+Only synthetic test data is used in automated checks; no real account uploads.
 
-Lokale export naar GPX, TCX-koers en KML toegevoegd. Negen nieuwe automatische
-tests: teruglezen met behoud van geometrie/hoogtes/routedelen, oplopende TCX-
-tijden en gekozen gemiddelde, ontbrekende hoogtes, coördinaatvolgorde, opname-
-gaten, ongeldige gegevens, geen persoonlijke metadata, niet overschrijven,
-rollback bij een conflicterend rapport en passende bestandsextensie.
-TCX en KML onafhankelijk gevalideerd met officiële Garmin- en OGC-XML-schema's.
-Zes talen met echte Tk-bediening getest: alle drie formaten opslaan, TCX via
-kalender/tijd/snelheid, ontbrekende tijden, annuleren, gewijzigde route blokkeren,
-voorstel eerst beoordelen. Geen upload of wijziging van de bewerkbare route.
-Geen echte accountuploads of navigatietoestellen getest.
-Technische referenties:
-https://www8.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd
-https://developers.google.com/kml/documentation/kmlreference
-https://schemas.opengis.net/kml/2.2.0/ogckml22.xsd
+Installer checks
+Inno Setup 7.1.1 is pinned by SHA-256 and checked for a valid Pyrsys B.V. signature.
+Tests cover first install, refusal while the program file is locked, reinstallation,
+byte-for-byte preservation of synthetic routes/edits/maps/preferences, uninstall,
+removal of this installation's task and retention of another copy's task.
+The user's existing installations are not used as installer test targets.
 
-RouteRefit 0.5.14 Bèta - validatie 2 november 2026
+Documentation and privacy checks
+Six manuals contain 47 portrait A4 pages and 33 chapters each. All pages are
+rendered and checked for text bounds; changed pages are visually reviewed.
+Only approved synthetic examples and screenshots are included. Source and Windows
+archives are checked against the reviewed data manifest. Source hashes must match
+the exact build input. These checks are not a general-purpose secret scanner.
+Personal routes, edits, maps and settings are excluded from public downloads.
 
-383 automatische tests geslaagd. Nieuwe controles: zes activiteiten, migratie
-van oude instellingen, toegangshiërarchie, richtingen, gravelondergrond,
-no/only-afslagrelaties, uitzonderingen, via-wegen en aankomstcontext over
-hoofdpunten heen. Index/crop behoudt relaties. Wegdekking: 1.500 willekeurige
-segmenten vergeleken met de oorspronkelijke volledige rechthoekcontrole.
-
-Echte Tk-bediening in zes talen: zes activiteiten en eigen snelheid bewaren
-en heropenen; drie navigatieknoppen; exportgeometrie, ontbrekende tijden,
-annuleren en officiële browserhandoff. Browseropening is gemockt; er is geen
-echte accountupload uitgevoerd en geen navigatietoestel getest.
-Regressies: handmatig verder na overnemen, tijdschema behoudt geometrie offline,
-annuleren/overnemen/ongedaan maken en opslaan/heropenen. Lokale uitlijning plus
-afzonderlijke wegdownload: accepteren, stoppen, route wisselen, gedeeltelijke
-dekking en sluiten. Geen nieuwe automatische aftel-/herhaalcyclus toegevoegd.
-
-Geïsoleerde lokale proef op een bestaande route (19 km, 10.525 punten), met
-netwerk geblokkeerd: 0.5.13 11,02 / 9,60 s; 0.5.14 5,01 / 5,00 s.
-Onafhankelijke vergelijking met de vrijgegeven 0.5.13-broncode: 8,27 versus
-5,50 s. Lijn, hoogtes, tijden, hoofdpunten en zes problemen hebben identieke
-controlesommen. De algemene melding over niet-verwerkte afslagrelaties is
-vervangen door gerichte verwerking. Dit is een gedeeltelijk lokaal voorstel;
-externe downloadtijd is niet inbegrepen en de winst geldt niet voor elke route.
-
-Zes handleidingen: elk 46 pagina's. Nieuwe hoofdstukken 6 en 32 in alle talen
-gerenderd en visueel gecontroleerd; versie/inhoudsopgave en bestaande opmaak
-behouden. Schermafdrukken van oudere bediening zijn als 0.5.5 aangeduid.
-Publieke broncode en Windows-uitgave bevatten geen eigen routes of kaartcache.
-
-RouteRefit 0.5.13 beta - validation, 2 November 2026
-
-368 automated tests passed, including unresolved alignment review after switching
-to manual editing. Real Tk tests passed in all six languages for accepting an
-automatic proposal, two consecutive manual edits, cancel/accept/undo, visible
-control points, geometry-preserving timing with and without local road data,
-continued individual-point editing, and save/reopen with times and editing mode.
-The tests fail if timing invokes global alignment, snapping or road downloads.
-Existing profile/settings UI tests passed in all six languages. Local-first
-download lifecycle tests passed for accept, stop, route switch, partial data and
-close: background downloads do not replace an accepted route.
-
-The changed manual chapters 9, 10 and 18 were rendered and visually reviewed
-in all six languages. Each guide retains 45 pages. No routing engine, provider,
-package importer, scheduler or resource-governor change is included in 0.5.13.
-The performance measurements below belong to 0.5.12 and were not repeated.
-
-Previous release validation: RouteRefit 0.5.12 beta
-
-367 automated tests passed. New coverage: custom polygon validation, no route/name
-in extraction payload, single supplier job with bounded polling and manual resume,
-cancel/failure preserves active package, compact/legacy incremental compatibility,
-background default-off, registration failure, stop, dead-helper detection and no
-retry loop, and resource scheduling under competing load followed by recovery.
-
-Real Tk package and custom-area tests passed in all six languages: rectangle and
-polygon drawing, undo/clear, queued selection, controls visible, background option
-off, cancel, local alignment and route/edit/settings preservation. NL/DE windows
-visually checked. PDF chapters 28-31 rendered/reviewed in all six languages; all
-guides have 45 pages. Existing 0.5.5 demonstration captures remain explicitly old.
-
-Same public Duesseldorf PBF (217055011 bytes), local processing only:
-- 0.5.11: 571.729 seconds, database 1298640896 bytes.
-- Complete 0.5.12: 265.135 seconds, database 926429184 bytes.
-- About 54% less processing time and 29% less disk space on this machine.
-- Earlier compact-import intermediate run: 178.485 seconds. This is not used as
-  the released-version speed claim. Timing varies with workload and machine.
-- Final run: 257 CPU samples, 12 in reduced-priority mode; mean competing CPU
-  load 8.3%. Database cache 128 MB; parallel native readers and one SQLite writer.
-All 19517670 nodes (coordinates/tags), 627236 ways (refs/tags), 3646465 way-node
-links, 8608 restrictions, 16726 relation-way links and all road bounds matched
-the old import exactly, using the final implementation database. Per-node source
-timestamps are not duplicated in compact packages; source freshness is retained
-at package level, and way timestamps are retained. Incremental tests include a
-new road using previously non-road nodes, deletion and changed coordinates.
-
-Live, deliberately public Bonn custom polygon: 12.5 km2, 3024798 download bytes,
-15.688 seconds including supplier preparation and local import; 8086 ways.
-One optional extraction job; no personal route or local area name transmitted.
-Supplier timings are not guaranteed. Custom updates are manual small full extracts.
-
-Background execution verified with native UI closed and an independent process
-finishing a synthetic package install. A temporary Windows task registered with
-two triggers, Limited privileges, WakeToRun false, IgnoreNew, then was removed.
-No user background opt-in was activated by these tests. Frozen Windows EXE tested
-headlessly against the public Liechtenstein package: unchanged check 0.803 seconds,
-zero PBF bytes (small metadata only), no route workspace loaded and no scheduler
-task created. Full Windows start/install validation is recorded separately.
-
-Routes and recorded activities were never uploaded. Public archives contain no
-personal routes, map caches, package databases or background jobs. Existing
-installations remain in place. Windows code signing and third-party activity
-imports have not been validated by this update.
-
-Earlier-version validation follows:
------------------------------------
-RouteRefit 0.5.11 beta - validation, 2 November 2026
-
-346 automated tests passed, including region-package integrity, cancellation,
-failed-update preservation, unchanged checks, corrupt-database rejection,
-incremental node/way/restriction changes and combined border-region coverage.
-Real Tk package tests passed in all six languages: multiple region selection
-survives filtering, sequential install, stop, offline alignment, visible controls,
-and unchanged route/edit/settings state. Existing local-first UI tests also pass
-in all six languages (success, failure, explicit supplement, stale jobs and undo).
-
-A real daily update for the small public Liechtenstein test region matched the
-current full extract's highway IDs, references, tags, used node coordinates/tags,
-and restriction relations exactly. Initial preparation: 16.914 s / 3,490,079 B.
-Daily difference: 1.042 s / 110,170 B. Already-current check: 0.409 s without a new
-region file. Small polygon/state/checksum metadata transfers are additional.
-
-The province selected locally for a private copy of a 19.01 km / 10,525-point
-route downloaded 100,861,207 bytes and prepared in 225.015 s. Later local proposals
-appeared in 5.311 and 5.892 s, identical on repeat. This route's search corridor
-crosses the package boundary, so these proposals correctly remain partial. This
-is not a benchmark of two identical complete alignments. Recorded UI heartbeat
-gap was at most 0.634 s. The test route and its settings were unchanged. No personal
-GPX or route coordinates were sent to either provider. Network calls during the
-alignment-only test were blocked; an incomplete corridor may normally request
-still-missing areas from Overpass in the background.
-
-New and changed PDF pages were rendered and visually reviewed in six languages.
-Package screens were inspected at the current Windows display scaling; controls
-remain visible. Help / About now names Marco Delnoij, GPL-3.0-only (2026),
-OpenStreetMap contributors and ODbL 1.0 with the copyright link.
-
-Windows executable startup passed: title RouteRefit 0.5.11 Bèta, responding.
-Windows source/ZIP hygiene gates passed on the packaged artifacts. No claim of testing a second
-Windows computer, every region or every border is made. Initial package preparation
-may take minutes and uses substantial disk space; updates require space for a safe
-copy. Full refresh after large/old changes is explicit, not automatic.
-
-Earlier release validation follows for context:
-
-RouteRefit 0.5.10 beta — validation, 2 November 2026
-
-334 automated tests passed.
-UI local-first and download-stop suites passed in all six languages.
-Five lifecycle cases passed: accept, stop, route switch, partial failure and close.
-A real-time UI test delayed a valid response for 26.5 seconds: the first synthetic
-local proposal appeared after 0.138 s; the download remained active beyond 20 s,
-finished after 27.273 s including subsequent distinct tile requests, and became
-usable only via explicit Update proposal. No duplicate requests or route changes.
-The tiny synthetic preview timing is not a benchmark of a personal route.
-
-A live diagnostic on a small public Paris box returned 22 ways/16,391 bytes after
-26.493 s. A subsequent check through the modified download_map/background budget
-returned the same road count/byte count in one request after 37.459 s. No personal
-route coordinates were used. These results show variable external latency and
-that the revised background path can use valid responses beyond the old 20 s limit.
-They do not establish general service availability or a faster external service.
-
-Background-only limits: 45 s/request, 60 s total, server execution setting 25 s.
-Foreground limits remain 20 s/request, 30 s total, server setting 15 s.
-Tests cover total budget, bounded individual requests, immediate stop, late-response
-rejection, typed failure causes, privacy-safe error details and unchanged caching.
-The local-first algorithm is unchanged. No new hosts, accounts or telemetry added.
-
---- Previous version validation (historical) ---
-
-RouteRefit 0.5.9 beta — validation, 2 November 2026
-
-328 automated tests passed.
-Six real Tk UI suites passed in all six interface languages:
-- Local-first proposal before the service returns; explicit supplement after download.
-- Actual service failures: no repeated countdown/request on any download path.
-- Partial/no local coverage, accept/cancel/undo and unresolved section preservation.
-- Offline persistent road index and complete-cache operation.
-- Progress animation, elapsed time and stop.
-- Direct automatic/manual modes and stale-result cancellation.
-Five additional lifecycle scenarios passed: accept while downloading, stop,
-route switch, partial download failure followed by local-only supplement, and close.
-
-Comparative measurement on identical private route/cache copies:
-0.5.8 first partial proposal: 22.713 s.
-0.5.9 first partial proposal: 2.344 s.
-Reduction: 20.369 s, 89.7%. Proposed coordinates, elevations and timestamps match.
-Simulated service reply after 25 s; real 20 s network limit unchanged.
-0.5.9 observed for 70 s: one request, no repeated countdown, no unsolicited proposal
-replacement, late reply ignored, source/working route/settings/cache unchanged.
-Background wait ended after 20.115 s; longest observed UI heartbeat gap 0.431 s.
-No external connections were used by this private comparison.
-The result concerns first partial preview, not complete alignment or all routes.
-
-Build and distribution privacy checks run on the clean source/application/archive.
-The full unit suite was run separately after UI fixtures were cleaned up; the
-privacy guard correctly rejected temporary UI GPX fixtures during a parallel run.
-No guard exception or manifest relaxation was added.
-Existing PDF manuals retained. See UPDATE-0.5.9.txt. Windows build unsigned.
-
---- Previous version validation (historical) ---
-
-RouteRefit 0.5.8 beta — validation, 2 November 2026
-
-323 automated tests passed.
-Four UI suites passed in all six interface languages:
-- Actual HTTP 503 through get-map, refresh, full alignment and partial fallback:
-  one request per failed action, no automatic countdown/retry, cooldown retained.
-- Stopped status survives a queued earlier progress update.
-- Failed refresh retains loaded map; source bytes, editable geometry and settings
-  preserved; partial proposal can be accepted and undone.
-- Partial coverage and no-cache handling, offline index reuse and restart,
-  progress animation, elapsed time, cancellation and late-result rejection.
-
-Unit coverage includes HTTP 429/502/503/504/509, network failure and timeout,
-resource errors with no automatic subdivision, incomplete XML never cached,
-complete tiles retained after a failure, later manual resume only downloads
-missing tiles, refresh failure keeps old tiles, cache works during cooldown,
-default request deadlines on legacy call paths, cancellation and late replies.
-The former automatic retry tests were replaced by first-failure-stop tests.
-
-No live personal route uploads or new providers were used for these tests.
-The external service can still be slow or unavailable. Network waiting is bounded;
-local indexing and calculation take additional time. Existing 0.5.7 CPU speedups
-remain unchanged. Historical validation below documents that separate work.
-
-See UPDATE-0.5.8.txt. Windows build unsigned.
-
---- Earlier 0.5.7 validation (historical) ---
-
-RouteRefit 0.5.7 beta — validation, 1 November 2026
-
-325 automated tests passed.
-Six-language UI checks passed for:
-- Partial offline proposals: warning visible, cancel/accept/undo, unresolved sections retained.
-- No usable coverage: information message, editable route retained, no false success.
-- Complete cached coverage: offline operation, restart/reuse, preview/cancel/accept/undo.
-- Progress: animated indicator, elapsed time and stop; late results ignored.
-- Direct alignment modes: anchor editing, full detour replacement, timing, stale proposal cancellation.
-
-New tests cover network wait deadlines, cancellation during an active request,
-single in-flight socket worker, late replies, cooldown across new attempts,
-completed tile reuse after partial failure, exact coverage including holes,
-and preservation of missing-section geometry, elevations and timestamps.
-CPU optimizations retain access/direction checks and invalidate changed road content.
-
-Local diagnostic: 10,605 source points, 245 anchors, 26,206 road nodes, 3,710 ways.
-0.5.6 baseline: 151.981 s. Three prototype runs: 1.052, 1.036, 1.461 s.
-Final 0.5.7 engine run: 1.306 s; exact match with baseline geometry, elevations,
-times, original XML, controls, warnings and issues.
-This is a deliberately partial-road recovery diagnostic, without network/UI;
-it is NOT a measurement of full end-to-end alignment or a universal speed factor.
-
-Live test of a small public demonstration area (no personal route coordinates):
-service did not finish; foreground wait ended after 20.005 seconds as designed.
-This does not demonstrate current availability of the external road service.
-The online budget is 30 s total; local indexing and computation are additional.
-No road upload providers, account connections or live export uploads added.
-
-Existing 0.5.5 manuals retained. See UPDATE-0.5.6.txt and UPDATE-0.5.7.txt.
-Windows build unsigned. Tests do not guarantee every route or device works.
-
-
+Outstanding
+Testing on a separate Windows 11 PC without Python, broader real-device
+navigation tests, and actual service imports remain outstanding. Windows 11 is
+the target platform; the hosted build runner uses Windows Server 2025 and does
+not substitute for a separate real Windows 11 user test. No SignPath acceptance,
+certificate, signed release or independent reviewer is claimed.

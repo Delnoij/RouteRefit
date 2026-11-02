@@ -1,59 +1,48 @@
-# Optionele gratis ondertekening — nog geen aanvraag
+# SignPath preparation - no application submitted
 
-De Windows-build van RouteRefit 0.5.15 Bèta is niet digitaal ondertekend.
-Een controlegetal bewijst bestandsintegriteit, geen geverifieerde uitgever.
+RouteRefit 0.5.15 Beta is unsigned. Checksums establish file integrity, not a
+verified publisher. SignPath Foundation offers free signing to accepted open-source
+projects under its terms; acceptance of a new project is not guaranteed.
 
-SignPath Foundation biedt gratis ondertekening aan toegelaten opensourceprojecten.
-Een actieve, gedocumenteerde openbare uitgave en naleving van hun voorwaarden
-zijn vereist. Toelating van dit nieuwe project is niet gegarandeerd.
+## Sequence
 
-Voorgestelde volgorde:
+1. Publish reviewed GPL-3.0-only source in [Delnoij/RouteRefit](https://github.com/Delnoij/RouteRefit).
+2. Run the GitHub Windows workflow, review its exact artifacts and publish a clearly
+   labelled beta. Local builds alone do not establish hosted build provenance.
+3. Gather real practical testing and project history. Apply using the actual
+   repository, run, release, maintainer roles and privacy policy. Do not invent usage.
+4. Only after acceptance, configure signing, artifact restrictions and deliberate
+   approval for every release. Store credentials in protected settings, never source.
+5. Verify signatures, timestamps and provenance. Recompute checksums after signing.
 
-1. Publiceer de gecontroleerde broncode onder GPL-3.0-only en laat de GitHub-workflow
-   de tests en Windows-build uitvoeren. De openbare repository is
-   [Delnoij/RouteRefit](https://github.com/Delnoij/RouteRefit).
-2. Controleer het exacte bouwresultaat en geef een duidelijke bèta-uitgave vrij.
-3. Vraag toelating aan met de echte repository, bouwrun, release, onderhoudsrollen
-   en privacybeleid. Gebruik uitsluitend echte gebruikscijfers en testresultaten.
-4. Configureer pas na toelating de koppeling en handmatige goedkeuring van elke
-   ondertekening. Bewaar geheimen in de accountinstellingen, nooit in broncode.
-5. Controleer de handtekening, tijdstempel en herkomst vóór publicatie. Maak nieuwe
-   controlegetallen voor de ondertekende downloads.
+The current workflow produces unsigned files. No SignPath signing integration is
+active. Responsibilities are documented in [CODE-SIGNING-POLICY.md](CODE-SIGNING-POLICY.md).
 
-De huidige workflow bouwt ongetekende bestanden; een werkende SignPath-koppeling
-is nog niet ingericht. CODE-SIGNING-POLICY.md beschrijft de verantwoordelijkheden.
+## Prepared
 
-## Concrete stand van zaken voor de eerste aanvraag
+- GPL-3.0-only licence and separate dependency notices.
+- Complete source, tests, pinned packages and a verified installer compiler.
+- Empty route catalogue and reviewed synthetic demonstration assets.
+- Per-user installer with privacy disclosure, optional actions and an uninstaller.
+- Tests for installation, locked-file refusal, updates, retained user data,
+  uninstallation and isolation from other installations' scheduled tasks.
+- Public code signing policy linked from the README and release notes.
 
-Lokaal voorbereid en controleerbaar:
-- GPL-3.0-only, afhankelijkheden en afzonderlijke licentievermeldingen.
-- Volledige bron met tests, vastgelegde pakketten en gecontroleerde Inno-bouwer.
-- Lege routecatalogus; alleen vooraf beoordeelde demonstratiegegevens.
-- Windows-installer met privacyuitleg, optionele handelingen en verwijderfunctie.
-- Installercontrole: eerste installatie, weigeren bij een geopend bestand,
-  opnieuw installeren, gegevens behouden, verwijderen en taken van andere kopieën behouden.
-- Code signing policy is gelinkt vanaf README en RELEASE-NOTES.
+## Verify before applying
 
-Nog feitelijk vast te stellen vóór een aanvraag:
-- De echte openbare repository en downloadpagina, met een geslaagde GitHub-run
-  die precies de aangeboden installer oplevert. Lokale bestanden bewijzen dit niet.
-- MFA op GitHub en later SignPath; daadwerkelijke branchbescherming en bevoegdheden.
-- Een aparte Windows 11-pc-test en aantoonbare gebruikservaring of onafhankelijke
-  review. Het project heeft nog geen aangetoonde openbare reputatie.
-- Beoordeling van netwerktoestemming: zichtbare kaartbeelden kunnen automatisch
-  online worden opgehaald. Er is nog geen algemene offline-schakelaar in de app.
-  De installatie toont dit gedrag, maar het voldoen aan een eventuele eis voor
-  uitschakelbare netwerkfuncties moet met SignPath worden vastgesteld of verbeterd.
-- Acceptatie door SignPath, metadatarestricties voor eigen bestanden en een
-  werkende volgorde voor ondertekenen van app, verwijderprogramma en installer.
+- The actual release files must match a successful hosted build and its source revision.
+- MFA on GitHub and later SignPath, branch protection and effective permissions.
+- Testing on a separate Windows 11 PC and genuine usage history or independent review.
+  No established public reputation or independent reviewer is currently claimed.
+- Network-consent requirements: visible map images can be fetched automatically,
+  and the app has no global offline switch. Disclosure alone does not establish
+  compliance with a signing provider's requirements; review or improve controls.
+- SignPath acceptance, restrictions to the project's own files, and correct order
+  for signing the application, uninstaller and enclosing installer.
 
-Publiceer geen acceptatielogo of sponsorvermelding vooraf. Voeg de door SignPath
-gevraagde credit pas na daadwerkelijke toelating toe. Geen gebruikersaantallen,
-reviews, MFA-status of CI-resultaten invullen die niet zijn geverifieerd.
+Do not display acceptance or sponsorship credits before approval. Add required
+credits only after acceptance. Do not claim unverified users, reviews, MFA or CI results.
 
-Officiële bronnen, gecontroleerd op 2 november 2026:
-- https://signpath.org/
-- https://signpath.org/terms.html
-
-Dit is een mogelijke vervolgstap, geen ingediende aanvraag of toezegging van gratis
-ondertekening. Een digitale handtekening garandeert ook geen afwezigheid van fouten.
+Official sources, checked 2 November 2026: https://signpath.org/ and
+https://signpath.org/terms.html . This is a possible next step, not an application,
+promise of free signing or guarantee that signed software is free of defects.

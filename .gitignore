@@ -27,6 +27,7 @@ Regios/
 Vakken/
 *.controle.json
 !examples/*
+!examples/**
 
 release/
 *.pfx

@@ -2,7 +2,7 @@ RouteRefit - installatie en privacy / installation and privacy
 
 NEDERLANDS
 
-RouteRefit is een gratis lokaal programma van Marco Delnoij (EOSfoto), GPL-3.0-only.
+RouteRefit is een gratis lokaal programma van Marco Delnoij, GPL-3.0-only.
 De installer plaatst het programma, handleidingen en een verwijderprogramma voor
 de huidige Windows-gebruiker. Een bureaubladsnelkoppeling is optioneel.
 Er worden geen kaartpakketten, telemetrie, advertenties of extra programma's
@@ -31,7 +31,7 @@ Deze bèta is nog niet digitaal ondertekend. Er is nog geen SignPath-toelating.
 
 ENGLISH
 
-RouteRefit is a free local application by Marco Delnoij (EOSfoto), GPL-3.0-only.
+RouteRefit is a free local application by Marco Delnoij, GPL-3.0-only.
 Setup installs the application, manuals and uninstaller for the current user.
 A desktop shortcut is optional. No telemetry, advertisements, map packages or
 additional applications are installed. No automatic file associations,

@@ -177,8 +177,9 @@ def package():
     check_tree(application, manifest)
     output = ROOT / "release"
     output.mkdir(exist_ok=True)
-    dutch_manual = output / (name + "-handleiding-NL.pdf")
-    shutil.copy2(ROOT / "Handleidingen" / dutch_manual.name, dutch_manual)
+    standalone_manuals = [output / (name + "-handleiding-" + code + ".pdf") for code in ("EN", "NL")]
+    for manual in standalone_manuals:
+        shutil.copy2(ROOT / "Handleidingen" / manual.name, manual)
     source_zip = output / (name + "-broncode.zip")
     windows_zip = output / (name + "-Windows.zip")
     write_zip(
@@ -197,7 +198,7 @@ def package():
     check_archive(source_zip, manifest)
     check_archive(windows_zip, manifest)
     (output / "SHA256SUMS.txt").write_text(
-        "".join(digest(path) + "  " + path.name + "\n" for path in (windows_zip, source_zip, dutch_manual)),
+        "".join(digest(path) + "  " + path.name + "\n" for path in (windows_zip, source_zip, *standalone_manuals)),
         encoding="utf-8",
     )
     (output / "BUILD-INFO.json").write_text(

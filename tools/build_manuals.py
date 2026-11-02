@@ -107,7 +107,7 @@ def build():
             canvas.saveState()
             canvas.setFont('Guide',9)
             canvas.setFillColor(MUTED)
-            canvas.drawString(MARGIN,22,f'RouteRefit {localized_version} | {LANGUAGES[code]} | EOSfoto | GPL-3.0-only')
+            canvas.drawString(MARGIN,22,f'RouteRefit {localized_version} | {LANGUAGES[code]} | © 2026 Marco Delnoij | GPL-3.0-only')
             canvas.drawRightString(PAGE_WIDTH-MARGIN,22,str(doc.page))
             canvas.restoreState()
         flow=[Spacer(1,15),para(f'RouteRefit {localized_version}','cover'),para(meta['title'],'cover'),
@@ -132,7 +132,7 @@ def build():
                 if not path.is_file():raise ValueError('Missing reviewed screenshot: '+str(path))
                 flow.extend([PageBreak(),para(chapter['title'],'figure'),Screenshot(path,FOCUS.get(name)),para(meta['caption'],'caption')])
         filename=out/f'RouteRefit-{VERSION}-handleiding-{code.upper()}.pdf'
-        doc=GuideDoc(str(filename),pagesize=A4,leftMargin=MARGIN,rightMargin=MARGIN,topMargin=36,bottomMargin=42,title=f'RouteRefit {localized_version} - {meta["title"]}',author='EOSfoto')
+        doc=GuideDoc(str(filename),pagesize=A4,leftMargin=MARGIN,rightMargin=MARGIN,topMargin=36,bottomMargin=42,title=f'RouteRefit {localized_version} - {meta["title"]}',author='Marco Delnoij')
         doc.multiBuild(flow,onFirstPage=footer,onLaterPages=footer)
         print(filename.name)
 
