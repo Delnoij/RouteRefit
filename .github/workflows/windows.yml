@@ -1,0 +1,64 @@
+name: Windows tests and unsigned beta build
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-2025
+    timeout-minutes: 25
+    env:
+      PYTHONHASHSEED: '0'
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.13.12'
+      - name: Install locked dependencies with hash verification
+        run: python -m pip install --require-hashes -r requirements-windows.lock
+      - name: Check release source hygiene
+        run: python release_tools.py check
+      - name: Run regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Run UI smoke checks without network access
+        run: python tests/ui_smoke.py
+      - name: Check reviewed segment connections and replacement in six languages
+        run: python tests/ui_segment_join.py
+      - name: Check access review, undo and report in six languages
+        run: python tests/ui_access_review.py
+      - name: Check independent settings and proposal acceptance in six languages
+        run: python tests/ui_profile_settings.py
+      - name: Check editing during stalled downloads in six languages
+        run: python tests/ui_background_roads.py
+      - name: Check simple alignment workflow in six languages
+        run: python tests/ui_simple_alignment.py
+      - name: Check persistent offline road index in six languages
+        run: python tests/ui_road_index.py
+      - name: Check calculation feedback and cancellation in six languages
+        run: python tests/ui_alignment_progress.py
+      - name: Build unsigned Windows beta
+        run: python build_windows.py
+      - name: Package unsigned build and source provenance
+        run: python release_tools.py package
+      - name: Install pinned and signature-verified installer compiler
+        run: ./tools/install_inno.ps1
+      - name: Build unsigned per-user installer
+        run: python build_installer.py --compiler build/inno/ISCC.exe
+      - name: Check installation, update, uninstall and data preservation
+        run: ./tests/installer_smoke.ps1 -Installer (Get-ChildItem release/*-Setup.exe).FullName
+      - name: Store unsigned build for review
+        id: unsigned-build
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: RouteRefit-unsigned-review
+          path: release/*
+          if-no-files-found: error
+          retention-days: 30

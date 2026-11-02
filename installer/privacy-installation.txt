@@ -1,0 +1,52 @@
+RouteRefit - installatie en privacy / installation and privacy
+
+NEDERLANDS
+
+RouteRefit is een gratis lokaal programma van Marco Delnoij (EOSfoto), GPL-3.0-only.
+De installer plaatst het programma, handleidingen en een verwijderprogramma voor
+de huidige Windows-gebruiker. Een bureaubladsnelkoppeling is optioneel.
+Er worden geen kaartpakketten, telemetrie, advertenties of extra programma's
+geïnstalleerd. Bestandskoppelingen en achtergrondtaken worden niet automatisch
+ingeschakeld. Het programma start alleen als je dat zelf aankruist.
+
+Je routes, bewerkingen, kaarten en instellingen blijven lokaal. Tijdens het
+tonen van kaarten haalt RouteRefit ontbrekende kaartbeelden bij OpenStreetMap op.
+Bij uitlijnen of gekozen downloads kunnen ontbrekende wegen en geselecteerde
+gebieden worden aangevraagd bij Overpass, Geofabrik of SliceOSM. Die diensten
+zien het gevraagde gebied en verbindingsgegevens zoals je IP-adres. De volledige
+GPX, activiteitstijden en foto's worden niet automatisch geüpload. Online werken
+is niet anoniem. Met lokaal beschikbare wegen kun je ook zonder internet bewerken.
+Zie PRIVACY.md voor alle diensten en hun privacybeleid.
+
+Downloaden na sluiten staat standaard uit. Alleen jouw expliciete opt-in in
+RouteRefit maakt hiervoor een Windows-taak. Deze installer schakelt dat niet in.
+
+Updates via deze installer gebruiken dezelfde programmamap. Mijn GPX, Kaarten
+en voorkeuren.json worden niet overschreven of bij verwijderen gewist. Je kunt
+bij de eerste installatie ook je bestaande RouteRefit-map kiezen. Sla eerst je
+werk op en sluit de oude versie en haar wegdownloads. De installer verplaatst
+geen gegevens tussen verschillende mappen. Bewaar zelf een reservekopie.
+
+Deze bèta is nog niet digitaal ondertekend. Er is nog geen SignPath-toelating.
+
+ENGLISH
+
+RouteRefit is a free local application by Marco Delnoij (EOSfoto), GPL-3.0-only.
+Setup installs the application, manuals and uninstaller for the current user.
+A desktop shortcut is optional. No telemetry, advertisements, map packages or
+additional applications are installed. No automatic file associations,
+background tasks or application launch are enabled.
+
+Route files and editing remain local. Viewing maps requests missing map images
+from OpenStreetMap. Alignment and selected downloads can request road/area data
+from Overpass, Geofabrik or SliceOSM. Providers see the area and connection data,
+including the IP address. Complete GPX files, activity times and photos are not
+automatically uploaded. Online use is not anonymous. Editing can work offline
+with locally available road data. See PRIVACY.md for providers and policies.
+
+Continuing downloads after closing requires a separate explicit opt-in in the
+application. Setup does not enable it. Updates reuse the installation folder.
+Personal routes, maps and preferences are retained during updates and uninstall.
+An existing RouteRefit folder may be selected; close its program and downloads
+first. Setup does not move data between folders. Keep your own backup.
+This beta is unsigned and has not been accepted by SignPath.

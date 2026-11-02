@@ -1,0 +1,1 @@
+Synthetische demonstratieroute over openbare OSM-wegen in Valkenburg. Geen persoonlijke opname. Tijden en hoogtes zijn illustratief. Het aandachtspunt is een demonstratie, geen vastgestelde wegfout. OSM-geometrie: OpenStreetMap-bijdragers, ODbL.

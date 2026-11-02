@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="GPX-werkbank synthetic test data" xmlns="http://www.topografix.com/GPX/1/1"><trk><name>Demo · synthetic points</name><type>cycling</type><trkseg>
+<trkpt lat="50.0000" lon="6.0000"><ele>100</ele><time>2026-01-01T08:00:00Z</time></trkpt>
+<trkpt lat="50.0010" lon="6.0010"><ele>120</ele><time>2026-01-01T08:02:00Z</time></trkpt>
+<trkpt lat="50.0020" lon="6.0020"><ele>110</ele><time>2026-01-01T08:04:00Z</time></trkpt>
+</trkseg></trk></gpx>

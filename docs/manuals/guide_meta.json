@@ -1,0 +1,68 @@
+{
+  "nl": {
+    "title": "Handleiding stap voor stap",
+    "intro": "Van je eerste routebestand tot een gecontroleerde GPX-export. Je hoeft geen ervaring met routebewerking te hebben. Werk de genummerde stappen rustig af; de blauwe woorden verwijzen naar echte knoppen en menu’s.",
+    "mouse": "Eén klik: druk de linkermuisknop kort in. Dubbelklik: klik twee keer snel achter elkaar. Slepen: houd links ingedrukt, beweeg en laat los. Rechts klikken opent extra keuzen. Een hoofdpunt is niet hetzelfde als een waypoint.",
+    "quick": "Snel beginnen: open een route (hoofdstuk 03), kies een activiteit (06), lijn automatisch (08) of handmatig (10) uit, beoordeel het voorstel (09) en sla apart op (22). Gebruik de inhoudsopgave voor andere taken.",
+    "zoom": "De inhoudsopgave en PDF-bladwijzers zijn aanklikbaar. Vergroot de PDF naar 150% of 200% om kleine schermlabels te bestuderen. Instellingen worden ook vergroot afgebeeld. Standaardvensters voor bestanden volgen soms de Windows-taal.",
+    "demo": "Alle afbeeldingen gebruiken dezelfde synthetische demonstratieroute. Ze bevatten geen persoonlijke opnamen. Plaatsen, getallen en tijden zijn voorbeelden. In het documentatievenster staat daarom Handleiding in de titel.",
+    "contents": "Vind de handeling die je zoekt",
+    "note": "Goed om te weten:",
+    "caption": "Echte programmaweergave met demonstratiegegevens. Sommige beelden tonen een vergroot detail. Voortgang is getoond met een testberekening. Kaart: © OpenStreetMap-bijdragers, ODbL. Knoppen en functies horen bij RouteRefit 0.5.5 Bèta."
+  },
+  "en": {
+    "title": "Step-by-step user guide",
+    "intro": "From your first route file to a reviewed GPX export. No route-editing experience is required. Follow the numbered steps at your own pace; blue words refer to real buttons and menus.",
+    "mouse": "Single click: briefly press the left mouse button. Double-click: click twice quickly. Drag: hold the left button, move and release. Right-click opens extra choices. A control point is not the same as a waypoint.",
+    "quick": "Quick start: open a route (chapter 03), choose activity (06), align automatically (08) or manually (10), review the proposal (09) and save separately (22). Use the contents for other tasks.",
+    "zoom": "The contents and PDF bookmarks are clickable. Zoom the PDF to 150% or 200% to study small screen labels. Settings are also shown as enlarged details. Standard file dialogs may use the Windows language.",
+    "demo": "All images use the same synthetic demonstration route. They contain no personal recordings. Places, values and times are examples. The documentation window is therefore marked as a guide in its title.",
+    "contents": "Find the task you need",
+    "note": "Good to know:",
+    "caption": "Actual application view using demonstration data. Some images show an enlarged detail. Progress is illustrated with a test calculation. Map: © OpenStreetMap contributors, ODbL. Controls and features are from RouteRefit 0.5.5 Beta."
+  },
+  "de": {
+    "title": "Schritt-für-Schritt-Anleitung",
+    "intro": "Von der ersten Routendatei bis zum geprüften GPX-Export. Erfahrung mit Routenbearbeitung ist nicht nötig. Folge den nummerierten Schritten in Ruhe; blaue Wörter bezeichnen echte Tasten und Menüs.",
+    "mouse": "Ein Klick: linke Maustaste kurz drücken. Doppelklick: zweimal schnell klicken. Ziehen: links gedrückt halten, bewegen und loslassen. Rechtsklick öffnet weitere Optionen. Ein Hauptpunkt ist nicht dasselbe wie ein Wegpunkt.",
+    "quick": "Schnellstart: Route öffnen (Kapitel 03), Aktivität wählen (06), automatisch (08) oder manuell (10) ausrichten, Vorschlag prüfen (09) und separat speichern (22). Weitere Aufgaben findest du im Inhaltsverzeichnis.",
+    "zoom": "Inhaltsverzeichnis und PDF-Lesezeichen sind anklickbar. Vergrößere die PDF auf 150% oder 200%, um kleine Beschriftungen zu lesen. Einstellungen werden auch als vergrößerte Details gezeigt. Standard-Dateidialoge können die Windows-Sprache verwenden.",
+    "demo": "Alle Bilder verwenden dieselbe synthetische Demonstrationsroute. Sie enthalten keine persönlichen Aufzeichnungen. Orte, Werte und Zeiten sind Beispiele. Das Dokumentationsfenster ist deshalb im Titel als Anleitung gekennzeichnet.",
+    "contents": "Die gewünschte Aufgabe finden",
+    "note": "Gut zu wissen:",
+    "caption": "Echte Programmansicht mit Demonstrationsdaten, teilweise als vergrößertes Detail. Fortschritt wird mit einer Testberechnung gezeigt. Karte: © OpenStreetMap-Mitwirkende, ODbL. Bedienung und Funktionen entsprechen RouteRefit 0.5.5 Beta."
+  },
+  "fr": {
+    "title": "Guide utilisateur pas à pas",
+    "intro": "Du premier fichier au GPX vérifié et exporté. Aucune expérience d’édition d’itinéraires n’est nécessaire. Suivez tranquillement les étapes numérotées ; les mots bleus désignent de vrais boutons et menus.",
+    "mouse": "Clic : appuyez brièvement sur le bouton gauche. Double-clic : deux clics rapides. Glisser : gardez le bouton gauche enfoncé, déplacez puis relâchez. Le clic droit ouvre d’autres choix. Un point de contrôle n’est pas un waypoint.",
+    "quick": "Départ rapide : ouvrez un itinéraire (chapitre 03), choisissez le activité (06), alignez automatiquement (08) ou manuellement (10), vérifiez (09) et enregistrez séparément (22). Consultez le sommaire pour les autres tâches.",
+    "zoom": "Le sommaire et les signets PDF sont cliquables. Agrandissez le PDF à 150% ou 200% pour lire les petits libellés. Les réglages sont aussi montrés en détails agrandis. Les boîtes de fichiers standard peuvent suivre la langue de Windows.",
+    "demo": "Toutes les images utilisent le même itinéraire synthétique. Aucun enregistrement personnel n’y figure. Lieux, valeurs et heures sont des exemples. La fenêtre de documentation est donc identifiée comme manuel dans son titre.",
+    "contents": "Trouver l’action souhaitée",
+    "note": "À savoir :",
+    "caption": "Vue réelle du programme avec données de démonstration, parfois en détail agrandi. La progression utilise un calcul de test. Carte : © contributeurs OpenStreetMap, ODbL. Commandes et fonctions de RouteRefit 0.5.5 Bêta."
+  },
+  "es": {
+    "title": "Manual paso a paso",
+    "intro": "Desde tu primer archivo hasta un GPX revisado y exportado. No necesitas experiencia editando rutas. Sigue los pasos numerados con calma; las palabras azules corresponden a botones y menús reales.",
+    "mouse": "Un clic: pulsa brevemente el botón izquierdo. Doble clic: dos clics rápidos. Arrastrar: mantén pulsado el izquierdo, mueve y suelta. El clic derecho abre más opciones. Un punto de control no es un waypoint.",
+    "quick": "Inicio rápido: abre una ruta (capítulo 03), elige actividad (06), alinea automáticamente (08) o manualmente (10), revisa (09) y guarda por separado (22). Busca otras tareas en el índice.",
+    "zoom": "El índice y los marcadores PDF son enlaces. Amplía el PDF al 150% o 200% para leer etiquetas pequeñas. Los ajustes también se muestran en detalles ampliados. Los diálogos estándar de archivos pueden usar el idioma de Windows.",
+    "demo": "Todas las imágenes usan la misma ruta sintética de demostración. No contienen grabaciones personales. Lugares, cifras y tiempos son ejemplos. La ventana de documentación se identifica como manual en su título.",
+    "contents": "Encuentra la acción que buscas",
+    "note": "Conviene saber:",
+    "caption": "Vista real del programa con datos de demostración; algunas imágenes amplían un detalle. El progreso usa un cálculo de prueba. Mapa: © colaboradores de OpenStreetMap, ODbL. Controles y funciones de RouteRefit 0.5.5 Beta."
+  },
+  "pt": {
+    "title": "Manual passo a passo",
+    "intro": "Do primeiro ficheiro até um GPX revisto e exportado. Não precisa de experiência a editar percursos. Siga os passos numerados com calma; as palavras azuis correspondem a botões e menus reais.",
+    "mouse": "Um clique: prima brevemente o botão esquerdo. Duplo clique: dois cliques rápidos. Arrastar: mantenha o esquerdo premido, mova e solte. O botão direito abre mais opções. Um ponto de controlo não é um waypoint.",
+    "quick": "Início rápido: abra um percurso (capítulo 03), escolha atividade (06), alinhe automaticamente (08) ou manualmente (10), reveja (09) e guarde separadamente (22). Procure outras tarefas no índice.",
+    "zoom": "O índice e os marcadores PDF são ligações. Amplie o PDF para 150% ou 200% para ler legendas pequenas. As definições também são mostradas em detalhes ampliados. As janelas padrão de ficheiros podem utilizar o idioma do Windows.",
+    "demo": "Todas as imagens utilizam o mesmo percurso sintético de demonstração. Não contêm gravações pessoais. Locais, valores e tempos são exemplos. A janela de documentação identifica-se como manual no título.",
+    "contents": "Encontre a ação que procura",
+    "note": "Convém saber:",
+    "caption": "Vista real do programa com dados de demonstração; algumas imagens ampliam um detalhe. O progresso utiliza um cálculo de teste. Mapa: © contribuidores do OpenStreetMap, ODbL. Controlos e funções do RouteRefit 0.5.5 Beta."
+  }
+}

@@ -1,0 +1,2276 @@
+{
+  "nl": [
+    {
+      "id": 1,
+      "title": "Installeren en veilig beginnen",
+      "steps": [
+        "Start RouteRefit-0.5.15-beta-Setup.exe. Lees de licentie en privacyuitleg en kies de programmamap. Python is niet nodig. Start daarna RouteRefit via het Startmenu.",
+        "Updates met de installer gebruiken dezelfde map en behouden Mijn GPX, Kaarten en voorkeuren.json. Sla je werk eerst op en sluit het programma en lopende wegdownloads.",
+        "Heb je al een draagbare versie? Kies bij installatie die bestaande map om dezelfde gegevens te gebruiken. De installer verplaatst niets tussen mappen. Bewaar vooraf een reservekopie.",
+        "Liever draagbaar? Pak de volledige Windows-ZIP uit en start RouteRefit-0.5.15-beta.exe. Laat _internal ernaast staan. Een andere uitgepakte map heeft eigen routes en kaarten.",
+        "Verwijderen gaat via Windows Instellingen > Apps. Persoonlijke gegevens blijven staan. Alleen een achtergrondtaak en websitekoppeling die naar deze installatie wijzen worden verwijderd.",
+        "Achtergrondwerk is een aparte opt-in. Bij overstappen: zet het in de oude kopie uit en desgewenst in de nieuwe kopie aan. Doe dit ook na verwijderen en herinstalleren."
+      ],
+      "tip": "Deze bèta is nog niet digitaal ondertekend. De installer bevat geen persoonlijke routes of kaarten en start geen achtergrondtaak. Een bureaubladsnelkoppeling en starten na installatie zijn optioneel."
+    },
+    {
+      "id": 2,
+      "title": "Taal kiezen en je weg vinden",
+      "steps": [
+        "Open het menu [[Taal]]. Kies Nederlands, English, Deutsch, Français, Español of Português.",
+        "Het programma herstart na de taalkeuze. Beantwoord eerst een eventuele vraag over niet-opgeslagen werk.",
+        "[[Routes]] is voor lokale bestanden. [[Route bewerken]] is voor de kaart; F6 opent hoogte en statistieken.",
+        "Open via [[Help]] de handleiding. Je krijgt de PDF in de gekozen programmataal."
+      ],
+      "tip": "Portugees gebruikt Europese woordkeuze. De schermafdrukken tonen een synthetische demonstratie; getallen zijn voorbeelden."
+    },
+    {
+      "id": 3,
+      "title": "Een route openen",
+      "steps": [
+        "Klik [[Route importeren…]] of druk Ctrl+O. Zoek je bestand, selecteer het en klik Openen.",
+        "Je kunt GPX, TCX, FIT, KML, KMZ en GeoJSON importeren. Bewaar het oorspronkelijke bestand.",
+        "Wacht tot de lijn en afstand verschijnen. Dit openen vereist geen complete wegdownload vooraf.",
+        "Lees eventuele conversiemeldingen. Sensorwaarden, kaartstijlen en apparaatspecifieke velden gaan niet allemaal mee naar GPX."
+      ],
+      "tip": "Een bestand moet een route met minstens twee punten bevatten. Een bestand met alleen waypoints is geen bewerkbare route."
+    },
+    {
+      "id": 4,
+      "title": "Een hele map controleren",
+      "steps": [
+        "Ga naar [[Routes]] en kies [[Map kiezen…]]. Wijs een map met routebestanden aan.",
+        "Vink [[Ook submappen]] aan als je onderliggende mappen wilt meenemen. Klik [[Map controleren]].",
+        "Selecteer een rij voor details. Let op onleesbare bestanden, ontbrekende tijden en dubbele inhoud.",
+        "Dubbelklik op de gewenste route of gebruik [[Geselecteerde GPX openen]]. Alleen die route wordt geopend."
+      ],
+      "tip": "De mapcontrole verandert of verwijdert niets. Gelijke inhoud kan onder verschillende bestandsnamen voorkomen; maximaal 10.000 bestanden per controle."
+    },
+    {
+      "id": 5,
+      "title": "De kaart lezen en verplaatsen",
+      "steps": [
+        "Onthoud: oranje is het origineel, blauw de bewerkbare route en groen een voorstel. Rood vraagt controle.",
+        "Kies [[Kaart verschuiven]] en sleep de kaart. Gebruik de muiswielzoom of de knoppen + en −.",
+        "Klik [[Hele route]] als je de lijn kwijt bent. [[Grote kaart]] of F11 geeft meer ruimte.",
+        "Grote gele punten zijn hoofdpunten. Paarse markeringen zijn waypoints; ze bepalen niet vanzelf het wegverloop."
+      ],
+      "tip": "De achtergrondkaart en de weggegevens voor berekenen zijn verschillende dingen. Een achtergrondstoring betekent niet dat opgeslagen wegen onbruikbaar zijn."
+    },
+    {
+      "id": 6,
+      "title": "Activiteit kiezen",
+      "steps": [
+        "Open [[Instellingen]] en het tabblad [[Activiteit]] vóór je uitlijnt. Kies [[Lopen]], [[Fiets]], [[MTB]], [[Gravelfiets]], [[Auto]] of [[Motor]]. Speedpedelec is niet opgenomen.",
+        "De activiteit bepaalt toegang, rijrichting en geschikte wegen. Gravel vermijdt zware trails; auto en motor gebruiken geen gewone fiets- of voetpaden zonder expliciete toestemming in de kaartgegevens.",
+        "Dezelfde lokale motor werkt met OSM-gegevens in heel Europa, ook over landsgrenzen. Expliciete toegang, eenrichtingsverkeer en ondersteunde afslagrelaties worden meegenomen. Kies bij grensroutes voldoende gebiedsdekking.",
+        "Verander je activiteit na het berekenen? Maak een nieuw voorstel. Het tempo bij [[Tijdschema]] verandert de wegkeuze niet; de activiteit en eigen snelheid worden met de GPX bewaard."
+      ],
+      "tip": "Bebording en lokale regels blijven bepalend. Landelijke standaardregels, voorwaardelijke toegang en voertuigafmetingen zijn niet volledig gemodelleerd. Herkende voorwaardelijke afslagverboden worden uit voorzorg altijd toegepast. De tijden zijn schattingen, zonder verkeersdrukte of snelheidslimieten."
+    },
+    {
+      "id": 7,
+      "title": "Routevoorkeur, toegang en zoekafstand",
+      "steps": [
+        "Open [[Instellingen]] en [[Route]]. De huidige routevoorkeur is [[Meest logisch]]: de bestaande route volgen.",
+        "Vanaf [[Activiteit]] opent [[Toegang en privéwegen…]] direct de route-instellingen. Bovenaan staan [[Sta privéwegen en -paden toe]] en [[Toegangsmeldingen…]].",
+        "Laat [[Sta privéwegen en -paden toe]] uit tenzij je die wegen bewust wilt meenemen. De instelling geeft geen toegangsrecht.",
+        "De maximale uitlijnverschuiving is de zoekafstand rond routepunten. Begin met 35 meter; toegestaan is 5–150 meter.",
+        "Vergroot de afstand alleen als het juiste pad buiten bereik ligt. Controleer daarna extra op parallelle paden en verkeerde zijden.",
+        "Toegangsmeldingen kun je na de routecontrole beoordelen. Accepteren behoudt de bestaande lijn, hoogtes en tijden. Ontbrekende toegangstags blokkeren lopen en fietsen niet automatisch; auto en motor vermijden gewone fiets- en voetpaden zonder expliciete toestemming."
+      ],
+      "tip": "Kortste, snelste, rustige, mooie en hoogtegestuurde alternatieven zijn nog toekomstig. Acceptatie van een toegangsmelding verandert geen wegkeuze."
+    },
+    {
+      "id": 8,
+      "title": "Automatisch uitlijnen en de voortgang volgen",
+      "steps": [
+        "Open een route, kies de activiteit en klik één keer op [[Automatisch uitlijnen]].",
+        "De voortgangsbalk beweegt; de huidige stap en verstreken tijd blijven zichtbaar. Dit kan even duren.",
+        "Het voorstel gebruikt eerst opgeslagen wegen. Ontbrekende wegen worden daarna op de achtergrond opgehaald. Er zijn geen automatische herhaalpogingen of nieuwe aftellingen. Gebruik Voorstel aanvullen nadat de download gereed is.",
+        "Gebruik [[Uitlijnen stoppen]] als je niet wilt wachten. De bewerkbare route blijft behouden; het resultaat wordt niet stilzwijgend toegepast."
+      ],
+      "tip": "Een nieuw gebied vraagt eerst weggegevens. Bestaande complete gebieden worden hergebruikt, ook na herstart. De groene lijn blijft een voorstel tot je het overneemt."
+    },
+    {
+      "id": 9,
+      "title": "Een voorstel beoordelen en overnemen",
+      "steps": [
+        "Lees afstand, geschatte reistijd, stijging en verschillen met origineel en bewerkbare route.",
+        "Zoom in op kruisingen, parallelle fietspaden en rode probleemmarkeringen. Controleer of de groene lijn klopt.",
+        "Klik [[Annuleren]] als je twijfelt. Verander zo nodig activiteit, zoekafstand of hoofdpunten en bereken opnieuw.",
+        "Klik [[Voorstel overnemen]] als het voorstel goed is. De blauwe route verandert nu; [[Ongedaan maken]] herstelt de vorige bewerking.",
+        "Na overnemen staan alle gele [[Hoofdpunten]] direct klaar voor verdere bewerking. Kies [[Losse punten]] voor vrije puntcorrecties; opnieuw automatisch uitlijnen is niet nodig."
+      ],
+      "tip": "Ontbrekende hoogtes geven gedeeltelijke totalen. Gereconstrueerde hoogtes en tijden blijven schattingen; een voorstel is geen bewijs van werkelijke reistijd of toegang."
+    },
+    {
+      "id": 10,
+      "title": "Handmatig uitlijnen met hoofdpunten",
+      "steps": [
+        "Kies [[Hoofdpunten]] of [[Handmatig uitlijnen]]. Na het overnemen van een uitlijnvoorstel is deze bewerkstand al actief; de gele hoofdpunten zijn zichtbaar.",
+        "Sleep een groot geel hoofdpunt naar het juiste pad. RouteRefit berekent de aansluitingen naar de buurhoofdpunten.",
+        "Klik met rechts op een ongewenst hoofdpunt en kies [[Hoofdpunt verwijderen en opnieuw verbinden]].",
+        "Controleer het vervangingsvoorstel en neem het pas daarna over. Begin- en eindhoofdpunt blijven bestaan.",
+        "Neem de plaatselijke wijziging over en bewerk meteen het volgende punt. [[GPX opslaan…]] bewaart de route, tijden, hoofdpunten en bewerkstand; open dat GPX-bestand later om verder te gaan."
+      ],
+      "tip": "Bij verwijderen verdwijnen ook de oude tussenpunten tot de aangrenzende overblijvende hoofdpunten. De oude omweg stuurt de vervanging niet meer."
+    },
+    {
+      "id": 11,
+      "title": "Losse punten en de verdeling van hoofdpunten",
+      "steps": [
+        "Kies [[Losse punten]] als je een afzonderlijk opgenomen routepunt wilt aanpassen.",
+        "Selecteer of sleep een punt. Dubbelklik op de lijn om een punt toe te voegen; gebruik de verwijderactie voor het geselecteerde punt.",
+        "Wil je juist via wegen corrigeren, ga dan terug naar [[Handmatig uitlijnen]] en gebruik de grote hoofdpunten.",
+        "Via [[Route]] kun je hoofdpunten opnieuw verdelen: [[Weinig]], [[Normaal]] of [[Veel]]. De bestaande lijn blijft daarbij behouden."
+      ],
+      "tip": "Een los punt handmatig verplaatsen is iets anders dan een wegverbinding berekenen. Gebruik [[Ongedaan maken]] bij een verkeerde wijziging."
+    },
+    {
+      "id": 12,
+      "title": "Een verkeerd gelopen omweg vervangen",
+      "steps": [
+        "Klik met rechts op de blauwe lijn vóór de omweg. Kies [[Begin te verwijderen stuk hier]].",
+        "Klik met rechts ná de omweg op dezelfde lijn en kies [[Eind te verwijderen stuk hier…]].",
+        "Bekijk de nieuwe verbinding. Gebruik zo nodig de vervanging met tussenpunten om het gewenste verloop aan te geven.",
+        "Neem het voorstel over of annuleer. Controleer daarna ook het nieuwe tijdschema."
+      ],
+      "tip": "Bij behoud van de beschikbare gemiddelde snelheid krijgt een kortere route een eerdere aankomst. Nieuwe puntentijden zijn schattingen; pauzes worden niet apart ingepland."
+    },
+    {
+      "id": 13,
+      "title": "Begin, einde of beide verplaatsen",
+      "steps": [
+        "Open [[Route]] en kies [[Startpunt verplaatsen]], [[Eindpunt verplaatsen]] of [[Start en eind samen verplaatsen]].",
+        "Klik op de gewenste weg of het gewenste pad. Alleen de aansluiting op de bestaande route wordt berekend.",
+        "Bekijk de aansluiting en controleer of de rijrichting en kant van het pad kloppen.",
+        "Neem de wijziging over als die goed is. Bereken daarna het tijdschema opnieuw."
+      ],
+      "tip": "De rest van de route blijft behouden en is hiermee niet opnieuw goedgekeurd. Kies [[Kaart verschuiven]] om de plaatsingsmodus te verlaten."
+    },
+    {
+      "id": 14,
+      "title": "Opnamegaten en routedelen begrijpen",
+      "steps": [
+        "Kijk bij de routegegevens hoeveel routedelen er zijn. Een echt opnamegat blijft herkenbaar als onderbreking.",
+        "Aansluitende TCX-rondegrenzen worden bij import verbonden. FIT-timerstops op vrijwel dezelfde plaats gelden als pauze.",
+        "Kies [[Meer]] → [[Routedelen verbinden…]]. Selecteer de onderbreking die je wilt reconstrueren.",
+        "Open [[Verbinding aanpassen…]]. Controleer de aansluiting met het vorige en volgende opgenomen deel."
+      ],
+      "tip": "Een gereconstrueerde verbinding is geen GPS-opname. Ga alleen akkoord als je het voorgestelde verloop zelf verantwoord vindt."
+    },
+    {
+      "id": 15,
+      "title": "Een verbinding sturen met tussenpunten",
+      "steps": [
+        "Klik in het verbindingsvenster op punten langs het gewenste verloop, in de juiste reisvolgorde.",
+        "Sleep een tussenpunt om het te verplaatsen. Gebruik omhoog, omlaag of verwijderen om de lijst te corrigeren.",
+        "Klik [[Verbinding berekenen]] na iedere wijziging. Alleen dan hoort de groene lijn bij de nieuwe tussenpunten.",
+        "Controleer de lijn en klik [[Verbinding overnemen]]. Annuleren laat de losse delen intact."
+      ],
+      "tip": "Maximaal 50 tussenpunten en een verbinding van 50 km. Ontbrekende wegen worden niet met een verzonnen rechte lijn overbrugd. Hoogtes en tijden worden als schattingen vermeld."
+    },
+    {
+      "id": 16,
+      "title": "Probleemstukken oplossen of bewust behouden",
+      "steps": [
+        "Gebruik [[Vorig probleem]], [[Volgend probleem]] en [[Probleemplaats tonen]] om rode markeringen te bekijken.",
+        "Controleer of de juiste activiteit, de juiste wegkant en voldoende kaartgegevens zijn gekozen.",
+        "Vraag een herstelvoorstel, verplaats een hoofdpunt of vervang het probleemstuk met tussenpunten.",
+        "Wil je het opgenomen verloop behouden, kies [[Gekozen stuk handmatig behouden]]. Bereken daarna opnieuw."
+      ],
+      "tip": "Handmatig behouden is een bewuste uitzondering, geen bewijs dat de weg toegankelijk is. Nog niet opgeloste delen blijven herkenbaar; een onverwachte fout betekent niet dat de hele GPX onbruikbaar is."
+    },
+    {
+      "id": 17,
+      "title": "Toegangsmeldingen begrijpen",
+      "steps": [
+        "Kies eerst automatisch uitlijnen of opnieuw controleren, zodat de problemen bekend zijn.",
+        "Open [[Meer]] → [[Toegangsmeldingen…]] als een probleem alleen door toegangstags lijkt te ontstaan.",
+        "Lees de waarschuwing. Alleen problemen die uitsluitend aan die tags zijn toe te schrijven kunnen zo worden geaccepteerd.",
+        "Accepteren verandert de lijn, hoogtes en tijden niet. Je keuze komt in het rapport en kan ongedaan worden gemaakt."
+      ],
+      "tip": "Deze knop heft geen plaatselijk verbod op. Houd rekening met regels en borden. Richting, ontbrekende verbindingen en andere geometrieproblemen worden hiermee niet genegeerd."
+    },
+    {
+      "id": 18,
+      "title": "Een nieuw tijdschema berekenen",
+      "steps": [
+        "Open [[Instellingen]] → [[Tijdschema]]. Kies een tempo of vul je eigen snelheid op vlak terrein in.",
+        "Vul de starttijd in. Het veld gebruikt UTC; dat is niet vanzelf je plaatselijke kloktijd.",
+        "Vul alleen een gewenste duur in als je bewust op die duur wilt uitkomen. Gebruik hh:mm.",
+        "Kies [[Tijdschema berekenen…]] via [[Meer]]. Controleer het voorstel en de gemelde geschatte tijden.",
+        "Deze actie berekent alleen de tijden op de bewerkte lijn. Je handmatige correcties blijven staan, ook zonder wegdownload. Gebruik [[Automatisch uitlijnen]] alleen als je de route opnieuw wilt laten uitlijnen."
+      ],
+      "tip": "De activiteit bepaalt de wegkeuze; tempo en snelheid bepalen het tijdschema. Wind, verkeerslichten en actuele verkeersdrukte worden niet gemodelleerd. Zonder complete hoogtes kan niet ieder terreinprofiel worden berekend."
+    },
+    {
+      "id": 19,
+      "title": "Opgenomen pauzes vinden en verwijderen",
+      "steps": [
+        "Open Tijdschema en kies de bewerking van de bestaande opname met pauzes verwijderen.",
+        "Stel de minimale pauzeduur en stilstandstraal in. Gebruik [[Pauzes zoeken]] of de zoekknop bij de lijst.",
+        "Selecteer een pauze en bekijk de plaats. Dubbelklik op een rij om de verwijderkeuze te veranderen.",
+        "Bereken het voorstel opnieuw en controleer de eindtijd. Laat echte opnamegaten ongemoeid als je hun betekenis niet weet."
+      ],
+      "tip": "Deze functie vereist complete, oplopende tijdstempels. Zonder die gegevens kun je geen betrouwbare opgenomen pauzes aanwijzen; kies dan bewust een nieuw geschat tijdschema."
+    },
+    {
+      "id": 20,
+      "title": "Hoogteprofiel en statistieken controleren",
+      "steps": [
+        "Klik [[Hoogte en statistiek]] of druk F6. Kies [[Origineel]], [[Bewerkte route]] of [[Voorstel]].",
+        "Bekijk afstand, duur, gemiddelde snelheid, stijging, daling en laagste en hoogste punt.",
+        "Beweeg over de grafiek voor plaatselijke waarden. Vergelijk opvallende pieken met de route op de kaart.",
+        "Kies [[Naar de kaart]] om terug te gaan. Bereken eerst een voorstel als die keuze nog geen gegevens heeft."
+      ],
+      "tip": "Hoogtes zijn ongefilterd; meetruis kan het stijgingstotaal verhogen. Ontbrekende hoogtes geven gedeeltelijke totalen. Gemiddelde snelheid omvat de beschikbare totale duur inclusief pauzes."
+    },
+    {
+      "id": 21,
+      "title": "Waypoints, beschrijvingen en foto's",
+      "steps": [
+        "Kies [[Waypoint toevoegen]] via Meer of het routemenu en klik op de gewenste plaats.",
+        "Geef de plaats een duidelijke naam. Voeg eventueel een beschrijving en een foto toe met [[Foto kiezen…]].",
+        "Klik [[Waypoint bewaren]]. Sleep de paarse markering om de plaats te wijzigen.",
+        "Open [[Waypoints beheren]] om een waypoint te bewerken, op de kaart te tonen of te verwijderen."
+      ],
+      "tip": "Naam: maximaal 200 tekens; beschrijving: 1.500. Foto: JPG, PNG, WebP of GIF, kleiner dan 25 MB en maximaal 60 megapixel. Verplaats later het GPX samen met de bijbehorende fotomap."
+    },
+    {
+      "id": 22,
+      "title": "GPX en controlerapport opslaan",
+      "steps": [
+        "Controleer eerst de lijn, tijden en meldingen. Neem een gewenst routevoorstel over.",
+        "Kies [[GPX opslaan…]] of Ctrl+S. Volg een eventuele vraag over een berekend voorstel of een concept.",
+        "Kies een nieuwe bestandsnaam en plaats. Bestaande bestanden worden niet overschreven.",
+        "Bewaar het GPX, het controlerapport en eventuele fotomap bij elkaar. Open de export opnieuw voor een laatste controle."
+      ],
+      "tip": "De uitvoer is GPX, ook na FIT- of TCX-import. Het rapport bewaart keuzes en schattingen. Een concept is geen nieuwe volledige goedkeuring. Het originele bronbestand blijft apart bewaard."
+    },
+    {
+      "id": 23,
+      "title": "Origineel en aangepaste route vergelijken",
+      "steps": [
+        "Open de oorspronkelijke route. Bewaar je bewerkingen voordat je een andere vergelijking opent.",
+        "Kies in [[Bestand]] de vergelijking met een aangepaste route en wijs het tweede GPX aan.",
+        "Bekijk oranje als origineel, blauw als aangepast en rood als nog te controleren.",
+        "Gebruik de volgende en vorige gewijzigde plek als het bijbehorende rapport die locaties bevat."
+      ],
+      "tip": "Bij een andere segmentstructuur moet je het aangepaste GPX soms apart openen. Een vergelijking verandert niet met terugwerkende kracht de oorspronkelijke opname."
+    },
+    {
+      "id": 24,
+      "title": "Lokale kaarten, offline werken en actualiseren",
+      "steps": [
+        "Lijn een route uit. Complete opgehaalde gebieden komen automatisch in de lokale wegenindex.",
+        "Open later dezelfde of een andere route in dat gebied. De index zoekt eerst bestaande gegevens en haalt alleen ontbrekende delen op.",
+        "Gebruik [[Lokaal OSM-bestand importeren…]] voor een complete begrensde OSM XML-regio. PBF en afbeeldingen zijn hiervoor niet bruikbaar.",
+        "Kies [[Uitlijngegevens vernieuwen]] als je actuele gegevens wilt. Doe dit alleen met een internetverbinding."
+      ],
+      "tip": "De kaartdatum is de OSM-momentopname of anders de bestandsdatum. Een indexopbouw kost eenmalig tijd. Maximum 128 MB per XML-bestand. De kaartachtergrond heeft een aparte cache en kan offline nog ontbreken."
+    },
+    {
+      "id": 25,
+      "title": "Websitecatalogus en automatisch openen",
+      "steps": [
+        "[[Mijn routeoverzicht]] is een optionele websitecatalogus. Het openbare pakket begint met een lege lijst.",
+        "Importeer alleen een catalogus die je bewust wilt gebruiken. Een websiteroute wordt gedownload wanneer je die opent.",
+        "De uploadactie opent je browser. RouteRefit publiceert geen routes automatisch en bewaart geen websitewachtwoord.",
+        "Via Bestand kun je nieuwe GPX-bestanden in Downloads automatisch laten openen. Dit staat standaard uit."
+      ],
+      "tip": "Een lokale bestandsimport vereist geen websiteaccount. Gebruik de catalogus- en uploadfuncties alleen als ze bij jouw werkwijze horen; er wordt nu niets naar GitHub of SignPath verzonden."
+    },
+    {
+      "id": 26,
+      "title": "Wat doen bij wachten of een fout?",
+      "steps": [
+        "Zie je een bewegende balk en oplopende verstreken tijd? Het werk loopt nog. Lees de huidige stap.",
+        "Het voorstel gebruikt eerst opgeslagen wegen. Ontbrekende wegen worden daarna op de achtergrond opgehaald. Er zijn geen automatische herhaalpogingen of nieuwe aftellingen. Gebruik Voorstel aanvullen nadat de download gereed is.",
+        "Mislukt de wegdownload uiteindelijk, probeer later opnieuw. Geldige opgeslagen vakken blijven behouden; je route is niet daardoor ongeldig.",
+        "Bij een onjuist resultaat: annuleer, controleer instellingen en gebruik hoofdpunten of tussenpunten. Gebruik Ongedaan na een overgenomen fout."
+      ],
+      "tip": "RouteRefit werkt ook zonder gebiedspakket. Ontbreken wegen, dan worden die tijdens het uitlijnen opgehaald. Daardoor kan de routeberekening veel langer op zich laten wachten. Al opgeslagen wegen worden altijd hergebruikt."
+    },
+    {
+      "id": 27,
+      "title": "Sneltoetsen, bewaren en wat later komt",
+      "steps": [
+        "Ctrl+O opent een route; Ctrl+S start opslaan. F6 opent statistieken; F11 geeft meer kaartruimte.",
+        "Een hoofdpunt stuurt de lijn. Een tussenpunt stuurt een verbindingsvoorstel. Een waypoint beschrijft een plaats.",
+        "Bewaar Mijn GPX, Kaarten en voorkeuren.json bij een update. Maak daarnaast een eigen reservekopie van je originele routes en bewerkingen.",
+        "De eerstvolgende uitbreiding na deze taal- en gebruikstest is meer activiteiten. Routes vanaf nul creëren wordt voorbereid, nog niet aangeboden."
+      ],
+      "tip": "Samenvoegen van losse bestanden en splitsen naar aparte bestanden blijven toekomstige functies. Deze bèta is niet de stabiele 1.0 en is nog niet digitaal ondertekend."
+    },
+    {
+      "id": 28,
+      "title": "Optionele gebiedspakketten: sneller uitlijnen",
+      "steps": [
+        "RouteRefit werkt ook zonder gebiedspakket. Ontbreken wegen, dan worden die tijdens het uitlijnen opgehaald. Daardoor kan de routeberekening veel langer op zich laten wachten. Al opgeslagen wegen worden altijd hergebruikt.",
+        "Open [[Kaart]] > [[Gebiedspakketten…]]. Zoek je provincie of regio. Kies bij voorkeur een klein gebied; downloads groter dan 500 MB worden geweigerd.",
+        "Met Ctrl of Shift kun je meerdere gebieden kiezen, ook uit verschillende landen. Je selectie blijft tijdens zoeken behouden. Controleer het aantal in de downloadlijst. De pakketten worden achter elkaar opgehaald en bij het uitlijnen gecombineerd. Kies bij de grens ook het aangrenzende gebied.",
+        "Selecteer het gebied en klik [[Downloaden / bijwerken]]. De eerste download en voorbereiding kunnen enkele minuten duren en vragen extra schijfruimte. Je kunt ondertussen verder werken.",
+        "Wacht op Gebied gereed. Open je route, controleer de activiteit en kies [[Automatisch uitlijnen]]. Alleen de wegen rond de route worden uit de lokale index gelezen.",
+        "De zes activiteiten staan in hoofdstuk 6. Navigatie-export staat in hoofdstuk 32. Routes vanaf nul tekenen is nog niet beschikbaar."
+      ],
+      "tip": "Gratis, zonder account. De leverancier Geofabrik ziet je IP-adres en gekozen gebied; je GPX, tijden en bewerkingen worden niet meegestuurd. Meer uitleg: https://download.geofabrik.de/technical.html"
+    },
+    {
+      "id": 29,
+      "title": "Gebiedspakketten efficiënt bijwerken",
+      "steps": [
+        "Laat [[Gedownloade gebieden wekelijks op de achtergrond bijwerken]] aangevinkt voor een wekelijkse controle. Standaard werkt dit alleen zolang RouteRefit geopend is. Uitvinken stopt toekomstige automatische controles.",
+        "Voor direct bijwerken: open [[Kaart]] > [[Gebiedspakketten…]], vink [[Alleen gedownload]] aan, selecteer een gebied en kies [[Downloaden / bijwerken]].",
+        "Als het gebied al actueel is, volgt geen nieuwe gebiedsdownload of indexopbouw. Anders worden kleine dagelijkse wijzigingsbestanden verwerkt. Alleen de veranderde wegen en betrokken punten worden aangepast.",
+        "Een update wordt eerst apart opgebouwd en gecontroleerd. [[Stoppen]] of een storing laat het bestaande pakket behouden. Er is geen herhaalde aftelling; na een mislukte automatische controle volgt minimaal een dag geen automatische nieuwe poging.",
+        "Bij een gewijzigde gebiedsgrens, te oude gegevens of te veel wijzigingen vraagt RouteRefit om [[Opnieuw downloaden]]. Dit gebeurt nooit stilzwijgend. Een afgeronde update verandert je open route of voorstel niet; kies opnieuw [[Automatisch uitlijnen]]."
+      ],
+      "tip": "De datum in de lijst is de datum van de OSM-gegevens. Een wekelijkse controle betekent niet dat de leverancier dagelijks wijzigingen heeft. Bewaar bij programma-updates ook de map Kaarten: daarin staan je gebiedspakketten en hun instellingen. Zie hoofdstuk 31 voor doorgaan na sluiten; die optie staat standaard uit."
+    },
+    {
+      "id": 30,
+      "title": "Een eigen downloadgebied tekenen",
+      "steps": [
+        "Open [[Kaart]] > [[Gebiedspakketten…]] > [[Eigen gebied tekenen…]]. Je kunt ook een gebied over landsgrenzen kiezen. De bestaande pakketten blijven beschikbaar.",
+        "Geef een lokale naam. Sleep met [[Rechthoek]] een gebied, of klik met [[Veelhoek]] de hoekpunten. [[Laatste punt weg]] en [[Wissen]] helpen bij corrigeren. Verschuif en zoom de kaart zo nodig.",
+        "Houd 1–2 km ruimte rond je routes. De omhullende rechthoek mag maximaal 2500 km² zijn. Een kleiner gebied vermindert de download en lokale verwerking; de wachtrij van de leverancier blijft van invloed.",
+        "Lees de privacyuitleg en kies [[Gebied downloaden via SliceOSM]]. Alleen de getekende grens en je IP-adres gaan naar de dienst. De gebiedsnaam, GPX, tijden en bewerkingen blijven lokaal. De grens is via de downloadlink opvraagbaar.",
+        "De voortgang toont drie fasen: downloaden (inclusief voorbereiding bij de leverancier), lokaal verwerken en controleren. [[Stoppen]] behoudt bestaande pakketten. Bij een trage leverancier kun je dezelfde aanvraag later handmatig vervolgen.",
+        "Eigen gebieden vernieuw je handmatig met [[Downloaden / bijwerken]]. Er komt een kleine volledige download, geen dagelijkse wijzigingsbestanden. Na een week staat een herinnering in de lijst. Zonder pakket werkt uitlijnen ook, maar ontbrekende wegen kunnen veel langer op zich laten wachten."
+      ],
+      "tip": "SliceOSM is gratis en vereist geen account, maar kan gebruiksgegevens registreren. https://github.com/SliceOSM/.github/blob/main/PRIVACY.md . Het pakket bevat rekenbare wegen; de zichtbare kaartachtergrond blijft apart. De snelheid is niet gegarandeerd."
+    },
+    {
+      "id": 31,
+      "title": "Achtergrondwerk en beschikbare rekenkracht",
+      "steps": [
+        "Achtergrondwerk buiten RouteRefit staat standaard uit. Sluiten stopt gebiedstaken. Er wordt geen Windows-taak aangemaakt; wekelijkse controles werken alleen met RouteRefit open.",
+        "Vink onder [[Gebiedspakketten…]] zelf [[Doorgaan als RouteRefit gesloten is (Windows-achtergrondtaak)]] aan. Windows plant voor jouw gebruiker een controle bij aanmelden en dagelijks om 09:00, zonder administratorrechten.",
+        "Start een gebiedsdownload of update. Een apart proces gaat door na sluiten. Windows moet actief zijn en je moet aangemeld zijn; de computer wordt niet gewekt. Routeberekeningen en bewerkingen lopen niet door.",
+        "De dagelijkse taak controleert welke Geofabrik-pakketten aan hun wekelijkse update toe zijn. De wekelijkse instelling blijft gelden. Eigen gebieden vernieuw je handmatig; een gestarte download kan wel na sluiten doorgaan.",
+        "[[Stoppen]] stopt de actuele gebiedstaak. Uitvinken stopt achtergrondwerk en verwijdert de Windows-taak. Netwerkuitval veroorzaakt geen herhaalde nieuwe aanvragen. Na een onderbreking door Windows hervat je handmatig.",
+        "Kaartbestanden worden waar mogelijk parallel uitgepakt. Bij weinig andere processorbelasting werkt RouteRefit op normale snelheid met begrensd geheugengebruik. Bij drukte krijgt kaartwerk een lagere prioriteit en extra pauzes. De bediening blijft gescheiden."
+      ],
+      "tip": "Inschakelen is altijd jouw keuze. Routes, tijden en instellingen worden niet naar de downloadleverancier gestuurd. Een bestaand pakket wordt pas vervangen nadat de nieuwe versie volledig is gecontroleerd."
+    },
+    {
+      "id": 32,
+      "title": "Navigatieroutes naar Komoot, Garmin en Strava",
+      "steps": [
+        "Controleer de lijn en neem het voorstel over. Bewaar je bewerkbare GPX met controlerapport om later verder te werken. Verbind opnamegaten als je één doorlopende navigatieroute nodig hebt.",
+        "[[Exporteer naar]]: klik Komoot, Garmin of Strava. [[GPX opslaan en uploadpagina openen]] bewaart de navigatielijn en hoogtes, zonder tijden. Kies het bestand op de website en bevestig daar zelf de import.",
+        "Komoot: kies een geplande route en behoud het oorspronkelijke verloop. Garmin: importeer bij Koersen en stuur naar een geschikt toestel. Strava: importeer in de routeplanner; een abonnement kan nodig zijn. Activiteitsexport met aangepaste tijden blijft bij [[Exporteren naar…]].",
+        "Controleer na import het verloop, de activiteit en wie de route kan zien. [[Bestandspad kopiëren]] helpt het bestand terugvinden. Open de opgeslagen route op je telefoon of geschikt navigatietoestel."
+      ],
+      "tip": "Export is lokaal en gratis. Bestanden bevatten geen foto’s, waypoints of persoonlijke metadata; locaties blijven zichtbaar. RouteRefit uploadt niets automatisch. Diensten hanteren eigen voorwaarden en eventuele kosten. Bewaar de gewone GPX met controlerapport voor verdere bewerking."
+    },
+    {
+      "id": 33,
+      "title": "Lokale bestanden: GPX, TCX en KML",
+      "steps": [
+        "Controleer de lijn en neem het voorstel over. Bewaar je bewerkbare GPX met controlerapport om later verder te werken. Verbind opnamegaten als je één doorlopende navigatieroute nodig hebt.",
+        "Voor lokale bestanden: [[Bestand…]] > GPX, TCX of KML > [[Bestand opslaan…]]. Ook bereikbaar via Bestand > [[Routebestand exporteren…]]. GPX is voor navigatie; KML voor kaartprogramma’s. Beide bevatten geen tijden. TCX is een koers met bestaande routetijden.",
+        "Kies [[Datum en snelheid voor TCX instellen]] om de kalender, tijdkiezer en gemiddelde snelheid te gebruiken. Zonder bruikbare tijden opent dit vanzelf. Nieuwe tijden zijn schattingen; lopen/fietsen vereist volledige hoogtes. Je bewerkbare route verandert niet.",
+        "Kies een nieuwe bestandsnaam; bestaande bestanden worden niet overschreven. Losse routedelen blijven gescheiden. KML vereist minstens twee punten per deel. Controleer na import lijn, tijden, activiteit en zichtbaarheid; ondersteuning verschilt per programma/toestel."
+      ],
+      "tip": "Export is lokaal en gratis. Bestanden bevatten geen foto’s, waypoints of persoonlijke metadata; locaties blijven zichtbaar. RouteRefit uploadt niets automatisch. Diensten hanteren eigen voorwaarden en eventuele kosten. Bewaar de gewone GPX met controlerapport voor verdere bewerking."
+    }
+  ],
+  "en": [
+    {
+      "id": 1,
+      "title": "Install and start safely",
+      "steps": [
+        "Run RouteRefit-0.5.15-beta-Setup.exe. Read the licence and privacy information and choose the program folder. Python is not required. Then launch RouteRefit from the Start menu.",
+        "Installer updates reuse the same folder and retain Mijn GPX, Kaarten and voorkeuren.json. Save your work and close the program and active road downloads first.",
+        "Already using a portable copy? Select that existing folder during setup to keep using its data. Setup does not move data between folders. Make a backup beforehand.",
+        "Prefer portable use? Extract the complete Windows ZIP and run RouteRefit-0.5.15-beta.exe with _internal alongside it. Another extracted folder has its own routes and maps.",
+        "Uninstall through Windows Settings > Apps. Personal data is retained. Only a background task and website association pointing to this installation are removed.",
+        "Background work requires a separate opt-in. When switching copies, disable it in the old copy and enable it in the new copy if wanted. Repeat after uninstalling and reinstalling."
+      ],
+      "tip": "This beta is unsigned. Setup contains no personal routes or maps and does not enable a background task. A desktop shortcut and launching after setup are optional."
+    },
+    {
+      "id": 2,
+      "title": "Choose a language and find your way",
+      "steps": [
+        "Open [[Taal]]. Choose Nederlands, English, Deutsch, Français, Español or Português.",
+        "The application restarts after a language change. Resolve any unsaved-work question first.",
+        "[[Routes]] is for local files. [[Route bewerken]] opens the map; F6 opens elevation and statistics.",
+        "Open the guide through [[Help]]. The PDF matches the selected application language."
+      ],
+      "tip": "Portuguese uses European terminology. Screenshots show a synthetic demonstration; their numbers are examples."
+    },
+    {
+      "id": 3,
+      "title": "Open a route",
+      "steps": [
+        "Click [[Route importeren…]] or press Ctrl+O. Find your file, select it and click Open.",
+        "You can import GPX, TCX, FIT, KML, KMZ and GeoJSON. Keep the source file.",
+        "Wait until the line and distance appear. Opening does not require a complete road download first.",
+        "Read any conversion messages. Sensor values, map styles and device-specific fields are not all transferred to GPX."
+      ],
+      "tip": "A file must contain a route with at least two points. A waypoint-only file is not an editable route."
+    },
+    {
+      "id": 4,
+      "title": "Check an entire folder",
+      "steps": [
+        "Go to [[Routes]] and choose [[Map kiezen…]]. Select a folder containing route files.",
+        "Select [[Ook submappen]] to include nested folders. Click [[Map controleren]].",
+        "Select a row for details. Look for unreadable files, missing timestamps and duplicate contents.",
+        "Double-click the route you want or use [[Geselecteerde GPX openen]]. Only that route opens."
+      ],
+      "tip": "Folder checks change or delete nothing. Identical contents may have different filenames; the limit is 10,000 files per check."
+    },
+    {
+      "id": 5,
+      "title": "Read and move the map",
+      "steps": [
+        "Remember: orange is the original, blue the editable route and green a proposal. Red requires review.",
+        "Choose [[Kaart verschuiven]] and drag the map. Zoom with the wheel or the + and − buttons.",
+        "Click [[Hele route]] if you lose the line. [[Grote kaart]] or F11 provides more room.",
+        "Large yellow points are control points. Purple markers are waypoints; they do not automatically determine road choices."
+      ],
+      "tip": "The background map and calculation road data are separate. A background outage does not make saved roads unusable."
+    },
+    {
+      "id": 6,
+      "title": "Choose an activity",
+      "steps": [
+        "Open [[Instellingen]] and [[Activiteit]] before aligning. Choose [[Lopen]], [[Fiets]], [[MTB]], [[Gravelfiets]], [[Auto]] or [[Motor]]. Speed pedelec is not included.",
+        "The activity determines access, direction and suitable roads. Gravel avoids difficult trails; cars and motorcycles do not use ordinary cycleways or footpaths without explicit permission in the map data.",
+        "The same local engine uses OSM data across Europe, including borders. Explicit access, one-way roads and supported turn restrictions are considered. Download enough coverage for cross-border routes.",
+        "Changed activity after calculating? Create a new proposal. The pace under [[Tijdschema]] does not change road choice; activity and custom speed are saved with the GPX."
+      ],
+      "tip": "Signs and local rules remain decisive. National defaults, conditional access and vehicle dimensions are not fully modeled. Recognized conditional turn restrictions apply at all times as a precaution. Times are estimates without traffic or speed limits."
+    },
+    {
+      "id": 7,
+      "title": "Route preference, access and search radius",
+      "steps": [
+        "Open [[Instellingen]] and [[Route]]. The current preference is [[Meest logisch]]: follow the existing route.",
+        "From [[Activiteit]], [[Toegang en privéwegen…]] opens the route settings directly. [[Sta privéwegen en -paden toe]] and [[Toegangsmeldingen…]] are near the top.",
+        "Leave [[Sta privéwegen en -paden toe]] off unless you deliberately want those roads considered. The setting grants no access rights.",
+        "The maximum alignment shift is the search radius around route points. Start at 35 metres; the valid range is 5–150 metres.",
+        "Increase it only when the correct path is out of reach. Then check parallel paths and the side of the road carefully.",
+        "Review access warnings after checking the route. Acceptance preserves the line, elevations and times. Missing access tags do not automatically block walking or cycling; cars and motorcycles avoid ordinary cycleways and footpaths without explicit permission."
+      ],
+      "tip": "Shortest, fastest, quiet, scenic and elevation-based alternatives are future work. Accepting an access warning does not change road selection."
+    },
+    {
+      "id": 8,
+      "title": "Align automatically and follow progress",
+      "steps": [
+        "Open a route, choose activity and click [[Automatisch uitlijnen]] once.",
+        "The indicator moves; the current step and elapsed time remain visible. This may take a while.",
+        "The proposal uses saved roads first. Missing roads are downloaded afterwards in the background. There are no automatic retries or new countdowns. Use Update proposal when the download is ready.",
+        "Use [[Uitlijnen stoppen]] if you do not want to wait. The editable route is preserved; results are not silently applied."
+      ],
+      "tip": "A new area first needs road data. Complete saved areas are reused, including after restart. The green line stays a proposal until you apply it."
+    },
+    {
+      "id": 9,
+      "title": "Review and apply a proposal",
+      "steps": [
+        "Read distance, estimated travel time, ascent and differences from the original and edited route.",
+        "Zoom into junctions, parallel cycle paths and red issue markers. Check that the green line is correct.",
+        "Click [[Annuleren]] if unsure. Adjust activity, search radius or control points as needed and calculate again.",
+        "Click [[Voorstel overnemen]] when satisfied. The blue route now changes; [[Ongedaan maken]] restores the previous edit.",
+        "After acceptance, all yellow [[Hoofdpunten]] are ready for further editing. Choose [[Losse punten]] for free point corrections; automatic alignment is not needed again."
+      ],
+      "tip": "Missing elevations produce partial totals. Reconstructed elevations and times remain estimates; a proposal does not prove actual travel time or access."
+    },
+    {
+      "id": 10,
+      "title": "Align manually using control points",
+      "steps": [
+        "Choose [[Hoofdpunten]] or [[Handmatig uitlijnen]]. After accepting an alignment proposal, this editing mode is already active and the yellow control points are visible.",
+        "Drag a large yellow control point onto the correct path. RouteRefit calculates connections to the neighbouring control points.",
+        "Right-click an unwanted control point and choose [[Hoofdpunt verwijderen en opnieuw verbinden]].",
+        "Review the replacement before applying it. The start and end control points remain.",
+        "Accept the local change and edit the next point immediately. [[GPX opslaan…]] saves the route, times, control points and editing mode; reopen that GPX file later to continue."
+      ],
+      "tip": "Removing a control point also replaces the old intermediate points between its remaining neighbours. The old detour no longer guides the replacement."
+    },
+    {
+      "id": 11,
+      "title": "Individual points and control-point density",
+      "steps": [
+        "Choose [[Losse punten]] to adjust an individual recorded route point.",
+        "Select or drag a point. Double-click the line to add one; use the delete action for the selected point.",
+        "To correct along roads instead, return to [[Handmatig uitlijnen]] and use the large control points.",
+        "Under [[Route]] redistribute control points using [[Weinig]], [[Normaal]] or [[Veel]]. The existing line is retained."
+      ],
+      "tip": "Moving an individual point manually differs from calculating a road connection. Use [[Ongedaan maken]] after an incorrect change."
+    },
+    {
+      "id": 12,
+      "title": "Replace an unwanted detour",
+      "steps": [
+        "Right-click the blue line before the detour. Choose [[Begin te verwijderen stuk hier]].",
+        "Right-click after the detour on the same line and choose [[Eind te verwijderen stuk hier…]].",
+        "Review the new connection. Use replacement with via points if you need to guide its course.",
+        "Apply or cancel the proposal. Then check the new schedule too."
+      ],
+      "tip": "When retaining the available average speed, a shorter route finishes earlier. New point times are estimates; pauses are not scheduled separately."
+    },
+    {
+      "id": 13,
+      "title": "Move the start, end or both",
+      "steps": [
+        "Open [[Route]] and choose [[Startpunt verplaatsen]], [[Eindpunt verplaatsen]] or [[Start en eind samen verplaatsen]].",
+        "Click the desired road or path. Only its connection to the existing route is calculated.",
+        "Review the connection and check travel direction and the side of the path.",
+        "Apply the change when correct. Recalculate the schedule afterwards."
+      ],
+      "tip": "The rest of the route is retained and has not been newly approved. Choose [[Kaart verschuiven]] to leave placement mode."
+    },
+    {
+      "id": 14,
+      "title": "Understand recording gaps and segments",
+      "steps": [
+        "Check the number of route segments. A genuine recording gap remains identifiable as a break.",
+        "Adjacent TCX lap boundaries are joined on import. FIT timer stops at nearly the same position count as pauses.",
+        "Choose [[Meer]] → [[Routedelen verbinden…]]. Select the gap you want to reconstruct.",
+        "Open [[Verbinding aanpassen…]]. Check connections to the previous and next recorded parts."
+      ],
+      "tip": "A reconstructed connection is not a GPS recording. Accept only when you consider its proposed course appropriate."
+    },
+    {
+      "id": 15,
+      "title": "Guide a connection with via points",
+      "steps": [
+        "Click locations along the desired course in the connection window, in travel order.",
+        "Drag a via point to move it. Use up, down or remove to correct the list.",
+        "Click [[Verbinding berekenen]] after every change. Only then does the green line match the new via points.",
+        "Review the line and click [[Verbinding overnemen]]. Cancel leaves the separate segments intact."
+      ],
+      "tip": "The limit is 50 via points and a 50 km connection. Missing roads are not bridged with an invented straight line. Elevations and times are identified as estimates."
+    },
+    {
+      "id": 16,
+      "title": "Repair issues or deliberately keep a section",
+      "steps": [
+        "Use [[Vorig probleem]], [[Volgend probleem]] and [[Probleemplaats tonen]] to inspect red markers.",
+        "Check activity, the side of the road and whether enough map data is available.",
+        "Request a repair proposal, move a control point or replace the problem section using via points.",
+        "To keep the recorded course, choose [[Gekozen stuk handmatig behouden]]. Calculate again afterwards."
+      ],
+      "tip": "Manual retention is a deliberate exception, not proof of road access. Unresolved sections remain identifiable; an unexpected error does not make the whole GPX unusable."
+    },
+    {
+      "id": 17,
+      "title": "Understand access warnings",
+      "steps": [
+        "First align automatically or check again so that the issues are known.",
+        "Open [[Meer]] → [[Toegangsmeldingen…]] when a problem appears to arise only from access tags.",
+        "Read the warning. Only issues attributable solely to those tags can be accepted this way.",
+        "Acceptance does not change the line, elevations or times. Your choice is recorded in the report and can be undone."
+      ],
+      "tip": "This button does not remove a local prohibition. Observe rules and signs. Direction, missing connections and other geometry problems are not ignored by it."
+    },
+    {
+      "id": 18,
+      "title": "Calculate a new schedule",
+      "steps": [
+        "Open [[Instellingen]] → [[Tijdschema]]. Choose a pace or enter your own level-ground speed.",
+        "Enter the departure time. The field uses UTC, which is not automatically your local clock time.",
+        "Enter a target duration only when you deliberately want that duration. Use hh:mm.",
+        "Choose [[Tijdschema berekenen…]] through [[Meer]]. Review the proposal and its estimated times.",
+        "This action calculates only the times along the edited line. Manual corrections stay in place, even without downloaded roads. Use [[Automatisch uitlijnen]] only when you want to align the route again."
+      ],
+      "tip": "Activity determines road selection; pace and speed determine the schedule. Wind, traffic lights and live traffic are not modelled. Incomplete elevations can prevent some terrain-based calculations."
+    },
+    {
+      "id": 19,
+      "title": "Find and remove recorded pauses",
+      "steps": [
+        "Open Schedule and select editing of the existing recording by removing pauses.",
+        "Set the minimum pause duration and stationary radius. Use [[Pauzes zoeken]] or the search button beside the list.",
+        "Select a pause and inspect its location. Double-click a row to change its removal selection.",
+        "Recalculate the proposal and check the finish time. Leave genuine recording gaps alone if you do not know their meaning."
+      ],
+      "tip": "This requires complete, increasing timestamps. Without them, recorded pauses cannot be identified reliably; deliberately choose a new estimated schedule instead."
+    },
+    {
+      "id": 20,
+      "title": "Check elevation and statistics",
+      "steps": [
+        "Click [[Hoogte en statistiek]] or press F6. Choose [[Origineel]], [[Bewerkte route]] or [[Voorstel]].",
+        "Inspect distance, duration, average speed, ascent, descent and minimum and maximum elevation.",
+        "Move over the graph for local values. Compare unusual peaks with the route on the map.",
+        "Choose [[Naar de kaart]] to return. Calculate a proposal first if that choice has no data yet."
+      ],
+      "tip": "Elevations are unfiltered; recording noise can inflate ascent. Missing elevations produce partial totals. Average speed uses the available total duration, including pauses."
+    },
+    {
+      "id": 21,
+      "title": "Waypoints, descriptions and photos",
+      "steps": [
+        "Choose [[Waypoint toevoegen]] through More or the route menu and click the desired location.",
+        "Give the place a clear name. Optionally add a description and a photo using [[Foto kiezen…]].",
+        "Click [[Waypoint bewaren]]. Drag the purple marker to change its position.",
+        "Open [[Waypoints beheren]] to edit, show or delete a waypoint."
+      ],
+      "tip": "Name: at most 200 characters; description: 1,500. Photo: JPG, PNG, WebP or GIF, smaller than 25 MB and at most 60 megapixels. Move the GPX together with its accompanying photo folder."
+    },
+    {
+      "id": 22,
+      "title": "Save GPX and the check report",
+      "steps": [
+        "First review the line, times and messages. Apply the route proposal you want.",
+        "Choose [[GPX opslaan…]] or Ctrl+S. Respond to any question about a calculated proposal or a draft.",
+        "Choose a new filename and location. Existing files are not overwritten.",
+        "Keep the GPX, check report and any photo folder together. Reopen the export for a final check."
+      ],
+      "tip": "Output is GPX, including after FIT or TCX import. The report retains choices and estimates. A draft is not a new complete approval. The source file remains separately preserved."
+    },
+    {
+      "id": 23,
+      "title": "Compare original and adjusted routes",
+      "steps": [
+        "Open the original route. Save your edits before opening a different comparison.",
+        "Under [[Bestand]], choose comparison with an adjusted route and select the second GPX.",
+        "Read orange as original, blue as adjusted and red as requiring review.",
+        "Use next and previous changed location when the accompanying report contains those locations."
+      ],
+      "tip": "A different segment structure may require opening the adjusted GPX separately. Comparing does not retrospectively change the original recording."
+    },
+    {
+      "id": 24,
+      "title": "Local maps, offline work and refresh",
+      "steps": [
+        "Align a route. Complete downloaded areas automatically enter the local road index.",
+        "Later open the same or another route in that area. The index first finds existing data and downloads only missing parts.",
+        "Use [[Lokaal OSM-bestand importeren…]] for a complete bounded OSM XML region. PBF and images cannot be used for this.",
+        "Choose [[Uitlijngegevens vernieuwen]] when you want current data. Do this only with an Internet connection."
+      ],
+      "tip": "The map date is the OSM snapshot date or otherwise the file date. Index creation takes time once. The XML-file limit is 128 MB. The background map has a separate cache and may still be missing offline."
+    },
+    {
+      "id": 25,
+      "title": "Website catalogue and automatic opening",
+      "steps": [
+        "[[Mijn routeoverzicht]] is an optional website catalogue. The public package starts with an empty list.",
+        "Import only a catalogue you deliberately want to use. A website route is downloaded when you open it.",
+        "The upload action opens your browser. RouteRefit does not publish routes automatically or store a website password.",
+        "Under File, you can enable automatic opening of new GPX files in Downloads. It is off by default."
+      ],
+      "tip": "Local file import needs no website account. Use catalogue and upload features only if they suit your workflow; nothing is being sent to GitHub or SignPath."
+    },
+    {
+      "id": 26,
+      "title": "What to do when waiting or after an error",
+      "steps": [
+        "Is the indicator moving and elapsed time increasing? Work is still running. Read the current step.",
+        "The proposal uses saved roads first. Missing roads are downloaded afterwards in the background. There are no automatic retries or new countdowns. Use Update proposal when the download is ready.",
+        "If the road download ultimately fails, try again later. Valid saved tiles remain; this does not make your route invalid.",
+        "If a result is wrong, cancel, check settings and use control or via points. Use Undo after applying an unwanted result."
+      ],
+      "tip": "RouteRefit also works without a region package. Missing roads are downloaded during alignment, which can make route calculation take much longer. Saved roads are always reused."
+    },
+    {
+      "id": 27,
+      "title": "Shortcuts, preservation and future work",
+      "steps": [
+        "Ctrl+O opens a route; Ctrl+S starts saving. F6 opens statistics; F11 gives the map more room.",
+        "A control point guides the line. A via point guides a connection proposal. A waypoint describes a place.",
+        "Keep Mijn GPX, Kaarten and voorkeuren.json when upgrading. Also make your own backup of original routes and edits.",
+        "More activity profiles come after testing these language and usability changes. Creating routes from scratch is being prepared, not yet offered."
+      ],
+      "tip": "Merging separate files and splitting into separate files remain future features. This beta is not the stable 1.0 release and is not digitally signed yet."
+    },
+    {
+      "id": 28,
+      "title": "Optional region packages: faster alignment",
+      "steps": [
+        "RouteRefit also works without a region package. Missing roads are downloaded during alignment, which can make route calculation take much longer. Saved roads are always reused.",
+        "Open [[Kaart]] > [[Gebiedspakketten…]]. Find a province or region. Prefer a small region; downloads over 500 MB are rejected.",
+        "Use Ctrl or Shift to select multiple regions, including different countries. Searching preserves your selection. Check the download-list count. Packages download one after another and their roads are combined for alignment. Include the neighbouring region near a border.",
+        "Select the region and choose [[Downloaden / bijwerken]]. The initial download and preparation may take several minutes and require extra disk space. You can keep working.",
+        "Wait until the region is ready. Open your route, check the activity and choose [[Automatisch uitlijnen]]. Only roads near the route are read from the local index.",
+        "The six activities are explained in chapter 6 and navigation export in chapter 32. Drawing routes from scratch is not yet available."
+      ],
+      "tip": "Free, without an account. Geofabrik receives your IP address and selected region, but not your GPX, times or edits. Details: https://download.geofabrik.de/technical.html"
+    },
+    {
+      "id": 29,
+      "title": "Updating region packages efficiently",
+      "steps": [
+        "Keep [[Gedownloade gebieden wekelijks op de achtergrond bijwerken]] enabled for weekly checks by default while RouteRefit is open. Disable it to stop future automatic checks.",
+        "To update now, open [[Kaart]] > [[Gebiedspakketten…]], enable [[Alleen gedownload]], select a region and choose [[Downloaden / bijwerken]].",
+        "An up-to-date region is not downloaded or indexed again. Otherwise small daily change files update only changed roads and affected points.",
+        "Updates are prepared and checked separately. [[Stoppen]] or a failure preserves the existing package. There are no repeated countdowns; a failed automatic check is not retried automatically for at least one day.",
+        "Changed boundaries, old data or excessive changes require [[Opnieuw downloaden]]. A full download never starts silently. Updates do not change an open route or proposal; choose [[Automatisch uitlijnen]] again."
+      ],
+      "tip": "The list shows the OSM data date. A weekly check does not guarantee daily supplier changes. Keep the Kaarten folder when upgrading RouteRefit; it contains your packages and their settings. See chapter 31 for continuing after closing; this option is off by default."
+    },
+    {
+      "id": 30,
+      "title": "Draw a custom download area",
+      "steps": [
+        "Open [[Kaart]] > [[Gebiedspakketten…]] > [[Eigen gebied tekenen…]]. Areas may cross national borders. Existing packages remain available.",
+        "Enter a local name. Drag a [[Rechthoek]] or click the corners of a [[Veelhoek]]. Correct with [[Laatste punt weg]] or [[Wissen]]. Pan and zoom as needed.",
+        "Leave 1–2 km around routes. The enclosing rectangle may cover at most 2500 km². Smaller areas reduce download and processing work; supplier queues can still cause delays.",
+        "Read the privacy explanation and choose [[Gebied downloaden via SliceOSM]]. Only the drawn boundary and your IP go to the service. The name, GPX, times and edits stay local. The boundary is accessible through the download link.",
+        "Progress has three stages: downloading (including supplier preparation), local processing and checking. [[Stoppen]] preserves existing packages. A slow supplier request can be resumed manually later.",
+        "Refresh custom areas manually with [[Downloaden / bijwerken]]. This downloads the small area again, without daily change files. A reminder appears after a week. Alignment also works without packages, but missing roads may take much longer to obtain."
+      ],
+      "tip": "SliceOSM is free and requires no account, but may log usage data. https://github.com/SliceOSM/.github/blob/main/PRIVACY.md . Packages contain routing roads; background map images are separate. Speed is not guaranteed."
+    },
+    {
+      "id": 31,
+      "title": "Background work and available computing power",
+      "steps": [
+        "By default, closing RouteRefit stops region jobs. No Windows startup task is created. Weekly checks then run only while the application is open.",
+        "To continue after closing, open [[Gebiedspakketten…]] and explicitly enable [[Doorgaan als RouteRefit gesloten is (Windows-achtergrondtaak)]]. Windows creates a task for your user at sign-in and daily at 09:00. No administrator rights or map-service account are needed.",
+        "Start a region download or update. A separate process continues after closing RouteRefit. Windows must be awake and you must be signed in. The task does not wake the computer. Route calculations and editing are not continued in the background.",
+        "The daily task checks which Geofabrik packages are due for their weekly update. The weekly setting still applies. Custom areas are refreshed manually; an already-started download can continue after closing.",
+        "[[Stoppen]] stops the current region job. Disabling the background option stops background work and removes the Windows task. Network failures do not trigger repeated new requests. After interruption by Windows, resume manually.",
+        "Map files are decoded in parallel where possible. With little competing CPU load, processing runs at normal speed with a bounded memory buffer. Under heavy load, map work gets lower priority and extra pauses. Processing remains separate from the interface."
+      ],
+      "tip": "Enabling is always your choice. Routes, times and settings are not sent to the download provider. Existing packages are replaced only after the new version passes validation."
+    },
+    {
+      "id": 32,
+      "title": "Navigation routes for Komoot, Garmin and Strava",
+      "steps": [
+        "Check the line and accept the proposal. Keep the editable GPX with its review report to continue later. Connect recording gaps if you need one continuous navigation route.",
+        "[[Exporteer naar]]: click Komoot, Garmin or Strava. [[GPX opslaan en uploadpagina openen]] saves the navigation line and elevations without times. Select the file on the website and confirm the import there.",
+        "Komoot: choose a planned route and retain its original shape. Garmin: import in Courses and send to a compatible device. Strava: import in the route planner; a subscription may be needed. Activity export with adjusted times remains under [[Exporteren naar…]].",
+        "After import, check the line, activity and who can see the route. [[Bestandspad kopiëren]] helps locate the file. Open the saved route on your phone or compatible navigation device."
+      ],
+      "tip": "Export is local and free. Files omit photos, waypoints and personal metadata; locations remain visible. RouteRefit never uploads automatically. Services have their own terms and possible fees. Keep the regular GPX with its review report for further editing."
+    },
+    {
+      "id": 33,
+      "title": "Local files: GPX, TCX and KML",
+      "steps": [
+        "Check the line and accept the proposal. Keep the editable GPX with its review report to continue later. Connect recording gaps if you need one continuous navigation route.",
+        "For local files: [[Bestand…]] > GPX, TCX or KML > [[Bestand opslaan…]]. Also available via File > [[Routebestand exporteren…]]. GPX is for navigation; KML for mapping programs. Both omit times. TCX is a course with existing route times.",
+        "Choose [[Datum en snelheid voor TCX instellen]] to use the calendar, time picker and average speed. This opens automatically if usable times are missing. New times are estimates; walking/cycling requires complete elevations. Your editable route is unchanged.",
+        "Choose a new filename; existing files are never overwritten. Separate sections stay separate. KML needs at least two points per section. After import, check the line, times, activity and visibility; support varies by program/device."
+      ],
+      "tip": "Export is local and free. Files omit photos, waypoints and personal metadata; locations remain visible. RouteRefit never uploads automatically. Services have their own terms and possible fees. Keep the regular GPX with its review report for further editing."
+    }
+  ],
+  "de": [
+    {
+      "id": 1,
+      "title": "Installieren und sicher starten",
+      "steps": [
+        "Starten Sie RouteRefit-0.5.15-beta-Setup.exe. Lesen Sie Lizenz und Datenschutzhinweise und wählen Sie den Programmordner. Python ist nicht erforderlich. Starten Sie RouteRefit danach über das Startmenü.",
+        "Updates mit dem Installationsprogramm verwenden denselben Ordner und erhalten Mijn GPX, Kaarten und voorkeuren.json. Speichern Sie zuerst Ihre Arbeit und schließen Sie das Programm sowie laufende Wegedownloads.",
+        "Sie nutzen bereits eine portable Kopie? Wählen Sie bei der Installation deren Ordner, um dieselben Daten zu verwenden. Daten werden nicht zwischen Ordnern verschoben. Erstellen Sie vorher eine Sicherung.",
+        "Für portable Nutzung entpacken Sie die vollständige Windows-ZIP und starten RouteRefit-0.5.15-beta.exe. Lassen Sie _internal daneben. Ein anderer entpackter Ordner hat eigene Routen und Karten.",
+        "Deinstallieren Sie über Windows-Einstellungen > Apps. Persönliche Daten bleiben erhalten. Nur die auf diese Installation verweisende Hintergrundaufgabe und Website-Verknüpfung werden entfernt.",
+        "Hintergrundarbeit braucht eine gesonderte Zustimmung. Beim Wechsel schalten Sie sie in der alten Kopie aus und bei Bedarf in der neuen ein. Wiederholen Sie dies nach einer Deinstallation und Neuinstallation."
+      ],
+      "tip": "Diese Beta ist nicht digital signiert. Die Installation enthält keine persönlichen Routen oder Karten und aktiviert keine Hintergrundaufgabe. Desktop-Verknüpfung und anschließender Programmstart sind optional."
+    },
+    {
+      "id": 2,
+      "title": "Sprache und Orientierung",
+      "steps": [
+        "Öffne [[Taal]] und wähle Nederlands, English, Deutsch, Français, Español oder Português.",
+        "Der Sprachwechsel startet das Programm neu. Kläre zuerst die Rückfrage zu ungespeicherter Arbeit.",
+        "[[Routes]] zeigt lokale Dateien, [[Route bewerken]] die Karte. F6 öffnet Höhe und Statistik.",
+        "Öffne die Anleitung über [[Help]]. Die PDF entspricht der gewählten Programmsprache."
+      ],
+      "tip": "Portugiesisch verwendet europäische Begriffe. Die Bilder zeigen eine synthetische Demonstration; Zahlen dienen als Beispiele."
+    },
+    {
+      "id": 3,
+      "title": "Eine Route öffnen",
+      "steps": [
+        "Klicke [[Route importeren…]] oder drücke Ctrl+O. Wähle deine Datei und öffne sie.",
+        "Unterstützt werden GPX, TCX, FIT, KML, KMZ und GeoJSON. Bewahre die Quelldatei auf.",
+        "Warte auf Linie und Entfernung. Dafür muss nicht erst das gesamte Straßennetz geladen werden.",
+        "Lies Konvertierungsmeldungen. Sensorwerte, Kartenstile und gerätespezifische Felder werden nicht vollständig in GPX übernommen."
+      ],
+      "tip": "Mindestens zwei Routenpunkte sind nötig. Eine reine Wegpunktdatei ist keine bearbeitbare Route."
+    },
+    {
+      "id": 4,
+      "title": "Einen Ordner prüfen",
+      "steps": [
+        "Wähle in [[Routes]] über [[Map kiezen…]] den Ordner mit Routendateien.",
+        "Aktiviere bei Bedarf [[Ook submappen]]. Klicke [[Map controleren]].",
+        "Wähle eine Zeile. Prüfe unlesbare Dateien, fehlende Zeiten und doppelte Inhalte.",
+        "Öffne die gewünschte Route per Doppelklick oder [[Geselecteerde GPX openen]]."
+      ],
+      "tip": "Die Prüfung verändert und löscht nichts. Gleiche Inhalte können andere Namen haben. Höchstens 10.000 Dateien pro Prüfung."
+    },
+    {
+      "id": 5,
+      "title": "Die Karte lesen und verschieben",
+      "steps": [
+        "Orange ist das Original, Blau die bearbeitbare Route, Grün ein Vorschlag. Rot verlangt Prüfung.",
+        "Wähle [[Kaart verschuiven]] und ziehe die Karte. Mausrad sowie + und − zoomen.",
+        "[[Hele route]] stellt den Überblick wieder her. [[Grote kaart]] oder F11 schafft Platz.",
+        "Große gelbe Punkte steuern die Route. Lila Markierungen sind Wegpunkte und bestimmen nicht automatisch den Straßenverlauf."
+      ],
+      "tip": "Kartenhintergrund und Straßendaten zur Berechnung sind getrennt. Eine Hintergrundstörung macht gespeicherte Straßen nicht unbrauchbar."
+    },
+    {
+      "id": 6,
+      "title": "Aktivität wählen",
+      "steps": [
+        "Öffne vor dem Ausrichten [[Instellingen]] und [[Activiteit]]. Wähle [[Lopen]], [[Fiets]], [[MTB]], [[Gravelfiets]], [[Auto]] oder [[Motor]]. Speed-Pedelec ist nicht enthalten.",
+        "Die Aktivität bestimmt Zugang, Fahrtrichtung und geeignete Wege. Gravel vermeidet schwere Trails; Auto und Motorrad nutzen gewöhnliche Rad- oder Fußwege nur mit ausdrücklicher Erlaubnis in den Kartendaten.",
+        "Die lokale Berechnung verwendet OSM-Daten in ganz Europa, auch grenzüberschreitend. Expliziter Zugang, Einbahnstraßen und unterstützte Abbiegebeschränkungen werden berücksichtigt. Lade genug Daten für Grenzrouten.",
+        "Aktivität nach der Berechnung geändert? Erstelle einen neuen Vorschlag. Das Tempo unter [[Tijdschema]] ändert nicht die Wegwahl. Aktivität und eigene Geschwindigkeit werden mit der GPX gespeichert."
+      ],
+      "tip": "Beschilderung und örtliche Regeln sind maßgeblich. Nationale Standardregeln, bedingter Zugang und Fahrzeugmaße sind nicht vollständig modelliert. Erkannte bedingte Abbiegebeschränkungen gelten vorsorglich immer. Zeiten sind Schätzungen ohne Verkehr oder Tempolimits."
+    },
+    {
+      "id": 7,
+      "title": "Routenwahl, Zugang und Suchradius",
+      "steps": [
+        "Öffne [[Instellingen]] und [[Route]]. Aktuell gibt es [[Meest logisch]]: der vorhandenen Route folgen.",
+        "Unter [[Activiteit]] öffnet [[Toegang en privéwegen…]] direkt die Routeneinstellungen. [[Sta privéwegen en -paden toe]] und [[Toegangsmeldingen…]] stehen weit oben.",
+        "Lasse [[Sta privéwegen en -paden toe]] aus, sofern du solche Wege nicht bewusst einbeziehen willst.",
+        "Beginne beim Suchradius mit 35 Metern. Erlaubt sind 5–150 Meter um die Routenpunkte.",
+        "Erhöhe ihn nur bei Bedarf. Prüfe danach parallele Wege und die richtige Straßenseite besonders genau.",
+        "Prüfe Zugangsmeldungen nach der Routenkontrolle. Die Annahme bewahrt Linie, Höhen und Zeiten. Fehlende Zugangstags sperren Gehen und Radfahren nicht automatisch; Auto und Motorrad vermeiden gewöhnliche Rad- und Fußwege ohne ausdrückliche Erlaubnis."
+      ],
+      "tip": "Kürzeste, schnellste, ruhige, schöne und höhenabhängige Varianten sind Zukunftsarbeit. Eine Zugangswarnung anzunehmen ändert keine Straßenwahl und schafft kein Zugangsrecht."
+    },
+    {
+      "id": 8,
+      "title": "Automatik und Fortschritt verfolgen",
+      "steps": [
+        "Öffne eine Route, wähle die Aktivität und klicke einmal [[Automatisch uitlijnen]].",
+        "Die Anzeige bewegt sich. Arbeitsschritt und vergangene Zeit bleiben sichtbar; es kann etwas dauern.",
+        "Der Vorschlag nutzt zuerst gespeicherte Wege. Fehlende Wege werden danach im Hintergrund geladen. Keine automatischen Wiederholungen oder neuen Countdowns. Ergänzen Sie den Vorschlag nach dem Download.",
+        "Mit [[Uitlijnen stoppen]] beendest du das Warten. Die bearbeitbare Route bleibt erhalten."
+      ],
+      "tip": "Neue Gebiete brauchen zunächst Straßendaten. Vollständige gespeicherte Gebiete werden auch nach Neustart genutzt. Grün bleibt bis zur Übernahme ein Vorschlag."
+    },
+    {
+      "id": 9,
+      "title": "Vorschlag prüfen und übernehmen",
+      "steps": [
+        "Lies Entfernung, geschätzte Reisezeit, Anstieg und Unterschiede zum Original und zur bearbeiteten Route.",
+        "Zoome an Kreuzungen, parallelen Radwegen und roten Markierungen. Prüfe die grüne Linie.",
+        "Wähle bei Zweifel [[Annuleren]]. Passe Aktivität, Radius oder Hauptpunkte an und berechne erneut.",
+        "Mit [[Voorstel overnemen]] ändert sich die blaue Route. [[Ongedaan maken]] stellt die vorige Bearbeitung wieder her.",
+        "Nach der Übernahme stehen alle gelben [[Hoofdpunten]] zur weiteren Bearbeitung bereit. Wähle [[Losse punten]] für freie Punktkorrekturen; erneutes automatisches Ausrichten ist nicht nötig."
+      ],
+      "tip": "Fehlende Höhen ergeben Teilsummen. Rekonstruierte Höhen und Zeiten bleiben Schätzungen, kein Beleg für tatsächliche Reisezeit oder Zugang."
+    },
+    {
+      "id": 10,
+      "title": "Mit Hauptpunkten manuell ausrichten",
+      "steps": [
+        "Wähle [[Hoofdpunten]] oder [[Handmatig uitlijnen]]. Nach der Übernahme eines Ausrichtungsvorschlags ist dieser Bearbeitungsmodus bereits aktiv; die gelben Hauptpunkte sind sichtbar.",
+        "Ziehe einen großen gelben Hauptpunkt auf den richtigen Weg. Die Nachbarverbindungen werden berechnet.",
+        "Rechtsklicke einen unerwünschten Hauptpunkt und wähle [[Hoofdpunt verwijderen en opnieuw verbinden]].",
+        "Prüfe den Ersatz und übernimm ihn erst dann. Start- und Endhauptpunkt bleiben bestehen.",
+        "Übernimm die örtliche Änderung und bearbeite gleich den nächsten Punkt. [[GPX opslaan…]] speichert Route, Zeiten, Hauptpunkte und Bearbeitungsmodus. Öffne diese GPX-Datei später zum Weiterarbeiten."
+      ],
+      "tip": "Auch die alten Zwischenpunkte zwischen den verbleibenden Nachbarhauptpunkten werden ersetzt. Der alte Umweg steuert den Ersatz nicht mehr."
+    },
+    {
+      "id": 11,
+      "title": "Einzelpunkte und Hauptpunktdichte",
+      "steps": [
+        "Wähle [[Losse punten]], um einen einzelnen aufgezeichneten Punkt zu bearbeiten.",
+        "Wähle oder ziehe ihn. Doppelklicke zum Hinzufügen auf die Linie; lösche den gewählten Punkt über die Löschaktion.",
+        "Für eine Korrektur entlang von Straßen wechsle zu [[Handmatig uitlijnen]] und den großen Hauptpunkten.",
+        "Unter [[Route]] verteilst du Hauptpunkte neu: [[Weinig]], [[Normaal]] oder [[Veel]]. Die Linie bleibt bestehen."
+      ],
+      "tip": "Einen Einzelpunkt zu verschieben ist keine Straßenberechnung. Bei einer falschen Änderung hilft [[Ongedaan maken]]."
+    },
+    {
+      "id": 12,
+      "title": "Einen unerwünschten Umweg ersetzen",
+      "steps": [
+        "Rechtsklicke vor dem Umweg auf die blaue Linie. Wähle [[Begin te verwijderen stuk hier]].",
+        "Rechtsklicke danach auf dieselbe Linie und wähle [[Eind te verwijderen stuk hier…]].",
+        "Prüfe die neue Verbindung. Nutze bei Bedarf Zwischenpunkte, um den gewünschten Verlauf anzugeben.",
+        "Übernimm den Vorschlag oder brich ab. Prüfe anschließend auch den neuen Zeitplan."
+      ],
+      "tip": "Bei Beibehaltung der verfügbaren Durchschnittsgeschwindigkeit endet eine kürzere Route früher. Neue Punktzeiten sind geschätzt; Pausen werden nicht separat eingeplant."
+    },
+    {
+      "id": 13,
+      "title": "Start, Ende oder beide verschieben",
+      "steps": [
+        "Wähle unter [[Route]] [[Startpunt verplaatsen]], [[Eindpunt verplaatsen]] oder [[Start en eind samen verplaatsen]].",
+        "Klicke auf den gewünschten Weg. Nur die Verbindung zur vorhandenen Route wird berechnet.",
+        "Prüfe Verbindung, Fahrtrichtung und Wegseite.",
+        "Übernimm die richtige Änderung und berechne danach den Zeitplan erneut."
+      ],
+      "tip": "Die restliche Route bleibt bestehen und wird dadurch nicht neu bestätigt. [[Kaart verschuiven]] beendet den Platzierungsmodus."
+    },
+    {
+      "id": 14,
+      "title": "Aufzeichnungslücken und Abschnitte verstehen",
+      "steps": [
+        "Prüfe die Zahl der Routenabschnitte. Eine echte Aufzeichnungslücke bleibt als Unterbrechung erkennbar.",
+        "Angrenzende TCX-Rundengrenzen werden verbunden. FIT-Timerstopps fast am selben Ort zählen als Pause.",
+        "Wähle [[Meer]] → [[Routedelen verbinden…]] und die zu rekonstruierende Lücke.",
+        "Öffne [[Verbinding aanpassen…]] und prüfe die Anschlüsse an beide Aufzeichnungen."
+      ],
+      "tip": "Die rekonstruierte Verbindung ist keine GPS-Aufzeichnung. Übernimm nur einen Verlauf, den du selbst für angemessen hältst."
+    },
+    {
+      "id": 15,
+      "title": "Verbindungen mit Zwischenpunkten steuern",
+      "steps": [
+        "Klicke im Verbindungsfenster Orte in der gewünschten Reisereihenfolge an.",
+        "Ziehe Marker oder nutze aufwärts, abwärts und entfernen, um Zwischenpunkte zu korrigieren.",
+        "Klicke nach jeder Änderung [[Verbinding berekenen]]. Erst dann passt Grün zur neuen Punktliste.",
+        "Prüfe die Linie und wähle [[Verbinding overnemen]]. Abbrechen erhält die getrennten Abschnitte."
+      ],
+      "tip": "Höchstens 50 Zwischenpunkte und 50 km Verbindung. Fehlende Straßen werden nicht durch erfundene Geraden ersetzt. Höhen und Zeiten bleiben gekennzeichnete Schätzungen."
+    },
+    {
+      "id": 16,
+      "title": "Probleme reparieren oder Abschnitte beibehalten",
+      "steps": [
+        "Nutze [[Vorig probleem]], [[Volgend probleem]] und [[Probleemplaats tonen]] für rote Markierungen.",
+        "Prüfe Aktivität, richtige Wegseite und verfügbare Kartendaten.",
+        "Suche einen Reparaturvorschlag, verschiebe einen Hauptpunkt oder ersetze den Abschnitt mit Zwischenpunkten.",
+        "Zum Beibehalten wähle [[Gekozen stuk handmatig behouden]] und berechne erneut."
+      ],
+      "tip": "Manuelles Beibehalten ist eine bewusste Ausnahme und kein Zugangsbeleg. Offene Probleme bleiben erkennbar; eine unerwartete Fehlermeldung macht nicht die gesamte GPX unbrauchbar."
+    },
+    {
+      "id": 17,
+      "title": "Zugangswarnungen verstehen",
+      "steps": [
+        "Richte zunächst automatisch aus oder prüfe erneut, damit die Probleme bekannt sind.",
+        "Öffne [[Meer]] → [[Toegangsmeldingen…]], wenn nur Zugangstags als Ursache infrage kommen.",
+        "Lies die Warnung. Nur ausschließlich dadurch verursachte Probleme können so angenommen werden.",
+        "Linie, Höhen und Zeiten bleiben gleich. Die Entscheidung wird protokolliert und lässt sich rückgängig machen."
+      ],
+      "tip": "Der Knopf hebt kein örtliches Verbot auf. Beachte Regeln und Schilder. Richtung, fehlende Verbindungen und Geometrieprobleme werden nicht ignoriert."
+    },
+    {
+      "id": 18,
+      "title": "Einen neuen Zeitplan berechnen",
+      "steps": [
+        "Öffne [[Instellingen]] → [[Tijdschema]]. Wähle ein Tempo oder eine eigene Geschwindigkeit auf ebener Strecke.",
+        "Gib die Startzeit an. Das Feld verwendet UTC, nicht automatisch deine Ortszeit.",
+        "Trage eine Zieldauer nur bewusst ein. Verwende hh:mm.",
+        "Wähle unter [[Meer]] [[Tijdschema berekenen…]] und prüfe Vorschlag und geschätzte Zeiten.",
+        "Diese Aktion berechnet nur die Zeiten entlang der bearbeiteten Linie. Manuelle Korrekturen bleiben auch ohne Wegedownload erhalten. Verwende [[Automatisch uitlijnen]] nur, wenn du die Route erneut ausrichten möchtest."
+      ],
+      "tip": "Aktivität bestimmt Straßen, Tempo bestimmt Zeiten. Wind, Ampeln und aktuelle Verkehrslage werden nicht modelliert. Unvollständige Höhen können Geländeberechnungen verhindern."
+    },
+    {
+      "id": 19,
+      "title": "Aufgezeichnete Pausen entfernen",
+      "steps": [
+        "Öffne den Zeitplan und wähle die Bearbeitung der bestehenden Aufnahme durch Pausenentfernung.",
+        "Stelle Mindestdauer und Stillstandsradius ein. Nutze [[Pauzes zoeken]] oder die Suchtaste neben der Liste.",
+        "Wähle eine Pause und prüfe den Ort. Ein Doppelklick ändert die Auswahl zur Entfernung.",
+        "Berechne den Vorschlag erneut und prüfe die Endzeit. Lasse unklare Aufzeichnungslücken unangetastet."
+      ],
+      "tip": "Vollständige, steigende Zeitstempel sind erforderlich. Ohne sie lassen sich aufgezeichnete Pausen nicht zuverlässig bestimmen; wähle dann bewusst einen neuen geschätzten Zeitplan."
+    },
+    {
+      "id": 20,
+      "title": "Höhenprofil und Statistik prüfen",
+      "steps": [
+        "Klicke [[Hoogte en statistiek]] oder F6. Wähle [[Origineel]], [[Bewerkte route]] oder [[Voorstel]].",
+        "Prüfe Entfernung, Dauer, Durchschnittstempo, Anstieg, Abstieg sowie niedrigsten und höchsten Punkt.",
+        "Bewege den Zeiger über die Grafik für Einzelwerte. Vergleiche auffällige Spitzen mit der Karte.",
+        "[[Naar de kaart]] führt zurück. Berechne zuerst einen Vorschlag, falls dafür noch Daten fehlen."
+      ],
+      "tip": "Ungefilterte Messwerte können den Anstieg überhöhen. Fehlende Höhen ergeben Teilsummen. Die Durchschnittsgeschwindigkeit berücksichtigt die verfügbare Gesamtdauer einschließlich Pausen."
+    },
+    {
+      "id": 21,
+      "title": "Wegpunkte, Beschreibungen und Fotos",
+      "steps": [
+        "Wähle [[Waypoint toevoegen]] unter Mehr oder Route und klicke den gewünschten Ort an.",
+        "Vergib einen deutlichen Namen. Ergänze optional Beschreibung und Foto über [[Foto kiezen…]].",
+        "Klicke [[Waypoint bewaren]]. Ziehe die lila Markierung zum Verschieben.",
+        "Unter [[Waypoints beheren]] kannst du bearbeiten, auf der Karte zeigen oder löschen."
+      ],
+      "tip": "Name höchstens 200 Zeichen, Beschreibung 1.500. Fotos: JPG, PNG, WebP oder GIF, unter 25 MB und höchstens 60 Megapixel. Bewahre GPX und zugehörigen Fotoordner zusammen auf."
+    },
+    {
+      "id": 22,
+      "title": "GPX und Prüfbericht speichern",
+      "steps": [
+        "Prüfe zuerst Linie, Zeiten und Meldungen. Übernimm den gewünschten Routenvorschlag.",
+        "Wähle [[GPX opslaan…]] oder Ctrl+S. Beantworte gegebenenfalls die Frage nach Vorschlag oder Entwurf.",
+        "Wähle neuen Dateinamen und Speicherort. Vorhandene Dateien werden nicht überschrieben.",
+        "Bewahre GPX, Prüfbericht und Fotoordner gemeinsam auf. Öffne den Export zur Endkontrolle erneut."
+      ],
+      "tip": "Ausgabe ist GPX, auch nach FIT/TCX-Import. Der Bericht enthält Entscheidungen und Schätzungen. Ein Entwurf ist keine neue vollständige Bestätigung. Die Quelle bleibt separat erhalten."
+    },
+    {
+      "id": 23,
+      "title": "Original und bearbeitete Route vergleichen",
+      "steps": [
+        "Öffne die Originalroute. Speichere Bearbeitungen vor einer anderen Vergleichsansicht.",
+        "Wähle unter [[Bestand]] den Vergleich mit einer angepassten Route und die zweite GPX.",
+        "Orange zeigt das Original, Blau die Anpassung, Rot noch zu prüfende Stellen.",
+        "Nutze nächste und vorherige Änderung, sofern der zugehörige Bericht diese Orte enthält."
+      ],
+      "tip": "Bei anderer Abschnittsstruktur muss die angepasste GPX eventuell separat geöffnet werden. Vergleichen verändert die ursprüngliche Aufnahme nicht rückwirkend."
+    },
+    {
+      "id": 24,
+      "title": "Lokale Karten, offline und Aktualisieren",
+      "steps": [
+        "Beim Ausrichten gelangen vollständig geladene Gebiete automatisch in den lokalen Straßenindex.",
+        "Spätere Routen im selben Gebiet nutzen vorhandene Daten; nur fehlende Teile werden geladen.",
+        "Importiere über [[Lokaal OSM-bestand importeren…]] eine vollständige begrenzte OSM-XML-Region, kein PBF oder Bild.",
+        "Für aktuelle Daten wähle [[Uitlijngegevens vernieuwen]]. Dafür ist Internet erforderlich."
+      ],
+      "tip": "Das Datum stammt aus dem OSM-Stand oder der Datei. Der Indexaufbau benötigt einmalig Zeit. Höchstens 128 MB je XML. Hintergrundkarten haben einen getrennten Cache und können offline fehlen."
+    },
+    {
+      "id": 25,
+      "title": "Websitekatalog und automatisches Öffnen",
+      "steps": [
+        "[[Mijn routeoverzicht]] ist ein optionaler Websitekatalog. Die öffentliche Ausgabe startet leer.",
+        "Importiere nur bewusst gewählte Kataloge. Eine Websiteroute wird beim Öffnen heruntergeladen.",
+        "Die Uploadaktion öffnet deinen Browser. RouteRefit veröffentlicht nicht automatisch und speichert kein Websitepasswort.",
+        "Unter Datei kannst du neue GPX-Dateien in Downloads automatisch öffnen lassen; standardmäßig ist das aus."
+      ],
+      "tip": "Für lokale Importe ist kein Websitekonto nötig. Nutze diese Zusatzfunktionen nur bei Bedarf. Es wird derzeit nichts an GitHub oder SignPath gesendet."
+    },
+    {
+      "id": 26,
+      "title": "Bei Warten oder Fehlern handeln",
+      "steps": [
+        "Bewegen sich Anzeige und vergangene Zeit, läuft die Arbeit noch. Lies den Arbeitsschritt.",
+        "Der Vorschlag nutzt zuerst gespeicherte Wege. Fehlende Wege werden danach im Hintergrund geladen. Keine automatischen Wiederholungen oder neuen Countdowns. Ergänzen Sie den Vorschlag nach dem Download.",
+        "Scheitert der Download, versuche es später erneut. Gültige Kacheln bleiben gespeichert; die Route ist deswegen nicht ungültig.",
+        "Bei falschem Verlauf: abbrechen, Einstellungen prüfen und Haupt- oder Zwischenpunkte verwenden. Nach Übernahme hilft Rückgängig."
+      ],
+      "tip": "RouteRefit funktioniert auch ohne Gebietspaket. Fehlende Wege werden während der Ausrichtung heruntergeladen. Dadurch kann die Routenberechnung deutlich länger dauern. Gespeicherte Wege werden immer wiederverwendet."
+    },
+    {
+      "id": 27,
+      "title": "Tastenkürzel, Sicherung und Zukunft",
+      "steps": [
+        "Ctrl+O öffnet, Ctrl+S speichert. F6 zeigt Statistik, F11 schafft Kartenplatz.",
+        "Ein Hauptpunkt steuert die Linie, ein Zwischenpunkt einen Verbindungsvorschlag. Ein Wegpunkt beschreibt einen Ort.",
+        "Bewahre beim Aktualisieren Mijn GPX, Kaarten und voorkeuren.json auf. Sichere Originale und Bearbeitungen zusätzlich selbst.",
+        "Weitere Aktivität folgen nach diesen Sprach- und Bedienungstests. Das Neuerstellen von Routen wird vorbereitet, noch nicht angeboten."
+      ],
+      "tip": "Dateien zusammenführen und getrennte Dateien erzeugen bleiben Zukunftsfunktionen. Diese Beta ist nicht die stabile 1.0 und noch nicht digital signiert."
+    },
+    {
+      "id": 28,
+      "title": "Optionale Gebietspakete: schneller ausrichten",
+      "steps": [
+        "RouteRefit funktioniert auch ohne Gebietspaket. Fehlende Wege werden während der Ausrichtung heruntergeladen. Dadurch kann die Routenberechnung deutlich länger dauern. Gespeicherte Wege werden immer wiederverwendet.",
+        "Öffnen Sie [[Kaart]] > [[Gebiedspakketten…]]. Suchen Sie eine Provinz oder Region. Wählen Sie ein kleines Gebiet; Downloads über 500 MB werden abgelehnt.",
+        "Mit Strg oder Umschalt wählen Sie mehrere Gebiete, auch aus verschiedenen Ländern. Die Suche erhält Ihre Auswahl. Prüfen Sie die Anzahl in der Downloadliste. Pakete werden nacheinander geladen und ihre Wege kombiniert. Wählen Sie an Grenzen auch das Nachbargebiet.",
+        "Wählen Sie das Gebiet und [[Downloaden / bijwerken]]. Download und erste Vorbereitung können mehrere Minuten dauern und benötigen zusätzlichen Speicherplatz. Sie können weiterarbeiten.",
+        "Warten Sie, bis das Gebiet bereit ist. Öffnen Sie Ihre Route, prüfen Sie die Aktivität und wählen Sie [[Automatisch uitlijnen]]. Nur Wege in Routennähe werden aus dem lokalen Index gelesen.",
+        "Die sechs Aktivitäten stehen in Kapitel 6, der Navigationsexport in Kapitel 32. Routen von Grund auf zeichnen ist noch nicht verfügbar."
+      ],
+      "tip": "Kostenlos, ohne Konto. Geofabrik erhält IP-Adresse und Gebiet, aber keine GPX-Datei, Zeiten oder Bearbeitungen. Details: https://download.geofabrik.de/technical.html"
+    },
+    {
+      "id": 29,
+      "title": "Gebietspakete effizient aktualisieren",
+      "steps": [
+        "Aktivieren Sie [[Gedownloade gebieden wekelijks op de achtergrond bijwerken]] für wöchentliche Prüfungen, standardmäßig solange RouteRefit geöffnet ist. Deaktivieren verhindert zukünftige automatische Prüfungen.",
+        "Zum sofortigen Aktualisieren: [[Kaart]] > [[Gebiedspakketten…]], [[Alleen gedownload]], Gebiet auswählen und [[Downloaden / bijwerken]].",
+        "Aktuelle Gebiete werden nicht erneut heruntergeladen oder indexiert. Kleine tägliche Änderungsdateien aktualisieren sonst nur geänderte Wege und betroffene Punkte.",
+        "Updates werden separat vorbereitet und geprüft. [[Stoppen]] oder ein Fehler lässt das bestehende Paket erhalten. Keine wiederholten Countdowns; nach einer fehlgeschlagenen automatischen Prüfung folgt mindestens einen Tag kein automatischer neuer Versuch.",
+        "Geänderte Grenzen, alte Daten oder zu viele Änderungen erfordern [[Opnieuw downloaden]]. Das startet nie unbemerkt. Offene Routen und Vorschläge bleiben unverändert; wählen Sie erneut [[Automatisch uitlijnen]]."
+      ],
+      "tip": "Die Liste zeigt das Datum der OSM-Daten. Wöchentliche Prüfungen garantieren keine täglichen Änderungen. Bewahren Sie bei Programmupdates den Ordner Kaarten mit den Paketen und Einstellungen auf. Kapitel 31 erklärt das Fortsetzen nach dem Schließen; standardmäßig deaktiviert."
+    },
+    {
+      "id": 30,
+      "title": "Eigenes Downloadgebiet zeichnen",
+      "steps": [
+        "Öffnen Sie [[Kaart]] > [[Gebiedspakketten…]] > [[Eigen gebied tekenen…]]. Gebiete dürfen Landesgrenzen überschreiten. Vorhandene Pakete bleiben verfügbar.",
+        "Geben Sie einen lokalen Namen ein. Ziehen Sie ein [[Rechthoek]] oder klicken Sie die Ecken eines [[Veelhoek]]. Korrigieren Sie mit [[Laatste punt weg]] oder [[Wissen]]. Verschieben und zoomen Sie die Karte.",
+        "Lassen Sie 1–2 km Abstand um Routen. Das umschließende Rechteck darf höchstens 2500 km² umfassen. Kleine Gebiete verringern Download und Verarbeitung; Warteschlangen beim Anbieter bleiben möglich.",
+        "Lesen Sie den Datenschutzhinweis und wählen Sie [[Gebied downloaden via SliceOSM]]. Nur Grenze und IP-Adresse gehen an den Dienst. Name, GPX, Zeiten und Bearbeitungen bleiben lokal. Die Grenze ist über den Downloadlink abrufbar.",
+        "Drei Phasen zeigen Download samt Anbietervorbereitung, lokale Verarbeitung und Prüfung. [[Stoppen]] erhält bestehende Pakete. Eine langsame Anfrage kann später manuell fortgesetzt werden.",
+        "Aktualisieren Sie eigene Gebiete manuell mit [[Downloaden / bijwerken]]. Das kleine Gebiet wird vollständig neu geladen, ohne tägliche Änderungsdateien. Nach einer Woche erscheint ein Hinweis. Ohne Paket funktioniert die Ausrichtung ebenfalls, fehlende Wege können jedoch deutlich länger brauchen."
+      ],
+      "tip": "SliceOSM ist kostenlos, ohne Konto, kann aber Nutzungsdaten erfassen: https://github.com/SliceOSM/.github/blob/main/PRIVACY.md . Pakete enthalten Rechenwege; Hintergrundkarten sind getrennt. Keine Geschwindigkeitsgarantie."
+    },
+    {
+      "id": 31,
+      "title": "Hintergrundarbeit und verfügbare Rechenleistung",
+      "steps": [
+        "Standardmäßig stoppt das Schließen von RouteRefit laufende Gebietstätigkeiten. Es wird keine Windows-Startaufgabe erstellt. Wöchentliche Prüfungen laufen dann nur bei geöffnetem Programm.",
+        "Aktivieren Sie in [[Gebiedspakketten…]] selbst [[Doorgaan als RouteRefit gesloten is (Windows-achtergrondtaak)]]. Windows erstellt eine Aufgabe für Ihren Benutzer bei der Anmeldung und täglich um 09:00. Keine Administratorrechte oder Konten beim Kartendienst nötig.",
+        "Starten Sie Download oder Update. Ein eigener Prozess arbeitet nach dem Schließen weiter. Windows muss aktiv und der Benutzer angemeldet sein. Der Computer wird nicht aufgeweckt. Routenberechnungen und Bearbeitungen laufen nicht im Hintergrund weiter.",
+        "Die tägliche Aufgabe prüft fällige wöchentliche Geofabrik-Updates. Die Wocheneinstellung bleibt gültig. Eigene Gebiete aktualisieren Sie manuell; gestartete Downloads können nach dem Schließen weiterlaufen.",
+        "[[Stoppen]] beendet die aktuelle Gebietstätigkeit. Deaktivieren stoppt Hintergrundarbeit und entfernt die Windows-Aufgabe. Netzwerkfehler erzeugen keine neuen automatischen Anfragen. Nach einer Windows-Unterbrechung setzen Sie manuell fort.",
+        "Kartendaten werden möglichst parallel gelesen und entpackt. Bei wenig anderer CPU-Last läuft die Verarbeitung normal schnell mit begrenztem Speicherpuffer. Bei hoher Last sinkt die Priorität und zusätzliche Pausen entlasten Windows. Die Oberfläche bleibt getrennt."
+      ],
+      "tip": "Die Aktivierung ist immer Ihre Entscheidung. Routen, Zeiten und Einstellungen werden nicht übertragen. Bestehende Pakete werden erst nach erfolgreicher Prüfung ersetzt."
+    },
+    {
+      "id": 32,
+      "title": "Navigationsrouten für Komoot, Garmin und Strava",
+      "steps": [
+        "Prüfen Sie die Linie und übernehmen Sie den Vorschlag. Bewahren Sie die bearbeitbare GPX mit Prüfbericht auf. Verbinden Sie Aufzeichnungslücken, wenn Sie eine durchgehende Navigationsroute benötigen.",
+        "[[Exporteer naar]]: Komoot, Garmin oder Strava anklicken. [[GPX opslaan en uploadpagina openen]] speichert Linie und Höhen ohne Zeiten. Wählen Sie die Datei auf der Website und bestätigen Sie dort den Import.",
+        "Komoot: als geplante Route importieren und ursprünglichen Verlauf behalten. Garmin: unter Strecken importieren und an ein geeignetes Gerät senden. Strava: im Routenplaner importieren; ein Abonnement kann nötig sein. Aktivitätsexport mit angepassten Zeiten bleibt unter [[Exporteren naar…]].",
+        "Prüfen Sie nach dem Import Verlauf, Aktivität und Sichtbarkeit. [[Bestandspad kopiëren]] hilft beim Wiederfinden der Datei. Öffnen Sie die gespeicherte Route auf dem Telefon oder geeigneten Navigationsgerät."
+      ],
+      "tip": "Der Export ist lokal und kostenlos. Keine Fotos, Wegpunkte oder persönlichen Metadaten; Orte bleiben sichtbar. RouteRefit lädt nichts automatisch hoch. Dienste haben eigene Bedingungen und mögliche Kosten. Bewahren Sie die normale GPX mit Prüfbericht zum Weiterbearbeiten auf."
+    },
+    {
+      "id": 33,
+      "title": "Lokale Dateien: GPX, TCX und KML",
+      "steps": [
+        "Prüfen Sie die Linie und übernehmen Sie den Vorschlag. Bewahren Sie die bearbeitbare GPX mit Prüfbericht auf. Verbinden Sie Aufzeichnungslücken, wenn Sie eine durchgehende Navigationsroute benötigen.",
+        "Lokale Dateien: [[Bestand…]] > GPX, TCX oder KML > [[Bestand opslaan…]]. Auch über Datei > [[Routebestand exporteren…]]. GPX dient der Navigation, KML Kartenprogrammen. Beide enthalten keine Zeiten. TCX ist eine Strecke mit vorhandenen Routenzeitpunkten.",
+        "[[Datum en snelheid voor TCX instellen]] öffnet Kalender, Uhrzeit und Durchschnittsgeschwindigkeit. Ohne nutzbare Zeiten öffnet sich dies automatisch. Neue Zeiten sind Schätzungen; Gehen/Radfahren benötigt vollständige Höhen. Die bearbeitbare Route bleibt unverändert.",
+        "Wählen Sie einen neuen Namen; vorhandene Dateien werden nie überschrieben. Getrennte Abschnitte bleiben getrennt. KML benötigt zwei Punkte je Abschnitt. Nach dem Import Linie, Zeiten, Aktivität und Sichtbarkeit prüfen; die Unterstützung ist geräteabhängig."
+      ],
+      "tip": "Der Export ist lokal und kostenlos. Keine Fotos, Wegpunkte oder persönlichen Metadaten; Orte bleiben sichtbar. RouteRefit lädt nichts automatisch hoch. Dienste haben eigene Bedingungen und mögliche Kosten. Bewahren Sie die normale GPX mit Prüfbericht zum Weiterbearbeiten auf."
+    }
+  ],
+  "fr": [
+    {
+      "id": 1,
+      "title": "Installer et démarrer sans risque",
+      "steps": [
+        "Lancez RouteRefit-0.5.15-beta-Setup.exe. Lisez la licence et les informations de confidentialité, puis choisissez le dossier du programme. Python est inutile. Lancez ensuite RouteRefit depuis le menu Démarrer.",
+        "Les mises à jour réutilisent ce dossier et conservent Mijn GPX, Kaarten et voorkeuren.json. Enregistrez votre travail et fermez le programme ainsi que les téléchargements de voies en cours.",
+        "Vous utilisez déjà une copie portable ? Choisissez son dossier pendant l’installation pour retrouver ses données. Aucun déplacement entre dossiers n’est automatique. Faites une sauvegarde préalable.",
+        "Pour une utilisation portable, extrayez toute la ZIP Windows et lancez RouteRefit-0.5.15-beta.exe avec _internal à côté. Un autre dossier extrait possède ses propres itinéraires et cartes.",
+        "Désinstallez via Paramètres Windows > Applications. Les données personnelles sont conservées. Seules la tâche en arrière-plan et l’association web pointant vers cette installation sont supprimées.",
+        "Le travail en arrière-plan nécessite un accord distinct. Désactivez-le dans l’ancienne copie et activez-le dans la nouvelle si souhaité. Répétez cela après une désinstallation suivie d’une réinstallation."
+      ],
+      "tip": "Cette bêta n’est pas signée numériquement. Elle ne contient ni itinéraires ni cartes personnels et n’active aucune tâche en arrière-plan. Le raccourci sur le bureau et le lancement après installation sont facultatifs."
+    },
+    {
+      "id": 2,
+      "title": "Langue et repères",
+      "steps": [
+        "Ouvrez [[Taal]] et choisissez Nederlands, English, Deutsch, Français, Español ou Português.",
+        "Le changement de langue redémarre l’application. Répondez d’abord à toute question sur le travail non enregistré.",
+        "[[Routes]] affiche les fichiers locaux, [[Route bewerken]] la carte. F6 ouvre altitude et statistiques.",
+        "Ouvrez le manuel par [[Help]]. Le PDF correspond à la langue du programme."
+      ],
+      "tip": "Le portugais utilise la terminologie européenne. Les images montrent une démonstration synthétique ; les chiffres sont des exemples."
+    },
+    {
+      "id": 3,
+      "title": "Ouvrir un itinéraire",
+      "steps": [
+        "Cliquez sur [[Route importeren…]] ou Ctrl+O. Sélectionnez votre fichier et ouvrez-le.",
+        "GPX, TCX, FIT, KML, KMZ et GeoJSON sont acceptés. Gardez le fichier source.",
+        "Attendez la ligne et la distance. L’ouverture ne nécessite pas le téléchargement préalable de tout le réseau.",
+        "Lisez les messages de conversion. Capteurs, styles et champs propres aux appareils ne sont pas tous transférés en GPX."
+      ],
+      "tip": "Il faut au moins deux points d’itinéraire. Un fichier contenant seulement des waypoints n’est pas un itinéraire modifiable."
+    },
+    {
+      "id": 4,
+      "title": "Vérifier un dossier",
+      "steps": [
+        "Dans [[Routes]], utilisez [[Map kiezen…]] pour choisir le dossier de fichiers.",
+        "Cochez [[Ook submappen]] si nécessaire. Cliquez sur [[Map controleren]].",
+        "Sélectionnez une ligne. Examinez fichiers illisibles, heures manquantes et contenus identiques.",
+        "Ouvrez l’itinéraire voulu par double-clic ou [[Geselecteerde GPX openen]]."
+      ],
+      "tip": "La vérification ne modifie ni ne supprime rien. Des noms différents peuvent cacher un contenu identique. Maximum : 10.000 fichiers par vérification."
+    },
+    {
+      "id": 5,
+      "title": "Lire et déplacer la carte",
+      "steps": [
+        "Orange : original ; bleu : itinéraire modifiable ; vert : proposition. Le rouge demande une vérification.",
+        "Choisissez [[Kaart verschuiven]] et faites glisser la carte. Zoomez avec la molette ou + et −.",
+        "[[Hele route]] rétablit la vue d’ensemble. [[Grote kaart]] ou F11 libère de la place.",
+        "Les gros points jaunes guident la ligne. Les marqueurs violets sont des waypoints, pas des contraintes routières automatiques."
+      ],
+      "tip": "Le fond de carte et les données routières sont distincts. Une panne du fond ne rend pas inutilisables les routes enregistrées."
+    },
+    {
+      "id": 6,
+      "title": "Choisir une activité",
+      "steps": [
+        "Ouvrez [[Instellingen]] puis [[Activiteit]] avant l’alignement. Choisissez [[Lopen]], [[Fiets]], [[MTB]], [[Gravelfiets]], [[Auto]] ou [[Motor]]. Le speed pedelec n’est pas inclus.",
+        "L’activité détermine l’accès, le sens et les voies adaptées. Le gravel évite les sentiers difficiles ; voiture et moto n’utilisent pas les voies cyclables ou piétonnes ordinaires sans autorisation explicite dans les données.",
+        "Le même moteur local utilise OSM dans toute l’Europe, y compris aux frontières. Accès explicites, sens uniques et restrictions de virage prises en charge sont considérés. Téléchargez une couverture suffisante aux frontières.",
+        "Activité modifiée après le calcul ? Créez une nouvelle proposition. L’allure sous [[Tijdschema]] ne change pas le choix des voies. Activité et vitesse personnalisée sont enregistrées avec le GPX."
+      ],
+      "tip": "Signalisation et règles locales restent déterminantes. Règles nationales implicites, accès conditionnels et dimensions des véhicules ne sont pas entièrement modélisés. Les restrictions conditionnelles de virage reconnues sont appliquées en permanence par précaution. Les horaires sont estimés sans circulation ni limitations de vitesse."
+    },
+    {
+      "id": 7,
+      "title": "Préférence, accès et rayon de recherche",
+      "steps": [
+        "Ouvrez [[Instellingen]] puis [[Route]]. La préférence actuelle est [[Meest logisch]] : suivre le tracé existant.",
+        "Depuis [[Activiteit]], [[Toegang en privéwegen…]] ouvre les réglages du parcours. [[Sta privéwegen en -paden toe]] et [[Toegangsmeldingen…]] se trouvent en haut.",
+        "Laissez [[Sta privéwegen en -paden toe]] désactivé sauf si vous souhaitez volontairement inclure ces voies.",
+        "Commencez avec un rayon de 35 mètres autour des points. La plage autorisée est de 5–150 mètres.",
+        "N’augmentez le rayon qu’au besoin. Vérifiez ensuite les voies parallèles et le bon côté.",
+        "Évaluez les avertissements après le contrôle du parcours. Leur acceptation préserve tracé, altitudes et horaires. L’absence de tags d’accès ne bloque pas automatiquement marche et vélo ; voiture et moto évitent les voies cyclables et piétonnes ordinaires sans autorisation explicite."
+      ],
+      "tip": "Les variantes courte, rapide, calme, belle et guidée par l’altitude sont futures. Accepter un avertissement d’accès ne change pas les voies et ne donne aucun droit d’accès."
+    },
+    {
+      "id": 8,
+      "title": "Alignement automatique et progression",
+      "steps": [
+        "Ouvrez l’itinéraire, choisissez l’activité et cliquez une fois sur [[Automatisch uitlijnen]].",
+        "L’indicateur bouge. L’étape et le temps écoulé restent visibles ; cela peut prendre un moment.",
+        "La proposition utilise d’abord les voies enregistrées. Les voies manquantes sont ensuite téléchargées en arrière-plan. Aucune tentative automatique répétée ni nouveau compte à rebours. Complétez la proposition après le téléchargement.",
+        "[[Uitlijnen stoppen]] permet d’arrêter l’attente. L’itinéraire modifiable est conservé."
+      ],
+      "tip": "Une nouvelle zone nécessite d’abord des données. Les zones complètes enregistrées sont réutilisées après redémarrage. La ligne verte reste une proposition jusqu’à acceptation."
+    },
+    {
+      "id": 9,
+      "title": "Vérifier et accepter une proposition",
+      "steps": [
+        "Lisez distance, durée estimée, montée et différences avec l’original et le tracé modifié.",
+        "Zoomez sur croisements, pistes parallèles et marqueurs rouges. Vérifiez la ligne verte.",
+        "En cas de doute, choisissez [[Annuleren]]. Ajustez activité, rayon ou points de contrôle puis recalculez.",
+        "[[Voorstel overnemen]] modifie la ligne bleue. [[Ongedaan maken]] rétablit la modification précédente.",
+        "Après adoption, tous les [[Hoofdpunten]] jaunes sont prêts à être modifiés. Choisissez [[Losse punten]] pour corriger librement les points ; aucun nouvel alignement automatique n’est nécessaire."
+      ],
+      "tip": "Les altitudes manquantes donnent des totaux partiels. Altitudes et heures reconstruites restent estimées, sans prouver durée réelle ni accès."
+    },
+    {
+      "id": 10,
+      "title": "Aligner manuellement avec les points de contrôle",
+      "steps": [
+        "Choisissez [[Hoofdpunten]] ou [[Handmatig uitlijnen]]. Après adoption d’une proposition d’alignement, ce mode est déjà actif et les points de contrôle jaunes sont visibles.",
+        "Glissez un gros point jaune sur le bon chemin. Les liaisons vers les voisins sont calculées.",
+        "Faites un clic droit sur un point indésirable et choisissez [[Hoofdpunt verwijderen en opnieuw verbinden]].",
+        "Vérifiez le remplacement avant acceptation. Les points de départ et d’arrivée restent présents.",
+        "Adoptez la modification locale puis modifiez immédiatement le point suivant. [[GPX opslaan…]] enregistre le tracé, les horaires, les points de contrôle et le mode d’édition. Rouvrez ce GPX plus tard pour continuer."
+      ],
+      "tip": "Les anciens points intermédiaires entre les voisins restants sont aussi remplacés. L’ancien détour ne guide plus le remplacement."
+    },
+    {
+      "id": 11,
+      "title": "Points individuels et densité de contrôle",
+      "steps": [
+        "Choisissez [[Losse punten]] pour modifier un point enregistré individuel.",
+        "Sélectionnez ou glissez-le. Double-cliquez sur la ligne pour ajouter un point ; supprimez le point sélectionné par l’action correspondante.",
+        "Pour corriger le long des voies, revenez à [[Handmatig uitlijnen]] et aux gros points.",
+        "Dans [[Route]], redistribuez les points : [[Weinig]], [[Normaal]] ou [[Veel]]. La ligne est conservée."
+      ],
+      "tip": "Déplacer un point individuel n’est pas calculer une liaison routière. [[Ongedaan maken]] permet de corriger une mauvaise modification."
+    },
+    {
+      "id": 12,
+      "title": "Remplacer un détour indésirable",
+      "steps": [
+        "Faites un clic droit avant le détour sur la ligne bleue. Choisissez [[Begin te verwijderen stuk hier]].",
+        "Après le détour, sur la même ligne, choisissez [[Eind te verwijderen stuk hier…]].",
+        "Vérifiez la liaison. Utilisez des points intermédiaires pour préciser le trajet si nécessaire.",
+        "Acceptez ou annulez la proposition. Vérifiez ensuite le nouvel horaire."
+      ],
+      "tip": "À vitesse moyenne disponible conservée, une route plus courte finit plus tôt. Les nouvelles heures sont estimées ; les pauses ne sont pas planifiées séparément."
+    },
+    {
+      "id": 13,
+      "title": "Déplacer départ, arrivée ou les deux",
+      "steps": [
+        "Dans [[Route]], choisissez [[Startpunt verplaatsen]], [[Eindpunt verplaatsen]] ou [[Start en eind samen verplaatsen]].",
+        "Cliquez sur la voie souhaitée. Seule sa liaison avec l’itinéraire existant est calculée.",
+        "Vérifiez liaison, sens de circulation et côté de la voie.",
+        "Acceptez si correct et recalculez ensuite les horaires."
+      ],
+      "tip": "Le reste est conservé et n’est pas nouvellement approuvé. [[Kaart verschuiven]] permet de quitter le mode de placement."
+    },
+    {
+      "id": 14,
+      "title": "Comprendre les lacunes et segments",
+      "steps": [
+        "Vérifiez le nombre de segments. Une vraie lacune reste visible comme interruption.",
+        "Les limites TCX adjacentes sont reliées. Les arrêts du chronomètre FIT presque au même endroit comptent comme pauses.",
+        "Choisissez [[Meer]] → [[Routedelen verbinden…]], puis la lacune à reconstruire.",
+        "Ouvrez [[Verbinding aanpassen…]] et vérifiez les raccordements aux deux enregistrements."
+      ],
+      "tip": "Une liaison reconstruite n’est pas un enregistrement GPS. N’acceptez qu’un trajet que vous jugez approprié."
+    },
+    {
+      "id": 15,
+      "title": "Guider une liaison par des points intermédiaires",
+      "steps": [
+        "Cliquez dans la fenêtre de liaison sur des lieux dans l’ordre du trajet.",
+        "Glissez les marqueurs ou utilisez monter, descendre et supprimer pour corriger la liste.",
+        "Après chaque modification, cliquez sur [[Verbinding berekenen]]. Le vert correspond alors à la nouvelle liste.",
+        "Vérifiez puis choisissez [[Verbinding overnemen]]. Annuler conserve les segments séparés."
+      ],
+      "tip": "Maximum : 50 points intermédiaires et 50 km de liaison. Les voies absentes ne sont pas remplacées par des droites inventées. Altitudes et heures restent des estimations signalées."
+    },
+    {
+      "id": 16,
+      "title": "Réparer ou conserver volontairement un tronçon",
+      "steps": [
+        "Utilisez [[Vorig probleem]], [[Volgend probleem]] et [[Probleemplaats tonen]] pour examiner le rouge.",
+        "Vérifiez activité, bon côté de la voie et données cartographiques disponibles.",
+        "Demandez une réparation, déplacez un point de contrôle ou remplacez le tronçon avec des points intermédiaires.",
+        "Pour conserver le tracé, choisissez [[Gekozen stuk handmatig behouden]] puis recalculez."
+      ],
+      "tip": "La conservation manuelle est une exception volontaire, pas une preuve d’accès. Les problèmes ouverts restent visibles ; une erreur inattendue ne rend pas tout le GPX inutilisable."
+    },
+    {
+      "id": 17,
+      "title": "Comprendre les avertissements d’accès",
+      "steps": [
+        "Alignez automatiquement ou vérifiez de nouveau pour connaître les problèmes.",
+        "Ouvrez [[Meer]] → [[Toegangsmeldingen…]] si seules les étiquettes d’accès semblent en cause.",
+        "Lisez l’avertissement. Seuls les problèmes exclusivement liés à ces étiquettes peuvent être acceptés ainsi.",
+        "Ligne, altitudes et heures restent identiques. La décision est consignée et peut être annulée."
+      ],
+      "tip": "Le bouton ne lève aucune interdiction locale. Respectez règles et panneaux. Sens, liaisons absentes et problèmes géométriques ne sont pas ignorés."
+    },
+    {
+      "id": 18,
+      "title": "Calculer de nouveaux horaires",
+      "steps": [
+        "Ouvrez [[Instellingen]] → [[Tijdschema]]. Choisissez une allure ou votre vitesse sur terrain plat.",
+        "Saisissez le départ. Le champ utilise UTC, pas automatiquement votre heure locale.",
+        "Indiquez une durée cible uniquement si vous la souhaitez vraiment, au format hh:mm.",
+        "Dans [[Meer]], choisissez [[Tijdschema berekenen…]] puis vérifiez proposition et heures estimées.",
+        "Cette action calcule uniquement les horaires sur le tracé modifié. Les corrections manuelles restent intactes, même sans voies téléchargées. Utilisez [[Automatisch uitlijnen]] uniquement pour réaligner le parcours."
+      ],
+      "tip": "Le activité détermine les voies ; l’allure détermine les horaires. Vent, feux et circulation actuelle ne sont pas modélisés. Des altitudes incomplètes peuvent empêcher certains calculs de terrain."
+    },
+    {
+      "id": 19,
+      "title": "Retrouver et supprimer les pauses",
+      "steps": [
+        "Ouvrez les horaires et choisissez la suppression des pauses dans l’enregistrement existant.",
+        "Réglez durée minimale et rayon d’immobilité. Utilisez [[Pauzes zoeken]] ou la recherche près de la liste.",
+        "Sélectionnez une pause et vérifiez son lieu. Un double-clic change sa sélection pour suppression.",
+        "Recalculez et vérifiez l’arrivée. Ne touchez pas aux lacunes dont vous ignorez la signification."
+      ],
+      "tip": "Des heures complètes et croissantes sont nécessaires. Sans elles, les pauses enregistrées ne sont pas identifiables de façon fiable ; choisissez alors volontairement un nouvel horaire estimé."
+    },
+    {
+      "id": 20,
+      "title": "Contrôler altitude et statistiques",
+      "steps": [
+        "Cliquez sur [[Hoogte en statistiek]] ou F6. Choisissez [[Origineel]], [[Bewerkte route]] ou [[Voorstel]].",
+        "Examinez distance, durée, vitesse moyenne, montée, descente, point bas et point haut.",
+        "Survolez le graphique pour les valeurs locales. Comparez les pics inhabituels avec la carte.",
+        "[[Naar de kaart]] permet de revenir. Calculez une proposition si ses données manquent encore."
+      ],
+      "tip": "Les valeurs non filtrées peuvent exagérer la montée. Les altitudes manquantes donnent des totaux partiels. La vitesse moyenne tient compte de la durée disponible, pauses comprises."
+    },
+    {
+      "id": 21,
+      "title": "Waypoints, descriptions et photos",
+      "steps": [
+        "Choisissez [[Waypoint toevoegen]] dans Plus ou Itinéraire, puis cliquez sur le lieu.",
+        "Donnez un nom clair. Ajoutez éventuellement description et photo par [[Foto kiezen…]].",
+        "Cliquez sur [[Waypoint bewaren]]. Glissez le marqueur violet pour le déplacer.",
+        "[[Waypoints beheren]] permet de modifier, montrer sur la carte ou supprimer."
+      ],
+      "tip": "Nom : 200 caractères maximum ; description : 1.500. Photo : JPG, PNG, WebP ou GIF, moins de 25 Mo et au plus 60 mégapixels. Conservez ensemble GPX et dossier photo associé."
+    },
+    {
+      "id": 22,
+      "title": "Enregistrer GPX et rapport de contrôle",
+      "steps": [
+        "Vérifiez ligne, heures et messages. Acceptez la proposition voulue.",
+        "Choisissez [[GPX opslaan…]] ou Ctrl+S. Répondez si une proposition calculée ou un brouillon est demandé.",
+        "Choisissez un nouveau nom et un emplacement. Les fichiers existants ne sont pas écrasés.",
+        "Gardez ensemble GPX, rapport et photos. Rouvrez l’export pour le dernier contrôle."
+      ],
+      "tip": "La sortie est GPX, même après FIT/TCX. Le rapport conserve décisions et estimations. Un brouillon n’est pas une nouvelle approbation complète. La source est conservée séparément."
+    },
+    {
+      "id": 23,
+      "title": "Comparer original et itinéraire ajusté",
+      "steps": [
+        "Ouvrez l’original. Enregistrez les modifications avant de changer de comparaison.",
+        "Dans [[Bestand]], choisissez la comparaison avec un itinéraire ajusté et le second GPX.",
+        "Orange désigne l’original, bleu l’ajustement, rouge les lieux à vérifier.",
+        "Utilisez lieu modifié suivant et précédent si le rapport associé les contient."
+      ],
+      "tip": "Une structure de segments différente peut exiger l’ouverture séparée du GPX ajusté. La comparaison ne modifie pas rétroactivement l’enregistrement original."
+    },
+    {
+      "id": 24,
+      "title": "Cartes locales, hors ligne et actualisation",
+      "steps": [
+        "L’alignement ajoute automatiquement les zones entièrement téléchargées à l’index routier local.",
+        "Les itinéraires ultérieurs dans la zone réutilisent ces données ; seules les parties manquantes sont téléchargées.",
+        "Importez par [[Lokaal OSM-bestand importeren…]] une région OSM XML complète et délimitée, pas un PBF ni une image.",
+        "Choisissez [[Uitlijngegevens vernieuwen]] pour des données actuelles. Internet est nécessaire."
+      ],
+      "tip": "La date est celle d’OSM ou du fichier. La création de l’index prend du temps une fois. Maximum : 128 Mo par XML. Le fond a un cache séparé et peut manquer hors ligne."
+    },
+    {
+      "id": 25,
+      "title": "Catalogue web et ouverture automatique",
+      "steps": [
+        "[[Mijn routeoverzicht]] est un catalogue web facultatif. L’édition publique commence vide.",
+        "N’importez que les catalogues voulus. Un itinéraire web est téléchargé à son ouverture.",
+        "L’envoi ouvre votre navigateur. RouteRefit ne publie pas automatiquement et ne conserve aucun mot de passe web.",
+        "Dans Fichier, vous pouvez activer l’ouverture des nouveaux GPX de Téléchargements ; elle est désactivée par défaut."
+      ],
+      "tip": "L’import local ne nécessite aucun compte web. Utilisez ces options seulement si utiles. Rien n’est actuellement envoyé vers GitHub ou SignPath."
+    },
+    {
+      "id": 26,
+      "title": "Attendre ou réagir à une erreur",
+      "steps": [
+        "Si l’indicateur et le temps écoulé avancent, le travail continue. Lisez l’étape.",
+        "La proposition utilise d’abord les voies enregistrées. Les voies manquantes sont ensuite téléchargées en arrière-plan. Aucune tentative automatique répétée ni nouveau compte à rebours. Complétez la proposition après le téléchargement.",
+        "Si le téléchargement échoue, réessayez plus tard. Les zones valides restent enregistrées ; l’itinéraire n’est pas invalide pour autant.",
+        "Si le tracé est faux, annulez, vérifiez les réglages et utilisez points de contrôle ou intermédiaires. Après acceptation, utilisez Annuler."
+      ],
+      "tip": "RouteRefit fonctionne aussi sans paquet régional. Les voies manquantes sont téléchargées pendant l’alignement, ce qui peut allonger considérablement le calcul. Les voies enregistrées sont toujours réutilisées."
+    },
+    {
+      "id": 27,
+      "title": "Raccourcis, sauvegarde et suite",
+      "steps": [
+        "Ctrl+O ouvre, Ctrl+S enregistre. F6 montre les statistiques, F11 libère de la place.",
+        "Un point de contrôle guide la ligne ; un point intermédiaire guide une liaison ; un waypoint décrit un lieu.",
+        "Conservez Mijn GPX, Kaarten et voorkeuren.json lors des mises à jour. Faites aussi votre propre sauvegarde des sources et modifications.",
+        "Les activités supplémentaires suivront ces tests de langues et d’utilisation. La création depuis zéro est préparée, pas encore proposée."
+      ],
+      "tip": "Fusionner et séparer en fichiers distincts restent futurs. Cette bêta n’est pas la version stable 1.0 et n’est pas encore signée numériquement."
+    },
+    {
+      "id": 28,
+      "title": "Paquets régionaux facultatifs : aligner plus vite",
+      "steps": [
+        "RouteRefit fonctionne aussi sans paquet régional. Les voies manquantes sont téléchargées pendant l’alignement, ce qui peut allonger considérablement le calcul. Les voies enregistrées sont toujours réutilisées.",
+        "Ouvrez [[Kaart]] > [[Gebiedspakketten…]]. Cherchez une province ou une région. Préférez une petite région ; les téléchargements de plus de 500 Mo sont refusés.",
+        "Ctrl ou Maj permet de choisir plusieurs régions, même dans différents pays. La recherche conserve la sélection. Vérifiez le nombre dans la liste. Les paquets sont téléchargés successivement et leurs voies sont combinées. Près d’une frontière, choisissez aussi la région voisine.",
+        "Sélectionnez la région et [[Downloaden / bijwerken]]. Le téléchargement et la préparation initiaux peuvent prendre plusieurs minutes et demandent de l’espace disque. Vous pouvez continuer à travailler.",
+        "Attendez que la région soit prête. Ouvrez le parcours, vérifiez le moyen de activité et choisissez [[Automatisch uitlijnen]]. Seules les voies proches du parcours sont lues dans l’index local.",
+        "Les six activités sont décrites au chapitre 6 et l’export de navigation au chapitre 32. Dessiner un parcours de zéro n’est pas encore disponible."
+      ],
+      "tip": "Gratuit, sans compte. Geofabrik reçoit votre adresse IP et la région choisie, sans votre GPX, vos horaires ni vos modifications. Détails : https://download.geofabrik.de/technical.html"
+    },
+    {
+      "id": 29,
+      "title": "Actualiser efficacement les paquets",
+      "steps": [
+        "Activez [[Gedownloade gebieden wekelijks op de achtergrond bijwerken]] pour une vérification hebdomadaire par défaut lorsque RouteRefit est ouvert. Désactivez pour arrêter les futures vérifications automatiques.",
+        "Pour actualiser maintenant : [[Kaart]] > [[Gebiedspakketten…]], cochez [[Alleen gedownload]], sélectionnez une région puis [[Downloaden / bijwerken]].",
+        "Une région à jour n’est ni retéléchargée ni réindexée. Sinon, de petits fichiers quotidiens actualisent uniquement les voies modifiées et les points concernés.",
+        "La mise à jour est préparée et vérifiée séparément. [[Stoppen]] ou une erreur conserve le paquet existant. Aucun compte à rebours répété ; après un échec automatique, aucune nouvelle tentative automatique pendant au moins un jour.",
+        "Des limites modifiées, des données anciennes ou trop de changements nécessitent [[Opnieuw downloaden]]. Aucun téléchargement complet ne démarre sans action. Le parcours ou la proposition reste inchangé ; choisissez à nouveau [[Automatisch uitlijnen]]."
+      ],
+      "tip": "La liste affiche la date des données OSM. Une vérification hebdomadaire ne garantit pas des modifications quotidiennes. Conservez le dossier Kaarten avec vos paquets et paramètres lors des mises à jour du programme. Le chapitre 31 explique la poursuite après fermeture, désactivée par défaut."
+    },
+    {
+      "id": 30,
+      "title": "Dessiner une zone de téléchargement",
+      "steps": [
+        "Ouvrez [[Kaart]] > [[Gebiedspakketten…]] > [[Eigen gebied tekenen…]]. La zone peut traverser une frontière. Les paquets existants restent disponibles.",
+        "Saisissez un nom local. Tracez un [[Rechthoek]] ou cliquez les sommets d’un [[Veelhoek]]. Corrigez avec [[Laatste punt weg]] ou [[Wissen]]. Déplacez et zoomez la carte.",
+        "Gardez 1–2 km autour des parcours. Le rectangle englobant est limité à 2500 km². Une petite zone réduit téléchargement et traitement ; une attente chez le fournisseur reste possible.",
+        "Lisez les informations de confidentialité puis [[Gebied downloaden via SliceOSM]]. Seuls la limite et votre IP sont transmis. Nom, GPX, horaires et modifications restent locaux. La limite est accessible via le lien de téléchargement.",
+        "Trois phases indiquent téléchargement avec préparation du fournisseur, traitement local et vérification. [[Stoppen]] conserve les paquets existants. Une demande lente peut être reprise manuellement plus tard.",
+        "Renouvelez les zones personnalisées avec [[Downloaden / bijwerken]]. La petite zone est entièrement retéléchargée, sans fichiers quotidiens de modifications. Un rappel apparaît après une semaine. Sans paquet, l’alignement fonctionne aussi, mais les voies manquantes peuvent prendre beaucoup plus de temps."
+      ],
+      "tip": "SliceOSM est gratuit, sans compte, mais peut enregistrer des données d’utilisation : https://github.com/SliceOSM/.github/blob/main/PRIVACY.md . Les voies de calcul et le fond de carte sont distincts. Vitesse non garantie."
+    },
+    {
+      "id": 31,
+      "title": "Arrière-plan et puissance disponible",
+      "steps": [
+        "Par défaut, fermer RouteRefit arrête les tâches régionales. Aucune tâche Windows de démarrage n’est créée. Les vérifications hebdomadaires nécessitent alors l’application ouverte.",
+        "Dans [[Gebiedspakketten…]], activez vous-même [[Doorgaan als RouteRefit gesloten is (Windows-achtergrondtaak)]]. Windows crée une tâche pour votre utilisateur à la connexion et chaque jour à 09:00. Aucun droit administrateur ni compte cartographique nécessaire.",
+        "Lancez un téléchargement ou une actualisation. Un processus séparé continue après fermeture. Windows doit être actif et votre session ouverte. La tâche ne réveille pas l’ordinateur. Les calculs et modifications de parcours ne continuent pas en arrière-plan.",
+        "La tâche quotidienne vérifie les actualisations hebdomadaires Geofabrik dues. Le réglage hebdomadaire reste applicable. Les zones personnalisées se renouvellent manuellement ; un téléchargement lancé peut continuer après fermeture.",
+        "[[Stoppen]] arrête la tâche courante. Désactiver l’option arrête le travail et supprime la tâche Windows. Les pannes réseau ne provoquent pas de nouvelles demandes répétées. Après une interruption Windows, reprenez manuellement.",
+        "Les fichiers sont décodés en parallèle lorsque possible. Avec peu de charge concurrente, le traitement utilise sa vitesse normale et un tampon mémoire limité. En forte charge, sa priorité diminue et des pauses supplémentaires libèrent le processeur. L’interface reste séparée."
+      ],
+      "tip": "L’activation reste votre choix. Parcours, horaires et réglages ne sont pas transmis. Un paquet existant est remplacé uniquement après vérification complète."
+    },
+    {
+      "id": 32,
+      "title": "Navigation avec Komoot, Garmin et Strava",
+      "steps": [
+        "Vérifiez la ligne et acceptez la proposition. Gardez le GPX modifiable avec son rapport de contrôle. Reliez les interruptions si vous souhaitez un parcours de navigation continu.",
+        "[[Exporteer naar]] : cliquez sur Komoot, Garmin ou Strava. [[GPX opslaan en uploadpagina openen]] enregistre la ligne et les altitudes sans horaires. Sélectionnez le fichier sur le site et confirmez-y l’importation.",
+        "Komoot : importez un parcours planifié et conservez le tracé initial. Garmin : importez dans Parcours puis envoyez vers un appareil compatible. Strava : utilisez le planificateur ; un abonnement peut être nécessaire. L’export d’activité avec horaires ajustés reste sous [[Exporteren naar…]].",
+        "Après import, vérifiez le tracé, l’activité et la visibilité. [[Bestandspad kopiëren]] aide à retrouver le fichier. Ouvrez le parcours enregistré sur votre téléphone ou appareil de navigation compatible."
+      ],
+      "tip": "L’export est local et gratuit. Sans photos, points d’intérêt ni métadonnées personnelles ; les lieux restent visibles. Aucun envoi automatique. Les services ont leurs conditions et frais éventuels. Gardez le GPX habituel avec rapport pour continuer les modifications."
+    },
+    {
+      "id": 33,
+      "title": "Fichiers locaux : GPX, TCX et KML",
+      "steps": [
+        "Vérifiez la ligne et acceptez la proposition. Gardez le GPX modifiable avec son rapport de contrôle. Reliez les interruptions si vous souhaitez un parcours de navigation continu.",
+        "Fichiers locaux : [[Bestand…]] > GPX, TCX ou KML > [[Bestand opslaan…]]. Également via Fichier > [[Routebestand exporteren…]]. GPX sert à naviguer, KML aux logiciels cartographiques. Tous deux omettent les horaires. TCX contient un parcours avec ses horaires existants.",
+        "[[Datum en snelheid voor TCX instellen]] ouvre le calendrier, l’heure et la vitesse moyenne. Sans horaires utilisables, cela s’ouvre automatiquement. Les nouveaux horaires sont estimés ; marche/vélo exige des altitudes complètes. Le parcours modifiable ne change pas.",
+        "Choisissez un nouveau nom ; aucun fichier existant n’est écrasé. Les sections restent séparées. KML exige deux points par section. Après import, vérifiez tracé, horaires, activité et visibilité ; la compatibilité dépend du logiciel ou appareil."
+      ],
+      "tip": "L’export est local et gratuit. Sans photos, points d’intérêt ni métadonnées personnelles ; les lieux restent visibles. Aucun envoi automatique. Les services ont leurs conditions et frais éventuels. Gardez le GPX habituel avec rapport pour continuer les modifications."
+    }
+  ],
+  "es": [
+    {
+      "id": 1,
+      "title": "Instalar y empezar con seguridad",
+      "steps": [
+        "Ejecuta RouteRefit-0.5.15-beta-Setup.exe. Lee la licencia y la información de privacidad y elige la carpeta del programa. No necesitas Python. Después abre RouteRefit desde el menú Inicio.",
+        "Las actualizaciones reutilizan la misma carpeta y conservan Mijn GPX, Kaarten y voorkeuren.json. Guarda el trabajo y cierra el programa y las descargas de vías activas antes de actualizar.",
+        "¿Ya utilizas una copia portátil? Selecciona su carpeta durante la instalación para usar los mismos datos. No se trasladan datos entre carpetas. Haz antes una copia de seguridad.",
+        "Para uso portátil, extrae toda la ZIP de Windows y ejecuta RouteRefit-0.5.15-beta.exe con _internal al lado. Otra carpeta extraída tiene sus propias rutas y mapas.",
+        "Desinstala desde Configuración de Windows > Aplicaciones. Se conservan los datos personales. Solo se eliminan la tarea en segundo plano y la asociación web que apuntan a esta instalación.",
+        "El trabajo en segundo plano requiere una autorización aparte. Desactívalo en la copia anterior y actívalo en la nueva si lo deseas. Repítelo tras desinstalar y volver a instalar."
+      ],
+      "tip": "Esta beta no tiene firma digital. No contiene rutas ni mapas personales y no activa tareas en segundo plano. El acceso directo en el escritorio y abrir al terminar son opcionales."
+    },
+    {
+      "id": 2,
+      "title": "Elegir idioma y orientarte",
+      "steps": [
+        "Abre [[Taal]] y elige Nederlands, English, Deutsch, Français, Español o Português.",
+        "El cambio reinicia el programa. Responde primero a cualquier pregunta sobre trabajo sin guardar.",
+        "[[Routes]] muestra archivos locales y [[Route bewerken]] el mapa. F6 abre elevación y estadísticas.",
+        "Abre el manual mediante [[Help]]. El PDF corresponde al idioma del programa."
+      ],
+      "tip": "El portugués usa términos europeos. Las imágenes muestran una demostración sintética; sus cifras son ejemplos."
+    },
+    {
+      "id": 3,
+      "title": "Abrir una ruta",
+      "steps": [
+        "Pulsa [[Route importeren…]] o Ctrl+O. Busca el archivo, selecciónalo y ábrelo.",
+        "Puedes importar GPX, TCX, FIT, KML, KMZ y GeoJSON. Conserva el archivo original.",
+        "Espera a ver la línea y la distancia. No hace falta descargar antes toda la red de vías.",
+        "Lee los mensajes de conversión. No todos los sensores, estilos y campos específicos pasan al GPX."
+      ],
+      "tip": "Se necesitan al menos dos puntos de ruta. Un archivo que solo contiene waypoints no es una ruta editable."
+    },
+    {
+      "id": 4,
+      "title": "Comprobar una carpeta",
+      "steps": [
+        "En [[Routes]], usa [[Map kiezen…]] para elegir la carpeta de archivos.",
+        "Marca [[Ook submappen]] si quieres incluir subcarpetas. Pulsa [[Map controleren]].",
+        "Selecciona una fila. Revisa archivos ilegibles, tiempos ausentes y contenidos duplicados.",
+        "Abre la ruta deseada con doble clic o [[Geselecteerde GPX openen]]."
+      ],
+      "tip": "La comprobación no modifica ni elimina nada. Distintos nombres pueden tener el mismo contenido. Máximo de 10.000 archivos por comprobación."
+    },
+    {
+      "id": 5,
+      "title": "Leer y mover el mapa",
+      "steps": [
+        "Naranja es el original, azul la ruta editable y verde una propuesta. Rojo requiere revisión.",
+        "Elige [[Kaart verschuiven]] y arrastra el mapa. Amplía con la rueda o con + y −.",
+        "[[Hele route]] recupera la vista general. [[Grote kaart]] o F11 da más espacio.",
+        "Los puntos amarillos grandes controlan la línea. Los marcadores morados son waypoints, no instrucciones automáticas de recorrido."
+      ],
+      "tip": "El fondo y los datos de vías son independientes. Un fallo del fondo no inutiliza las vías guardadas."
+    },
+    {
+      "id": 6,
+      "title": "Elegir una actividad",
+      "steps": [
+        "Abre [[Instellingen]] y [[Activiteit]] antes de alinear. Elige [[Lopen]], [[Fiets]], [[MTB]], [[Gravelfiets]], [[Auto]] o [[Motor]]. No se incluye speed pedelec.",
+        "La actividad determina acceso, sentido y vías adecuadas. Gravel evita senderos difíciles; coche y moto no usan vías ciclistas o peatonales normales sin permiso explícito en los datos.",
+        "El mismo motor local usa OSM en toda Europa, también entre países. Considera acceso explícito, sentidos únicos y restricciones de giro compatibles. Descarga suficiente cobertura para rutas fronterizas.",
+        "¿Has cambiado de actividad después del cálculo? Crea otra propuesta. El ritmo en [[Tijdschema]] no cambia la elección de vías. La actividad y velocidad personalizada se guardan con el GPX."
+      ],
+      "tip": "Prevalecen las señales y reglas locales. No se modelan por completo las reglas nacionales implícitas, acceso condicional ni dimensiones del vehículo. Las restricciones condicionales de giro reconocidas se aplican siempre por precaución. Los tiempos son estimaciones sin tráfico ni límites de velocidad."
+    },
+    {
+      "id": 7,
+      "title": "Preferencia, acceso y radio",
+      "steps": [
+        "Abre [[Instellingen]] y [[Route]]. La preferencia actual es [[Meest logisch]]: seguir el recorrido existente.",
+        "Desde [[Activiteit]], [[Toegang en privéwegen…]] abre los ajustes de ruta. [[Sta privéwegen en -paden toe]] y [[Toegangsmeldingen…]] están cerca de la parte superior.",
+        "Deja [[Sta privéwegen en -paden toe]] desactivado salvo que quieras considerar esas vías expresamente.",
+        "Empieza con un radio de 35 metros alrededor de los puntos. El margen permitido es 5–150 metros.",
+        "Auméntalo solo si hace falta. Comprueba después vías paralelas y el lado correcto.",
+        "Revisa los avisos tras comprobar la ruta. Aceptarlos conserva línea, altitudes y tiempos. La ausencia de etiquetas de acceso no bloquea automáticamente caminar o pedalear; coche y moto evitan vías ciclistas y peatonales normales sin permiso explícito."
+      ],
+      "tip": "Las opciones corta, rápida, tranquila, bonita y por elevación son futuras. Aceptar un aviso no cambia las vías ni concede derecho de acceso."
+    },
+    {
+      "id": 8,
+      "title": "Alinear automáticamente y ver el progreso",
+      "steps": [
+        "Abre la ruta, elige actividad y pulsa una vez [[Automatisch uitlijnen]].",
+        "El indicador se mueve. Se muestran la etapa y el tiempo transcurrido; puede tardar un poco.",
+        "La propuesta usa primero las vías guardadas. Las que faltan se descargan después en segundo plano. No hay reintentos automáticos ni nuevas cuentas atrás. Complete la propuesta cuando termine la descarga.",
+        "Usa [[Uitlijnen stoppen]] si no quieres esperar. Se conserva la ruta editable."
+      ],
+      "tip": "Una zona nueva necesita datos de vías. Las zonas completas guardadas se reutilizan tras reiniciar. La línea verde sigue siendo una propuesta hasta aceptarla."
+    },
+    {
+      "id": 9,
+      "title": "Revisar y aceptar la propuesta",
+      "steps": [
+        "Lee distancia, tiempo estimado, ascenso y diferencias con el original y la ruta editada.",
+        "Amplía cruces, carriles bici paralelos y marcas rojas. Comprueba la línea verde.",
+        "Si dudas, pulsa [[Annuleren]]. Ajusta actividad, radio o puntos de control y calcula otra vez.",
+        "[[Voorstel overnemen]] cambia la línea azul. [[Ongedaan maken]] recupera el cambio anterior.",
+        "Tras aceptar, todos los [[Hoofdpunten]] amarillos están listos para seguir editando. Elige [[Losse punten]] para corregir puntos libremente; no hace falta repetir la alineación automática."
+      ],
+      "tip": "Sin todas las elevaciones habrá totales parciales. Elevaciones y tiempos reconstruidos siguen siendo estimaciones, no pruebas de duración real ni acceso."
+    },
+    {
+      "id": 10,
+      "title": "Alinear manualmente con puntos de control",
+      "steps": [
+        "Elige [[Hoofdpunten]] o [[Handmatig uitlijnen]]. Tras aceptar una propuesta de alineación, este modo ya está activo y los puntos de control amarillos son visibles.",
+        "Arrastra un punto amarillo grande al camino correcto. Se calculan las conexiones con sus vecinos.",
+        "Haz clic derecho en un punto no deseado y elige [[Hoofdpunt verwijderen en opnieuw verbinden]].",
+        "Revisa el reemplazo antes de aceptarlo. Se conservan los puntos de inicio y final.",
+        "Acepta el cambio local y edita enseguida el siguiente punto. [[GPX opslaan…]] guarda la ruta, los tiempos, los puntos de control y el modo de edición. Abre ese GPX más tarde para continuar."
+      ],
+      "tip": "También se sustituyen los puntos intermedios antiguos entre los vecinos restantes. El desvío anterior deja de guiar el reemplazo."
+    },
+    {
+      "id": 11,
+      "title": "Puntos individuales y densidad de control",
+      "steps": [
+        "Elige [[Losse punten]] para editar un punto grabado individual.",
+        "Selecciónalo o arrástralo. Haz doble clic en la línea para añadir uno; usa la acción de eliminar para el seleccionado.",
+        "Para corregir siguiendo vías, vuelve a [[Handmatig uitlijnen]] y a los puntos grandes.",
+        "En [[Route]], redistribuye los puntos con [[Weinig]], [[Normaal]] o [[Veel]]. La línea existente se conserva."
+      ],
+      "tip": "Mover un punto individual no es calcular una conexión por vías. Usa [[Ongedaan maken]] tras un cambio equivocado."
+    },
+    {
+      "id": 12,
+      "title": "Sustituir un desvío no deseado",
+      "steps": [
+        "Haz clic derecho en la línea azul antes del desvío. Elige [[Begin te verwijderen stuk hier]].",
+        "Después del desvío, en la misma línea, elige [[Eind te verwijderen stuk hier…]].",
+        "Revisa la nueva conexión. Usa puntos de paso para guiar el recorrido si hace falta.",
+        "Acepta o cancela la propuesta. Revisa después el horario nuevo."
+      ],
+      "tip": "Si se conserva la velocidad media disponible, una ruta más corta termina antes. Los tiempos nuevos son estimados; las pausas no se programan por separado."
+    },
+    {
+      "id": 13,
+      "title": "Mover inicio, final o ambos",
+      "steps": [
+        "En [[Route]], elige [[Startpunt verplaatsen]], [[Eindpunt verplaatsen]] o [[Start en eind samen verplaatsen]].",
+        "Pulsa la vía deseada. Solo se calcula su conexión con la ruta existente.",
+        "Revisa conexión, sentido y lado de la vía.",
+        "Acepta si es correcto y recalcula después el horario."
+      ],
+      "tip": "El resto se conserva y no queda aprobado de nuevo. [[Kaart verschuiven]] permite salir del modo de colocación."
+    },
+    {
+      "id": 14,
+      "title": "Entender huecos y tramos",
+      "steps": [
+        "Comprueba el número de tramos. Un hueco real de grabación sigue siendo una interrupción identificable.",
+        "Se conectan límites de vueltas TCX adyacentes. Los timerstops FIT casi en la misma posición cuentan como pausas.",
+        "Elige [[Meer]] → [[Routedelen verbinden…]] y el hueco que quieras reconstruir.",
+        "Abre [[Verbinding aanpassen…]] y comprueba los enlaces con las dos grabaciones."
+      ],
+      "tip": "Una conexión reconstruida no es una grabación GPS. Acepta solo un recorrido que consideres adecuado."
+    },
+    {
+      "id": 15,
+      "title": "Guiar una conexión con puntos de paso",
+      "steps": [
+        "En la ventana de conexión, pulsa lugares en el orden del recorrido deseado.",
+        "Arrastra marcadores o usa subir, bajar y eliminar para corregir la lista.",
+        "Pulsa [[Verbinding berekenen]] tras cada cambio. Solo entonces el verde corresponde a la lista nueva.",
+        "Revisa y elige [[Verbinding overnemen]]. Cancelar conserva los tramos separados."
+      ],
+      "tip": "Máximo de 50 puntos de paso y 50 km de conexión. Las vías ausentes no se sustituyen por rectas inventadas. Elevaciones y tiempos son estimaciones identificadas."
+    },
+    {
+      "id": 16,
+      "title": "Reparar problemas o conservar un tramo",
+      "steps": [
+        "Usa [[Vorig probleem]], [[Volgend probleem]] y [[Probleemplaats tonen]] para examinar las marcas rojas.",
+        "Comprueba actividad, lado correcto y datos cartográficos disponibles.",
+        "Busca una reparación, mueve un punto de control o sustituye el tramo con puntos de paso.",
+        "Para conservar la grabación, elige [[Gekozen stuk handmatig behouden]] y calcula de nuevo."
+      ],
+      "tip": "Conservar manualmente es una excepción consciente, no una prueba de acceso. Los problemas pendientes siguen visibles; un error inesperado no inutiliza todo el GPX."
+    },
+    {
+      "id": 17,
+      "title": "Entender los avisos de acceso",
+      "steps": [
+        "Alinea automáticamente o vuelve a comprobar primero para conocer los problemas.",
+        "Abre [[Meer]] → [[Toegangsmeldingen…]] si parecen deberse solo a etiquetas de acceso.",
+        "Lee el aviso. Solo se pueden aceptar así problemas causados exclusivamente por esas etiquetas.",
+        "Línea, elevaciones y tiempos no cambian. La decisión se registra y se puede deshacer."
+      ],
+      "tip": "El botón no anula ninguna prohibición local. Respeta normas y señales. No ignora el sentido, las conexiones ausentes ni los problemas geométricos."
+    },
+    {
+      "id": 18,
+      "title": "Calcular un horario nuevo",
+      "steps": [
+        "Abre [[Instellingen]] → [[Tijdschema]]. Elige un ritmo o tu velocidad en llano.",
+        "Introduce la salida. El campo usa UTC, no automáticamente tu hora local.",
+        "Indica una duración deseada solo si la quieres expresamente, con formato hh:mm.",
+        "En [[Meer]], elige [[Tijdschema berekenen…]] y revisa la propuesta y los tiempos estimados.",
+        "Esta acción solo calcula los tiempos sobre la línea editada. Las correcciones manuales se mantienen, incluso sin vías descargadas. Usa [[Automatisch uitlijnen]] solo para volver a alinear la ruta."
+      ],
+      "tip": "El actividad decide las vías; el ritmo decide los tiempos. No se modelan viento, semáforos ni tráfico actual. Elevaciones incompletas pueden impedir ciertos cálculos de terreno."
+    },
+    {
+      "id": 19,
+      "title": "Buscar y eliminar pausas grabadas",
+      "steps": [
+        "Abre Horario y elige eliminar pausas de la grabación existente.",
+        "Ajusta la duración mínima y el radio de inmovilidad. Usa [[Pauzes zoeken]] o la búsqueda junto a la lista.",
+        "Selecciona una pausa y mira su lugar. Haz doble clic para cambiar si se elimina.",
+        "Recalcula y revisa la llegada. No modifiques huecos cuya causa desconoces."
+      ],
+      "tip": "Se necesitan tiempos completos y crecientes. Sin ellos no se pueden identificar pausas grabadas con fiabilidad; elige conscientemente un nuevo horario estimado."
+    },
+    {
+      "id": 20,
+      "title": "Comprobar elevación y estadísticas",
+      "steps": [
+        "Pulsa [[Hoogte en statistiek]] o F6. Elige [[Origineel]], [[Bewerkte route]] o [[Voorstel]].",
+        "Revisa distancia, duración, velocidad media, ascenso, descenso y elevación mínima y máxima.",
+        "Mueve el puntero sobre el gráfico para ver valores locales. Compara picos extraños con el mapa.",
+        "[[Naar de kaart]] permite volver. Calcula una propuesta si todavía no tiene datos."
+      ],
+      "tip": "Los valores sin filtrar pueden exagerar el ascenso. Las elevaciones ausentes dan totales parciales. La velocidad media usa la duración disponible, incluidas las pausas."
+    },
+    {
+      "id": 21,
+      "title": "Waypoints, descripciones y fotos",
+      "steps": [
+        "Elige [[Waypoint toevoegen]] en Más o Ruta y pulsa el lugar deseado.",
+        "Pon un nombre claro. Añade opcionalmente descripción y foto con [[Foto kiezen…]].",
+        "Pulsa [[Waypoint bewaren]]. Arrastra el marcador morado para moverlo.",
+        "[[Waypoints beheren]] permite editar, mostrar en el mapa o eliminar."
+      ],
+      "tip": "Nombre: hasta 200 caracteres; descripción: 1.500. Foto: JPG, PNG, WebP o GIF, menos de 25 MB y hasta 60 megapíxeles. Conserva juntos el GPX y su carpeta de fotos."
+    },
+    {
+      "id": 22,
+      "title": "Guardar GPX e informe de control",
+      "steps": [
+        "Comprueba línea, tiempos y mensajes. Acepta la propuesta deseada.",
+        "Elige [[GPX opslaan…]] o Ctrl+S. Responde si se pregunta por una propuesta calculada o un borrador.",
+        "Elige un nombre nuevo y una ubicación. No se sobrescriben archivos existentes.",
+        "Conserva juntos GPX, informe y fotos. Abre la exportación otra vez para la comprobación final."
+      ],
+      "tip": "La salida es GPX, también tras FIT/TCX. El informe conserva decisiones y estimaciones. Un borrador no es una aprobación completa nueva. El original se guarda por separado."
+    },
+    {
+      "id": 23,
+      "title": "Comparar original y ruta ajustada",
+      "steps": [
+        "Abre el original. Guarda los cambios antes de abrir otra comparación.",
+        "En [[Bestand]], elige comparar con una ruta ajustada y selecciona el segundo GPX.",
+        "Naranja indica el original, azul el ajuste y rojo los lugares por revisar.",
+        "Usa lugar modificado siguiente y anterior si el informe correspondiente los incluye."
+      ],
+      "tip": "Una estructura de tramos diferente puede requerir abrir el GPX ajustado por separado. Comparar no cambia retroactivamente la grabación original."
+    },
+    {
+      "id": 24,
+      "title": "Mapas locales, trabajo sin conexión y actualización",
+      "steps": [
+        "Al alinear, las áreas descargadas completas se añaden automáticamente al índice local.",
+        "Las rutas posteriores de esa área reutilizan datos; solo se descargan partes que faltan.",
+        "Importa con [[Lokaal OSM-bestand importeren…]] una región OSM XML completa y delimitada, no PBF ni imágenes.",
+        "Elige [[Uitlijngegevens vernieuwen]] para datos actuales. Necesitas conexión a Internet."
+      ],
+      "tip": "La fecha es la de OSM o la del archivo. Crear el índice lleva tiempo una vez. Máximo de 128 MB por XML. El fondo tiene otra caché y puede faltar sin conexión."
+    },
+    {
+      "id": 25,
+      "title": "Catálogo web y apertura automática",
+      "steps": [
+        "[[Mijn routeoverzicht]] es un catálogo web opcional. El paquete público empieza vacío.",
+        "Importa solo un catálogo que quieras usar. Una ruta web se descarga al abrirla.",
+        "La acción de subir abre el navegador. RouteRefit no publica automáticamente ni guarda contraseñas web.",
+        "En Archivo puedes activar la apertura de nuevos GPX de Descargas; está desactivada por defecto."
+      ],
+      "tip": "La importación local no necesita cuenta web. Usa estas opciones solo si son útiles. Ahora no se envía nada a GitHub ni SignPath."
+    },
+    {
+      "id": 26,
+      "title": "Qué hacer durante esperas o errores",
+      "steps": [
+        "Si se mueven el indicador y el tiempo transcurrido, el trabajo continúa. Lee la etapa.",
+        "La propuesta usa primero las vías guardadas. Las que faltan se descargan después en segundo plano. No hay reintentos automáticos ni nuevas cuentas atrás. Complete la propuesta cuando termine la descarga.",
+        "Si falla la descarga, prueba más tarde. Los sectores válidos permanecen guardados; la ruta no es inválida por eso.",
+        "Si el trazado es incorrecto, cancela, revisa ajustes y usa puntos de control o paso. Tras aceptar, usa Deshacer."
+      ],
+      "tip": "RouteRefit también funciona sin paquete regional. Las vías que faltan se descargan durante la alineación, por lo que el cálculo puede tardar mucho más. Las vías guardadas siempre se reutilizan."
+    },
+    {
+      "id": 27,
+      "title": "Atajos, copias y próximos pasos",
+      "steps": [
+        "Ctrl+O abre y Ctrl+S guarda. F6 muestra estadísticas y F11 da espacio al mapa.",
+        "Un punto de control guía la línea; un punto de paso guía una conexión; un waypoint describe un lugar.",
+        "Conserva Mijn GPX, Kaarten y voorkeuren.json al actualizar. Haz también una copia de originales y cambios.",
+        "Los vehículos adicionales llegarán tras probar idiomas y manejo. Crear rutas desde cero se está preparando, no está disponible todavía."
+      ],
+      "tip": "Unir archivos separados y dividir en archivos distintos siguen siendo funciones futuras. Esta beta no es la versión estable 1.0 y todavía no está firmada digitalmente."
+    },
+    {
+      "id": 28,
+      "title": "Paquetes regionales opcionales: alinear más rápido",
+      "steps": [
+        "RouteRefit también funciona sin paquete regional. Las vías que faltan se descargan durante la alineación, por lo que el cálculo puede tardar mucho más. Las vías guardadas siempre se reutilizan.",
+        "Abra [[Kaart]] > [[Gebiedspakketten…]]. Busque una provincia o región. Prefiera una región pequeña; se rechazan descargas superiores a 500 MB.",
+        "Use Ctrl o Mayús para elegir varias regiones, incluso de distintos países. La búsqueda conserva la selección. Compruebe el número en la lista. Los paquetes se descargan sucesivamente y sus vías se combinan. Cerca de una frontera, incluya la región vecina.",
+        "Seleccione la región y [[Downloaden / bijwerken]]. La descarga y preparación iniciales pueden tardar varios minutos y requieren espacio adicional. Puede seguir trabajando.",
+        "Espere a que la región esté lista. Abra la ruta, compruebe la actividad y elija [[Automatisch uitlijnen]]. Solo se leen del índice local las vías cercanas a la ruta.",
+        "Las seis actividades están en el capítulo 6 y la exportación de navegación en el 32. Aún no se pueden dibujar rutas desde cero."
+      ],
+      "tip": "Gratis, sin cuenta. Geofabrik recibe su IP y la región elegida, pero no su GPX, horarios ni cambios. Detalles: https://download.geofabrik.de/technical.html"
+    },
+    {
+      "id": 29,
+      "title": "Actualizar los paquetes de forma eficiente",
+      "steps": [
+        "Active [[Gedownloade gebieden wekelijks op de achtergrond bijwerken]] para comprobar semanalmente por defecto mientras RouteRefit está abierto. Desactive para detener futuras comprobaciones automáticas.",
+        "Para actualizar ahora: [[Kaart]] > [[Gebiedspakketten…]], active [[Alleen gedownload]], seleccione una región y [[Downloaden / bijwerken]].",
+        "Una región actualizada no se vuelve a descargar ni indexar. Los pequeños archivos diarios modifican solo las vías cambiadas y los puntos afectados.",
+        "La actualización se prepara y verifica por separado. [[Stoppen]] o un fallo conserva el paquete existente. No se repiten cuentas atrás; tras un fallo automático no hay un nuevo intento automático durante al menos un día.",
+        "Los límites modificados, datos antiguos o demasiados cambios requieren [[Opnieuw downloaden]]. La descarga completa nunca empieza sin una acción. La ruta o propuesta abierta no cambia; elija de nuevo [[Automatisch uitlijnen]]."
+      ],
+      "tip": "La lista muestra la fecha de los datos OSM. Una comprobación semanal no garantiza cambios diarios. Conserve la carpeta Kaarten con los paquetes y ajustes al actualizar el programa. El capítulo 31 explica continuar al cerrar; desactivado por defecto."
+    },
+    {
+      "id": 30,
+      "title": "Dibujar una zona de descarga",
+      "steps": [
+        "Abre [[Kaart]] > [[Gebiedspakketten…]] > [[Eigen gebied tekenen…]]. La zona puede cruzar fronteras. Los paquetes existentes se conservan.",
+        "Escribe un nombre local. Arrastra un [[Rechthoek]] o pulsa los vértices de un [[Veelhoek]]. Corrige con [[Laatste punt weg]] o [[Wissen]]. Desplaza y amplía el mapa.",
+        "Deja 1–2 km alrededor de las rutas. El rectángulo envolvente no puede superar 2500 km². Una zona pequeña reduce descarga y procesamiento; el proveedor puede tener cola.",
+        "Lee la explicación de privacidad y elige [[Gebied downloaden via SliceOSM]]. Solo se envían el límite y tu IP. Nombre, GPX, tiempos y cambios quedan locales. El límite es accesible mediante el enlace de descarga.",
+        "Hay tres fases: descarga con preparación del proveedor, procesamiento local y comprobación. [[Stoppen]] conserva los paquetes existentes. Una solicitud lenta puede reanudarse manualmente después.",
+        "Renueva zonas propias con [[Downloaden / bijwerken]]. La zona pequeña se descarga entera de nuevo, sin cambios diarios. Tras una semana aparece un recordatorio. Sin paquetes la alineación también funciona, pero conseguir las vías que faltan puede tardar mucho más."
+      ],
+      "tip": "SliceOSM es gratis y sin cuenta, pero puede registrar datos de uso: https://github.com/SliceOSM/.github/blob/main/PRIVACY.md . Las vías de cálculo y el fondo del mapa son distintos. La velocidad no está garantizada."
+    },
+    {
+      "id": 31,
+      "title": "Segundo plano y potencia disponible",
+      "steps": [
+        "Por defecto, cerrar RouteRefit detiene las tareas regionales. No se crea una tarea automática de Windows. Las comprobaciones semanales requieren la aplicación abierta.",
+        "En [[Gebiedspakketten…]], activa expresamente [[Doorgaan als RouteRefit gesloten is (Windows-achtergrondtaak)]]. Windows crea una tarea para tu usuario al iniciar sesión y diariamente a las 09:00. No requiere administrador ni cuenta del servicio de mapas.",
+        "Inicia una descarga o actualización. Un proceso separado continúa al cerrar. Windows debe estar activo y tu sesión abierta. La tarea no despierta el equipo. Los cálculos y cambios de rutas no continúan en segundo plano.",
+        "La tarea diaria comprueba las actualizaciones semanales pendientes de Geofabrik. El ajuste semanal sigue vigente. Las zonas propias se renuevan manualmente; una descarga iniciada puede continuar al cerrar.",
+        "[[Stoppen]] detiene la tarea actual. Desactivar la opción detiene el trabajo y elimina la tarea de Windows. Los fallos de red no generan solicitudes nuevas repetidas. Tras una interrupción de Windows, reanuda manualmente.",
+        "Los archivos se decodifican en paralelo cuando es posible. Con poca carga ajena, se procesa a velocidad normal con memoria limitada. Con carga alta, baja la prioridad y se añaden pausas. La interfaz permanece separada."
+      ],
+      "tip": "Activar siempre es tu decisión. No se envían rutas, tiempos ni ajustes. Un paquete existente solo se sustituye tras comprobar completamente el nuevo."
+    },
+    {
+      "id": 32,
+      "title": "Navegar con Komoot, Garmin y Strava",
+      "steps": [
+        "Revisa la línea y acepta la propuesta. Conserva el GPX editable con su informe de control. Conecta los huecos si necesitas una ruta de navegación continua.",
+        "[[Exporteer naar]]: pulsa Komoot, Garmin o Strava. [[GPX opslaan en uploadpagina openen]] guarda la línea y altitudes sin horarios. Elige el archivo en la web y confirma allí la importación.",
+        "Komoot: importa como ruta planificada y conserva el trazado original. Garmin: importa en Trayectos y envía a un dispositivo compatible. Strava: usa el planificador; puede requerir suscripción. La exportación de actividad con tiempos ajustados sigue en [[Exporteren naar…]].",
+        "Tras importar, revisa el trazado, la actividad y quién puede ver la ruta. [[Bestandspad kopiëren]] ayuda a encontrar el archivo. Abre la ruta guardada en el teléfono o navegador compatible."
+      ],
+      "tip": "Exportación local y gratuita. Sin fotos, puntos de interés ni metadatos personales; los lugares siguen visibles. Sin subidas automáticas. Los servicios tienen sus condiciones y posibles costes. Guarda el GPX habitual con informe para seguir editando."
+    },
+    {
+      "id": 33,
+      "title": "Archivos locales: GPX, TCX y KML",
+      "steps": [
+        "Revisa la línea y acepta la propuesta. Conserva el GPX editable con su informe de control. Conecta los huecos si necesitas una ruta de navegación continua.",
+        "Archivos locales: [[Bestand…]] > GPX, TCX o KML > [[Bestand opslaan…]]. También en Archivo > [[Routebestand exporteren…]]. GPX sirve para navegar; KML para programas de mapas. Ambos omiten horarios. TCX es un trayecto con los horarios existentes.",
+        "[[Datum en snelheid voor TCX instellen]] abre calendario, hora y velocidad media. Se abre automáticamente si faltan horarios válidos. Los nuevos tiempos son estimados; caminar/pedalear requiere altitudes completas. La ruta editable no cambia.",
+        "Elige un nombre nuevo; no se sobrescriben archivos. Los tramos separados se conservan. KML requiere dos puntos por tramo. Tras importar, revisa línea, horarios, actividad y visibilidad; la compatibilidad depende del programa o dispositivo."
+      ],
+      "tip": "Exportación local y gratuita. Sin fotos, puntos de interés ni metadatos personales; los lugares siguen visibles. Sin subidas automáticas. Los servicios tienen sus condiciones y posibles costes. Guarda el GPX habitual con informe para seguir editando."
+    }
+  ],
+  "pt": [
+    {
+      "id": 1,
+      "title": "Instalar e começar em segurança",
+      "steps": [
+        "Execute RouteRefit-0.5.15-beta-Setup.exe. Leia a licença e as informações de privacidade e escolha a pasta do programa. Não precisa de Python. Depois abra o RouteRefit pelo menu Iniciar.",
+        "As atualizações reutilizam a mesma pasta e preservam Mijn GPX, Kaarten e voorkeuren.json. Guarde o trabalho e feche o programa e as transferências de vias em curso antes de atualizar.",
+        "Já utiliza uma cópia portátil? Selecione essa pasta na instalação para usar os mesmos dados. Não há transferência automática de dados entre pastas. Faça uma cópia de segurança antes.",
+        "Para utilização portátil, extraia todo o ZIP do Windows e execute RouteRefit-0.5.15-beta.exe com _internal ao lado. Outra pasta extraída tem os seus próprios percursos e mapas.",
+        "Desinstale nas Definições do Windows > Aplicações. Os dados pessoais são preservados. Só são removidas a tarefa em segundo plano e a associação web que apontem para esta instalação.",
+        "O trabalho em segundo plano exige uma autorização separada. Desative-o na cópia antiga e ative-o na nova se pretender. Repita após desinstalar e voltar a instalar."
+      ],
+      "tip": "Esta beta não tem assinatura digital. Não contém percursos ou mapas pessoais nem ativa tarefas em segundo plano. O atalho no ambiente de trabalho e abrir após instalar são opcionais."
+    },
+    {
+      "id": 2,
+      "title": "Escolher o idioma e orientar-se",
+      "steps": [
+        "Abra [[Taal]] e escolha Nederlands, English, Deutsch, Français, Español ou Português.",
+        "A mudança reinicia o programa. Responda primeiro a qualquer pergunta sobre trabalho não guardado.",
+        "[[Routes]] mostra ficheiros locais e [[Route bewerken]] o mapa. F6 abre elevação e estatísticas.",
+        "Abra o manual através de [[Help]]. O PDF corresponde ao idioma do programa."
+      ],
+      "tip": "O português utiliza terminologia europeia. As imagens mostram uma demonstração sintética; os números são exemplos."
+    },
+    {
+      "id": 3,
+      "title": "Abrir um percurso",
+      "steps": [
+        "Prima [[Route importeren…]] ou Ctrl+O. Procure o ficheiro, selecione-o e abra-o.",
+        "Pode importar GPX, TCX, FIT, KML, KMZ e GeoJSON. Conserve o ficheiro original.",
+        "Aguarde a linha e a distância. Não é necessário transferir primeiro toda a rede de vias.",
+        "Leia as mensagens de conversão. Nem todos os sensores, estilos e campos específicos passam para o GPX."
+      ],
+      "tip": "São necessários pelo menos dois pontos de percurso. Um ficheiro que só contém waypoints não é um percurso editável."
+    },
+    {
+      "id": 4,
+      "title": "Verificar uma pasta",
+      "steps": [
+        "Em [[Routes]], utilize [[Map kiezen…]] para escolher a pasta de ficheiros.",
+        "Assinale [[Ook submappen]] se quiser incluir subpastas. Prima [[Map controleren]].",
+        "Selecione uma linha. Reveja ficheiros ilegíveis, tempos em falta e conteúdos duplicados.",
+        "Abra o percurso pretendido com duplo clique ou [[Geselecteerde GPX openen]]."
+      ],
+      "tip": "A verificação não altera nem elimina nada. Nomes diferentes podem ter o mesmo conteúdo. Máximo de 10.000 ficheiros por verificação."
+    },
+    {
+      "id": 5,
+      "title": "Ler e mover o mapa",
+      "steps": [
+        "Laranja é o original, azul o percurso editável e verde uma proposta. Vermelho exige revisão.",
+        "Escolha [[Kaart verschuiven]] e arraste o mapa. Amplie com a roda ou com + e −.",
+        "[[Hele route]] recupera a vista geral. [[Grote kaart]] ou F11 dá mais espaço.",
+        "Os pontos amarelos maiores controlam a linha. Os marcadores roxos são waypoints, não instruções automáticas de trajeto."
+      ],
+      "tip": "O fundo e os dados de vias são independentes. Uma falha do fundo não inutiliza as vias guardadas."
+    },
+    {
+      "id": 6,
+      "title": "Escolher uma atividade",
+      "steps": [
+        "Abra [[Instellingen]] e [[Activiteit]] antes de alinhar. Escolha [[Lopen]], [[Fiets]], [[MTB]], [[Gravelfiets]], [[Auto]] ou [[Motor]]. Speed pedelec não está incluído.",
+        "A atividade determina acesso, sentido e vias adequadas. Gravel evita trilhos difíceis; automóvel e mota não usam ciclovias ou caminhos pedonais comuns sem permissão explícita nos dados.",
+        "O mesmo motor local utiliza OSM em toda a Europa, incluindo fronteiras. Considera acesso explícito, sentidos únicos e restrições de viragem suportadas. Descarregue cobertura suficiente para percursos fronteiriços.",
+        "Mudou de atividade após o cálculo? Crie outra proposta. O ritmo em [[Tijdschema]] não altera a escolha das vias. A atividade e velocidade personalizada são guardadas com o GPX."
+      ],
+      "tip": "A sinalização e regras locais prevalecem. Regras nacionais implícitas, acesso condicional e dimensões do veículo não são totalmente modelados. Restrições condicionais de viragem reconhecidas são sempre aplicadas por precaução. Os tempos são estimativas sem trânsito ou limites de velocidade."
+    },
+    {
+      "id": 7,
+      "title": "Preferência, acesso e raio",
+      "steps": [
+        "Abra [[Instellingen]] e [[Route]]. A preferência atual é [[Meest logisch]]: seguir o trajeto existente.",
+        "Em [[Activiteit]], [[Toegang en privéwegen…]] abre as definições do percurso. [[Sta privéwegen en -paden toe]] e [[Toegangsmeldingen…]] estão perto do topo.",
+        "Deixe [[Sta privéwegen en -paden toe]] desativado, salvo se quiser considerar expressamente essas vias.",
+        "Comece com um raio de 35 metros em redor dos pontos. O intervalo permitido é 5–150 metros.",
+        "Aumente-o apenas se necessário. Verifique depois vias paralelas e o lado correto.",
+        "Avalie os avisos após verificar o percurso. Aceitar preserva linha, altitudes e tempos. A ausência de etiquetas de acesso não bloqueia automaticamente caminhada ou ciclismo; automóvel e mota evitam ciclovias e caminhos pedonais comuns sem permissão explícita."
+      ],
+      "tip": "As opções curta, rápida, calma, bonita e por elevação são futuras. Aceitar um aviso não altera as vias nem concede direito de acesso."
+    },
+    {
+      "id": 8,
+      "title": "Alinhar automaticamente e acompanhar o progresso",
+      "steps": [
+        "Abra o percurso, escolha atividade e prima uma vez [[Automatisch uitlijnen]].",
+        "O indicador move-se. São mostrados a etapa e o tempo decorrido; pode demorar um pouco.",
+        "A proposta usa primeiro as vias guardadas. As vias em falta são depois descarregadas em segundo plano. Não há tentativas automáticas repetidas nem novas contagens. Complete a proposta após a descarga.",
+        "Utilize [[Uitlijnen stoppen]] se não quiser esperar. O percurso editável é mantido."
+      ],
+      "tip": "Uma zona nova precisa de dados de vias. As zonas completas guardadas são reutilizadas após reiniciar. A linha verde continua a ser uma proposta até a aceitar."
+    },
+    {
+      "id": 9,
+      "title": "Rever e aceitar a proposta",
+      "steps": [
+        "Leia distância, tempo estimado, subida e diferenças face ao original e ao percurso editado.",
+        "Amplie cruzamentos, ciclovias paralelas e marcas vermelhas. Verifique a linha verde.",
+        "Em caso de dúvida, prima [[Annuleren]]. Ajuste atividade, raio ou pontos de controlo e calcule novamente.",
+        "[[Voorstel overnemen]] altera a linha azul. [[Ongedaan maken]] recupera a alteração anterior.",
+        "Após aceitar, todos os [[Hoofdpunten]] amarelos estão prontos para continuar a editar. Escolha [[Losse punten]] para corrigir pontos livremente; não é necessário repetir o alinhamento automático."
+      ],
+      "tip": "Sem todas as elevações haverá totais parciais. Elevações e tempos reconstruídos continuam a ser estimativas, não provas da duração real nem do acesso."
+    },
+    {
+      "id": 10,
+      "title": "Alinhar manualmente com pontos de controlo",
+      "steps": [
+        "Escolha [[Hoofdpunten]] ou [[Handmatig uitlijnen]]. Depois de aceitar uma proposta de alinhamento, este modo já está ativo e os pontos de controlo amarelos estão visíveis.",
+        "Arraste um ponto amarelo maior para o caminho correto. São calculadas as ligações aos vizinhos.",
+        "Clique com o botão direito num ponto indesejado e escolha [[Hoofdpunt verwijderen en opnieuw verbinden]].",
+        "Reveja a substituição antes de a aceitar. Os pontos de início e fim são mantidos.",
+        "Aceite a alteração local e edite logo o ponto seguinte. [[GPX opslaan…]] guarda o percurso, os tempos, os pontos de controlo e o modo de edição. Reabra esse GPX mais tarde para continuar."
+      ],
+      "tip": "Também são substituídos os pontos intermédios antigos entre os vizinhos restantes. O desvio anterior deixa de guiar a substituição."
+    },
+    {
+      "id": 11,
+      "title": "Pontos individuais e densidade de controlo",
+      "steps": [
+        "Escolha [[Losse punten]] para editar um ponto gravado individual.",
+        "Selecione-o ou arraste-o. Faça duplo clique na linha para adicionar um; utilize a ação de eliminar para o selecionado.",
+        "Para corrigir seguindo vias, volte a [[Handmatig uitlijnen]] e aos pontos maiores.",
+        "Em [[Route]], redistribua os pontos com [[Weinig]], [[Normaal]] ou [[Veel]]. A linha existente é mantida."
+      ],
+      "tip": "Mover um ponto individual não é calcular uma ligação por vias. Utilize [[Ongedaan maken]] após uma alteração errada."
+    },
+    {
+      "id": 12,
+      "title": "Substituir um desvio indesejado",
+      "steps": [
+        "Clique com o botão direito na linha azul antes do desvio. Escolha [[Begin te verwijderen stuk hier]].",
+        "Depois do desvio, na mesma linha, escolha [[Eind te verwijderen stuk hier…]].",
+        "Reveja a nova ligação. Utilize pontos de passagem para orientar o trajeto se necessário.",
+        "Aceite ou cancele a proposta. Reveja depois o horário novo."
+      ],
+      "tip": "Mantendo a velocidade média disponível, um percurso mais curto termina mais cedo. Os tempos novos são estimados; as pausas não são programadas separadamente."
+    },
+    {
+      "id": 13,
+      "title": "Mover início, fim ou ambos",
+      "steps": [
+        "Em [[Route]], escolha [[Startpunt verplaatsen]], [[Eindpunt verplaatsen]] ou [[Start en eind samen verplaatsen]].",
+        "Clique na via pretendida. Só é calculada a ligação ao percurso existente.",
+        "Reveja ligação, sentido e lado da via.",
+        "Aceite se estiver correto e recalcule depois o horário."
+      ],
+      "tip": "O restante é mantido e não fica novamente aprovado. [[Kaart verschuiven]] permite sair do modo de colocação."
+    },
+    {
+      "id": 14,
+      "title": "Compreender lacunas e troços",
+      "steps": [
+        "Verifique o número de troços. Uma lacuna real de gravação continua a ser uma interrupção identificável.",
+        "São ligados os limites de voltas TCX adjacentes. As paragens do temporizador FIT quase na mesma posição contam como pausas.",
+        "Escolha [[Meer]] → [[Routedelen verbinden…]] e a lacuna que pretende reconstruir.",
+        "Abra [[Verbinding aanpassen…]] e verifique as ligações às duas gravações."
+      ],
+      "tip": "Uma ligação reconstruída não é uma gravação GPS. Aceite apenas um trajeto que considere adequado."
+    },
+    {
+      "id": 15,
+      "title": "Orientar uma ligação com pontos de passagem",
+      "steps": [
+        "Na janela de ligação, clique em locais pela ordem do trajeto pretendido.",
+        "Arraste marcadores ou utilize subir, descer e eliminar para corrigir a lista.",
+        "Prima [[Verbinding berekenen]] após cada alteração. Só então o verde corresponde à lista nova.",
+        "Reveja e escolha [[Verbinding overnemen]]. Cancelar mantém os troços separados."
+      ],
+      "tip": "Máximo de 50 pontos de passagem e 50 km de ligação. As vias em falta não são substituídas por retas inventadas. Elevações e tempos são estimativas identificadas."
+    },
+    {
+      "id": 16,
+      "title": "Reparar problemas ou manter um troço",
+      "steps": [
+        "Utilize [[Vorig probleem]], [[Volgend probleem]] e [[Probleemplaats tonen]] para examinar as marcas vermelhas.",
+        "Verifique atividade, lado correto e dados cartográficos disponíveis.",
+        "Procure uma reparação, mova um ponto de controlo ou substitua o troço com pontos de passagem.",
+        "Para manter a gravação, escolha [[Gekozen stuk handmatig behouden]] e calcule novamente."
+      ],
+      "tip": "Manter manualmente é uma exceção consciente, não uma prova de acesso. Os problemas pendentes continuam visíveis; um erro inesperado não inutiliza todo o GPX."
+    },
+    {
+      "id": 17,
+      "title": "Compreender os avisos de acesso",
+      "steps": [
+        "Alinhe automaticamente ou verifique novamente primeiro para conhecer os problemas.",
+        "Abra [[Meer]] → [[Toegangsmeldingen…]] se parecerem dever-se apenas a etiquetas de acesso.",
+        "Leia o aviso. Só podem ser aceites assim problemas causados exclusivamente por essas etiquetas.",
+        "Linha, elevações e tempos não mudam. A decisão é registada e pode ser anulada."
+      ],
+      "tip": "O botão não anula nenhuma proibição local. Respeite regras e sinalização. Não ignora o sentido, as ligações em falta nem os problemas geométricos."
+    },
+    {
+      "id": 18,
+      "title": "Calcular um horário novo",
+      "steps": [
+        "Abra [[Instellingen]] → [[Tijdschema]]. Escolha um ritmo ou a sua velocidade em terreno plano.",
+        "Introduza a partida. O campo utiliza UTC, não automaticamente a sua hora local.",
+        "Indique uma duração pretendida apenas se a quiser expressamente, com formato hh:mm.",
+        "Em [[Meer]], escolha [[Tijdschema berekenen…]] e reveja a proposta e os tempos estimados.",
+        "Esta ação calcula apenas os tempos ao longo da linha editada. As correções manuais mantêm-se, mesmo sem vias descarregadas. Use [[Automatisch uitlijnen]] apenas para voltar a alinhar o percurso."
+      ],
+      "tip": "O atividade determina as vias; o ritmo determina os tempos. Não são modelados vento, semáforos nem trânsito atual. Elevações incompletas podem impedir certos cálculos de terreno."
+    },
+    {
+      "id": 19,
+      "title": "Procurar e remover pausas gravadas",
+      "steps": [
+        "Abra Horário e escolha remover pausas da gravação existente.",
+        "Ajuste a duração mínima e o raio de imobilidade. Utilize [[Pauzes zoeken]] ou a pesquisa junto da lista.",
+        "Selecione uma pausa e veja o local. Faça duplo clique para alterar se deve ser removida.",
+        "Recalcule e reveja a chegada. Não altere lacunas cuja causa desconhece."
+      ],
+      "tip": "São necessários tempos completos e crescentes. Sem eles não é possível identificar pausas gravadas com fiabilidade; escolha conscientemente um horário novo estimado."
+    },
+    {
+      "id": 20,
+      "title": "Verificar elevação e estatísticas",
+      "steps": [
+        "Prima [[Hoogte en statistiek]] ou F6. Escolha [[Origineel]], [[Bewerkte route]] ou [[Voorstel]].",
+        "Reveja distância, duração, velocidade média, subida, descida e elevação mínima e máxima.",
+        "Mova o ponteiro sobre o gráfico para ver valores locais. Compare picos estranhos com o mapa.",
+        "[[Naar de kaart]] permite voltar. Calcule uma proposta se ainda não tiver dados."
+      ],
+      "tip": "Os valores não filtrados podem exagerar a subida. As elevações em falta dão totais parciais. A velocidade média utiliza a duração disponível, incluindo pausas."
+    },
+    {
+      "id": 21,
+      "title": "Waypoints, descrições e fotografias",
+      "steps": [
+        "Escolha [[Waypoint toevoegen]] em Mais ou Percurso e clique no local pretendido.",
+        "Dê um nome claro. Adicione opcionalmente descrição e fotografia com [[Foto kiezen…]].",
+        "Prima [[Waypoint bewaren]]. Arraste o marcador roxo para o mover.",
+        "[[Waypoints beheren]] permite editar, mostrar no mapa ou eliminar."
+      ],
+      "tip": "Nome: até 200 carateres; descrição: 1.500. Fotografia: JPG, PNG, WebP ou GIF, menos de 25 MB e até 60 megapíxeis. Mantenha juntos o GPX e a pasta de fotografias."
+    },
+    {
+      "id": 22,
+      "title": "Guardar GPX e relatório de controlo",
+      "steps": [
+        "Verifique linha, tempos e mensagens. Aceite a proposta pretendida.",
+        "Escolha [[GPX opslaan…]] ou Ctrl+S. Responda se for perguntado por uma proposta calculada ou um rascunho.",
+        "Escolha um nome novo e uma localização. Os ficheiros existentes não são substituídos.",
+        "Mantenha juntos GPX, relatório e fotografias. Abra novamente a exportação para a verificação final."
+      ],
+      "tip": "A saída é GPX, também após FIT/TCX. O relatório mantém decisões e estimativas. Um rascunho não é uma nova aprovação completa. O original é guardado separadamente."
+    },
+    {
+      "id": 23,
+      "title": "Comparar original e percurso ajustado",
+      "steps": [
+        "Abra o original. Guarde as alterações antes de abrir outra comparação.",
+        "Em [[Bestand]], escolha comparar com um percurso ajustado e selecione o segundo GPX.",
+        "Laranja indica o original, azul o ajuste e vermelho os locais a rever.",
+        "Utilize local alterado seguinte e anterior se o relatório correspondente os incluir."
+      ],
+      "tip": "Uma estrutura de troços diferente pode exigir abrir o GPX ajustado separadamente. Comparar não altera retroativamente a gravação original."
+    },
+    {
+      "id": 24,
+      "title": "Mapas locais, trabalho sem ligação e atualização",
+      "steps": [
+        "Ao alinhar, as áreas completas transferidas são adicionadas automaticamente ao índice local.",
+        "Os percursos posteriores dessa área reutilizam dados; só são transferidas partes em falta.",
+        "Importe com [[Lokaal OSM-bestand importeren…]] uma região OSM XML completa e delimitada, não PBF nem imagens.",
+        "Escolha [[Uitlijngegevens vernieuwen]] para dados atuais. Precisa de ligação à Internet."
+      ],
+      "tip": "A data é a do OSM ou a do ficheiro. Criar o índice demora tempo uma vez. Máximo de 128 MB por XML. O fundo tem outra cache e pode faltar sem ligação."
+    },
+    {
+      "id": 25,
+      "title": "Catálogo web e abertura automática",
+      "steps": [
+        "[[Mijn routeoverzicht]] é um catálogo web opcional. O pacote público começa vazio.",
+        "Importe apenas um catálogo que queira utilizar. Um percurso web é transferido ao ser aberto.",
+        "A ação de envio abre o navegador. O RouteRefit não publica automaticamente nem guarda palavras-passe web.",
+        "Em Ficheiro pode ativar a abertura de novos GPX em Transferências; está desativada por predefinição."
+      ],
+      "tip": "A importação local não exige conta web. Utilize estas opções apenas se forem úteis. Agora não é enviado nada para GitHub nem SignPath."
+    },
+    {
+      "id": 26,
+      "title": "O que fazer durante esperas ou erros",
+      "steps": [
+        "Se o indicador e o tempo decorrido avançam, o trabalho continua. Leia a etapa.",
+        "A proposta usa primeiro as vias guardadas. As vias em falta são depois descarregadas em segundo plano. Não há tentativas automáticas repetidas nem novas contagens. Complete a proposta após a descarga.",
+        "Se a transferência falhar, tente mais tarde. Os setores válidos continuam guardados; o percurso não é inválido por isso.",
+        "Se o traçado estiver errado, cancele, reveja definições e utilize pontos de controlo ou passagem. Após aceitar, utilize Anular."
+      ],
+      "tip": "O RouteRefit também funciona sem pacote regional. As vias em falta são descarregadas durante o alinhamento, o que pode tornar o cálculo muito mais demorado. As vias guardadas são sempre reutilizadas."
+    },
+    {
+      "id": 27,
+      "title": "Atalhos, cópias e próximos passos",
+      "steps": [
+        "Ctrl+O abre e Ctrl+S guarda. F6 mostra estatísticas e F11 dá espaço ao mapa.",
+        "Um ponto de controlo guia a linha; um ponto de passagem guia uma ligação; um waypoint descreve um local.",
+        "Conserve Mijn GPX, Kaarten e voorkeuren.json ao atualizar. Faça também uma cópia de originais e alterações.",
+        "Os veículos adicionais chegarão após testar idiomas e utilização. Criar percursos de raiz está a ser preparado, ainda não está disponível."
+      ],
+      "tip": "Unir ficheiros separados e dividir em ficheiros distintos continuam a ser funções futuras. Esta beta não é a versão estável 1.0 e ainda não está assinada digitalmente."
+    },
+    {
+      "id": 28,
+      "title": "Pacotes regionais opcionais: alinhar mais depressa",
+      "steps": [
+        "O RouteRefit também funciona sem pacote regional. As vias em falta são descarregadas durante o alinhamento, o que pode tornar o cálculo muito mais demorado. As vias guardadas são sempre reutilizadas.",
+        "Abra [[Kaart]] > [[Gebiedspakketten…]]. Procure uma província ou região. Prefira uma região pequena; descargas superiores a 500 MB são recusadas.",
+        "Use Ctrl ou Shift para escolher várias regiões, mesmo de países diferentes. A pesquisa mantém a seleção. Confirme o número na lista. Os pacotes são descarregados sucessivamente e as suas vias são combinadas. Perto da fronteira, inclua a região vizinha.",
+        "Selecione a região e [[Downloaden / bijwerken]]. A descarga e preparação iniciais podem demorar vários minutos e exigem espaço adicional. Pode continuar a trabalhar.",
+        "Aguarde até a região estar pronta. Abra o percurso, confirme a atividade e escolha [[Automatisch uitlijnen]]. Só são lidas do índice local as vias próximas do percurso.",
+        "As seis atividades estão no capítulo 6 e a exportação de navegação no 32. Ainda não é possível desenhar percursos de raiz."
+      ],
+      "tip": "Gratuito, sem conta. A Geofabrik recebe o seu IP e a região escolhida, mas não o GPX, horários ou alterações. Detalhes: https://download.geofabrik.de/technical.html"
+    },
+    {
+      "id": 29,
+      "title": "Atualizar os pacotes de forma eficiente",
+      "steps": [
+        "Ative [[Gedownloade gebieden wekelijks op de achtergrond bijwerken]] para verificações semanais por defeito enquanto o RouteRefit está aberto. Desative para impedir futuras verificações automáticas.",
+        "Para atualizar agora: [[Kaart]] > [[Gebiedspakketten…]], ative [[Alleen gedownload]], selecione uma região e [[Downloaden / bijwerken]].",
+        "Uma região atualizada não volta a ser descarregada nem indexada. Pequenos ficheiros diários atualizam apenas as vias alteradas e os pontos afetados.",
+        "A atualização é preparada e verificada separadamente. [[Stoppen]] ou uma falha preserva o pacote existente. Não há contagens decrescentes repetidas; após uma falha automática não há nova tentativa automática durante pelo menos um dia.",
+        "Limites alterados, dados antigos ou demasiadas alterações exigem [[Opnieuw downloaden]]. A descarga completa nunca começa sem uma ação. O percurso ou proposta aberto não muda; escolha novamente [[Automatisch uitlijnen]]."
+      ],
+      "tip": "A lista mostra a data dos dados OSM. Uma verificação semanal não garante alterações diárias. Guarde a pasta Kaarten com os pacotes e definições ao atualizar o programa. O capítulo 31 explica continuar após fechar; desativado por defeito."
+    },
+    {
+      "id": 30,
+      "title": "Desenhar uma área de descarga",
+      "steps": [
+        "Abra [[Kaart]] > [[Gebiedspakketten…]] > [[Eigen gebied tekenen…]]. A área pode atravessar fronteiras. Os pacotes existentes mantêm-se disponíveis.",
+        "Introduza um nome local. Arraste um [[Rechthoek]] ou clique nos vértices de um [[Veelhoek]]. Corrija com [[Laatste punt weg]] ou [[Wissen]]. Desloque e amplie o mapa.",
+        "Deixe 1–2 km à volta dos percursos. O retângulo envolvente tem um máximo de 2500 km². Uma área pequena reduz descarga e processamento; o fornecedor pode ter fila.",
+        "Leia a explicação de privacidade e escolha [[Gebied downloaden via SliceOSM]]. Só o limite e o seu IP são enviados. Nome, GPX, horários e alterações ficam locais. O limite é acessível pelo link de descarga.",
+        "São apresentadas três fases: descarga com preparação pelo fornecedor, processamento local e verificação. [[Stoppen]] conserva os pacotes existentes. Um pedido lento pode ser retomado manualmente mais tarde.",
+        "Renove áreas próprias com [[Downloaden / bijwerken]]. A pequena área é descarregada por completo, sem ficheiros diários de alterações. Após uma semana surge um lembrete. Sem pacotes o alinhamento também funciona, mas obter vias em falta pode demorar muito mais."
+      ],
+      "tip": "A SliceOSM é gratuita, sem conta, mas pode registar dados de utilização: https://github.com/SliceOSM/.github/blob/main/PRIVACY.md . As vias de cálculo e o mapa de fundo são separados. A velocidade não é garantida."
+    },
+    {
+      "id": 31,
+      "title": "Segundo plano e capacidade disponível",
+      "steps": [
+        "Por defeito, fechar o RouteRefit para as tarefas regionais. Não é criada uma tarefa automática do Windows. As verificações semanais requerem a aplicação aberta.",
+        "Em [[Gebiedspakketten…]], ative expressamente [[Doorgaan als RouteRefit gesloten is (Windows-achtergrondtaak)]]. O Windows cria uma tarefa para o utilizador ao iniciar sessão e diariamente às 09:00. Não exige administrador nem conta do serviço de mapas.",
+        "Inicie uma descarga ou atualização. Um processo separado continua após fechar. O Windows tem de estar ativo e a sessão iniciada. A tarefa não desperta o computador. Os cálculos e alterações de percursos não continuam em segundo plano.",
+        "A tarefa diária verifica atualizações semanais devidas da Geofabrik. A definição semanal continua válida. Áreas próprias renovam-se manualmente; uma descarga iniciada pode continuar após fechar.",
+        "[[Stoppen]] para a tarefa atual. Desativar a opção para o trabalho e remove a tarefa do Windows. Falhas de rede não originam pedidos novos repetidos. Após interrupção pelo Windows, retome manualmente.",
+        "Os ficheiros são descodificados em paralelo quando possível. Com pouca carga concorrente, o processamento usa velocidade normal e memória limitada. Com carga elevada, baixa a prioridade e acrescenta pausas. A interface permanece separada."
+      ],
+      "tip": "Ativar é sempre uma escolha sua. Não são enviados percursos, horários ou definições. Um pacote existente só é substituído depois de o novo ser totalmente verificado."
+    },
+    {
+      "id": 32,
+      "title": "Navegar com Komoot, Garmin e Strava",
+      "steps": [
+        "Reveja a linha e aceite a proposta. Guarde o GPX editável com o relatório de controlo. Ligue falhas de gravação se precisar de um percurso de navegação contínuo.",
+        "[[Exporteer naar]]: clique em Komoot, Garmin ou Strava. [[GPX opslaan en uploadpagina openen]] guarda a linha e altitudes sem horários. Selecione o ficheiro no site e confirme aí a importação.",
+        "Komoot: importe como percurso planeado e mantenha o traçado original. Garmin: importe em Percursos e envie para um dispositivo compatível. Strava: use o planeador; pode exigir subscrição. A exportação de atividade com horários ajustados mantém-se em [[Exporteren naar…]].",
+        "Após importar, confirme traçado, atividade e visibilidade. [[Bestandspad kopiëren]] ajuda a encontrar o ficheiro. Abra o percurso guardado no telemóvel ou navegador compatível."
+      ],
+      "tip": "Exportação local e gratuita. Sem fotos, pontos de interesse ou metadados pessoais; os locais continuam visíveis. Sem envios automáticos. Os serviços têm condições e eventuais custos próprios. Guarde o GPX habitual com relatório para continuar a editar."
+    },
+    {
+      "id": 33,
+      "title": "Ficheiros locais: GPX, TCX e KML",
+      "steps": [
+        "Reveja a linha e aceite a proposta. Guarde o GPX editável com o relatório de controlo. Ligue falhas de gravação se precisar de um percurso de navegação contínuo.",
+        "Ficheiros locais: [[Bestand…]] > GPX, TCX ou KML > [[Bestand opslaan…]]. Também em Ficheiro > [[Routebestand exporteren…]]. GPX serve para navegação; KML para programas de mapas. Ambos omitem horários. TCX é um percurso com os horários existentes.",
+        "[[Datum en snelheid voor TCX instellen]] abre calendário, hora e velocidade média. Abre automaticamente se faltarem horários válidos. Os novos tempos são estimados; caminhada/ciclismo exige altitudes completas. O percurso editável não muda.",
+        "Escolha um novo nome; não são substituídos ficheiros existentes. Os troços separados mantêm-se. KML exige dois pontos por troço. Após importar, confirme linha, horários, atividade e visibilidade; o suporte depende do programa ou dispositivo."
+      ],
+      "tip": "Exportação local e gratuita. Sem fotos, pontos de interesse ou metadados pessoais; os locais continuam visíveis. Sem envios automáticos. Os serviços têm condições e eventuais custos próprios. Guarde o GPX habitual com relatório para continuar a editar."
+    }
+  ]
+}

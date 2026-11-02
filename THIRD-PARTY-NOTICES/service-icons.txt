@@ -1,0 +1,8 @@
+Service icons identify export destinations; no affiliation or endorsement.
+Downloaded 2026-11-01 from official sites:
+Strava: https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-180x180.png
+Garmin: https://static.garmincdn.com/favicon.ico
+Komoot: https://www.komoot.com/assets/9b4d45e81ebda372.png
+Wikiloc: https://sc.wklcdn.com/favicon.ico
+Icons remain property of their respective owners, not covered by the application GPL license.
+RouteRefit compass artwork: original, GPL-3.0-only.

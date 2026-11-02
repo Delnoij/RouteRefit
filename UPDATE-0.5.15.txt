@@ -1,0 +1,28 @@
+RouteRefit 0.5.15 Bèta - 2 november 2026
+
+De zes handleidingen zijn nu staand A4 (47 pagina’s, 33 hoofdstukken).
+Hoofdstuk 33 beschrijft de lokale GPX-, TCX- en KML-export.
+
+Nieuw: Exporteer naar > Bestand… biedt GPX, TCX en KML. TCX is een koers
+met bestaande of zelf ingestelde routetijden. GPX/KML bevatten geen tijden.
+Export blijft lokaal; bestaande bestanden worden nooit overschreven.
+
+Boven Komoot, Garmin en Strava staat nu Exporteer naar.
+De knoppen zijn compacter: kleinere logo's en minder ruimte rond de tekst.
+Zo blijft meer plaats over voor toekomstige exportmogelijkheden.
+
+De privéwegenoptie was niet verwijderd. Ze is nu beter zichtbaar:
+Instellingen > Activiteit > Toegang en privéwegen opent Instellingen > Route.
+Bovenaan staan Sta privéwegen en -paden toe en Toegangsmeldingen.
+De laatste functie blijft ook beschikbaar via Meer > Toegangsmeldingen.
+
+Sta privéwegen en -paden toe neemt wegen met een toepasselijke private-tag mee
+bij uitlijnen. Andere expliciete toegangsbeperkingen worden niet opgeheven.
+Via Toegangsmeldingen kun je na de routecontrole toegangsmeldingen beoordelen
+en de bestaande lijn behouden; hoogtes en tijden blijven ook behouden.
+Ongedaan maken en het opslaan van de beoordeling blijven beschikbaar.
+
+Ontbrekende toegangstags blokkeren lopen en fietsen niet automatisch. Auto en
+motor blijven gewone fiets- en voetpaden zonder expliciete toestemming vermijden.
+Je opgeslagen toegangskeuze, routes, bewerkingen en kaarten blijven behouden.
+Lees hoofdstuk 7 van de bijgewerkte handleiding.

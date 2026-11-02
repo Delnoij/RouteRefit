@@ -1,0 +1,30 @@
+RouteRefit is geïnstalleerd / RouteRefit is installed
+
+Start via het Startmenu. Het programma heet nu steeds RouteRefit.exe, zodat
+snelkoppelingen en nieuwe achtergrondtaken ook bij een volgende update dezelfde
+locatie gebruiken. Via Help > Handleiding open je de handleiding in jouw taal.
+
+Routes en kaarten staan in Mijn GPX en Kaarten in de gekozen programmamap.
+Zie je je oude routes of kaarten niet? Dan gebruikte de oude kopie een andere
+map. Er is niets verwijderd. Gebruik je oude kopie of installeer in die map;
+kopieer gegevens alleen als beide programma's en achtergrondtaken gesloten zijn.
+
+Een achtergrondtaak uit een oudere draagbare versie wijst nog naar die versie.
+Wil je die overzetten, schakel de achtergrondoptie in de oude versie eerst uit
+en daarna desgewenst in de geïnstalleerde versie aan. Geen automatische opt-in.
+
+Verwijderen kan via Windows > Instellingen > Apps. Je gegevens blijven staan.
+Een achtergrondtaak die naar deze installatie wijst wordt daarbij verwijderd.
+Zet na herinstallatie de achtergrondoptie desgewenst zelf opnieuw uit en aan.
+
+ENGLISH
+
+Launch RouteRefit from the Start menu. The installed executable has the stable
+name RouteRefit.exe. Help opens the manual in your selected language.
+Routes and maps remain in Mijn GPX and Kaarten in the chosen installation folder.
+Missing old data usually means an older portable copy uses another folder;
+Setup did not delete or move it. Close both copies and downloads before copying.
+To transfer an older portable background task, disable it in the old copy and
+explicitly enable it in the installed copy. Uninstall via Windows Settings > Apps.
+Personal data is retained; this installation's optional scheduled task is removed.
+After reinstalling, toggle the background option off and on if you want it again.
