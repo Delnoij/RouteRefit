@@ -18,4 +18,4 @@ Current Windows packages are unsigned. No keys or tokens are stored in the repos
 
 See [PRIVACY.md](PRIVACY.md). Signing-service credits will be added only after actual acceptance and configuration. We make no present claim of free signing, a SignPath certificate, or a verified publisher.
 
-The prospective GitHub repository name is `Delnoij/RouteRefit`; this is a proposed destination, not a claim that it has been created or connected. Marco Delnoij is a private individual in the Netherlands. Publication and any signing application require a later decision after personal testing.
+The project repository is [Delnoij/RouteRefit](https://github.com/Delnoij/RouteRefit). Marco Delnoij is a private individual in the Netherlands. A signing application will follow only after reviewed public builds, testing and a separate decision by the maintainer.

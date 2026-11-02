@@ -45,7 +45,7 @@ def main():
         'setup_sha256': digest(setup),
     }
     (output / 'INSTALLER-INFO.json').write_text(json.dumps(installer_info, indent=2) + '\n', encoding='utf-8')
-    hashes = sorted(p for p in output.iterdir() if p.suffix in {'.zip', '.exe', '.json'})
+    hashes = sorted(p for p in output.iterdir() if p.suffix in {'.zip', '.exe', '.json', '.pdf'})
     (output / 'SHA256SUMS.txt').write_text(''.join(digest(p) + '  ' + p.name + '\n' for p in hashes), encoding='utf-8')
     print('Unsigned installer created: ' + setup.name)
 

@@ -10,8 +10,8 @@ zijn vereist. Toelating van dit nieuwe project is niet gegarandeerd.
 Voorgestelde volgorde:
 
 1. Publiceer de gecontroleerde broncode onder GPL-3.0-only en laat de GitHub-workflow
-   de tests en Windows-build uitvoeren. Voorgestelde repository: Delnoij/RouteRefit.
-   Deze naam is geen bevestiging dat de repository al bestaat.
+   de tests en Windows-build uitvoeren. De openbare repository is
+   [Delnoij/RouteRefit](https://github.com/Delnoij/RouteRefit).
 2. Controleer het exacte bouwresultaat en geef een duidelijke bèta-uitgave vrij.
 3. Vraag toelating aan met de echte repository, bouwrun, release, onderhoudsrollen
    en privacybeleid. Gebruik uitsluitend echte gebruikscijfers en testresultaten.
